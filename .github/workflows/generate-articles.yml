@@ -48,14 +48,14 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: 📦 Install dependencies
+      - name: 📦 Install dependencies (including PAAPI5)
         run: |
           python -m pip install --upgrade pip
           pip install \
             google-genai pillow requests markdown pyyaml numpy \
             scikit-learn nltk coverage nose pluggy py randomize \
-            simplejson python-dotenv \
-            git+https://github.com/amzn/paapi5-python-sdk.git
+            simplejson python-dotenv
+          pip install --no-deps git+https://github.com/amzn/paapi5-python-sdk.git
 
       - name: 🗂️ Create required directories
         run: |
