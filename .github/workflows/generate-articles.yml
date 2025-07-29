@@ -39,7 +39,7 @@ jobs:
       - name: ⬇️ Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
           fetch-depth: 0
 
       - name: 🐍 Set up Python 3.11
@@ -56,7 +56,7 @@ jobs:
             scikit-learn nltk coverage nose pluggy py randomize \
             simplejson python-dotenv
           pip install --no-deps \
-            git+https://${{ secrets.GITHUB_TOKEN }}@github.com/amzn/paapi5-python-sdk.git
+            git+https://${{ secrets.GITHUBTOKEN }}@github.com/amzn/paapi5-python-sdk.git
 
       - name: 🗂️ Create required directories
         run: |
