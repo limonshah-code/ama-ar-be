@@ -309,13 +309,36 @@ def generate_and_upload_image(title):
                 config=types.GenerateContentConfig(response_modalities=["image", "text"])
             )
             api_key_manager.increment_usage(current_key)
-            if response.candidates and response.candidates[0].content.parts:
-                inline_data = response.candidates[0].content.parts[0].inline_data
-                file_ext = mimetypes.guess_extension(inline_data.mime_type)
-                original_file = f"blog_image_{int(time.time())}{file_ext}"
-                save_binary_file(original_file, inline_data.data)
-                final_file = compress_image(original_file)
-                return upload_to_cloudinary(final_file)
+            if not response.candidates or not response.candidates[0].content.parts:
+                print(f"No valid image data in response (attempt {attempt + 1})")
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+            inline_data = response.candidates[0].content.parts[0].inline_data
+            if not hasattr(inline_data, 'mime_type') or not inline_data.mime_type:
+                print(f"Invalid mime_type in response (attempt {attempt + 1})")
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+            file_ext = mimetypes.guess_extension(inline_data.mime_type)
+            if not file_ext:
+                print(f"Could not determine file extension (attempt {attempt + 1})")
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                return None
+            original_file = f"blog_image_{int(time.time())}{file_ext}"
+            save_binary_file(original_file, inline_data.data)
+            final_file = compress_image(original_file)
+            image_url = upload_to_cloudinary(final_file)
+            if image_url:
+                return image_url
+            print(f"Image upload failed (attempt {attempt + 1})")
+            if attempt < max_retries - 1:
+                time.sleep(2)
+                continue
             return None
         except Exception as e:
             error_str = str(e).lower()
@@ -403,8 +426,8 @@ Article Structure Requirements:
    - Use product title as H2 heading
    - 200-300 words per section
    - Include product features as bullet points
-   - Embed Amazon affiliate link: [Buy on Amazon]({product_url})
-   - Use product image if available
+   - Embed Amazon affiliate link: [Buy on Amazon](<product.url>) using the 'url' field from each product in the data
+   - Use product image if available from 'image_medium' or 'image_large' fields
    - Include "{title}" and related keywords
    - Use 1-2 relevant internal links from: {links_json}
 6. **FAQ Section:** 4-6 questions about "{title}", 50-75 words each
@@ -674,8 +697,12 @@ def main():
         try:
             slug = create_slug(title)
             article_url = f"https://beacleaner.com/{slug}"
-            image_url = generate_and_upload_image(title) or default_image_url
-            print(f"Generated image URL: {image_url}")
+            image_url = generate_and_upload_image(title)
+            if not image_url:
+                print(f"Using default image URL: {default_image_url}")
+                image_url = default_image_url
+            else:
+                print(f"Generated image URL: {image_url}")
             products = fetch_amazon_products(title)
             if not products:
                 print("No products fetched, skipping to next keyword")
