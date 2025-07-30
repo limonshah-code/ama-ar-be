@@ -1225,7 +1225,7 @@ Title: "{len(products)} Best {title}"
 For EACH product in the data, create:
 
 #### Product Format:
-### [Number]. [Category Rank]: [Full Product Name from data]
+### [Number]. [Category Rank]: [optimize Product Name ]
 
 **Product Details:**
 - Use the actual product title from the data
