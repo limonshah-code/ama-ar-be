@@ -1326,13 +1326,13 @@ def generate_article(prompt):
         try:
             current_key = api_key_manager.get_current_key()
             client = genai.Client(api_key=current_key)
-            model = "gemini-1.5-pro-latest"
+            model = "gemini-2.5-flash-preview-05-20"
             contents = [types.Content(role="user", parts=[types.Part.from_text(text=prompt)])]
             generate_content_config = types.GenerateContentConfig(
                 temperature=0.8,
                 top_p=0.95,
                 top_k=64,
-                max_output_tokens=32000,
+                max_output_tokens=8192,
                 response_mime_type="text/plain",
             )
             print(f"Generating article (attempt {attempt + 1})...")
