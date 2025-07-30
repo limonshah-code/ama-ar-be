@@ -1199,7 +1199,7 @@ metadata:
 
 ### 1. HEADER SECTION (Already provided above)
 
-### 2. OPENING SECTION (150-200 words)
+### 2. Introduction SECTION (150-200 words)
 Write an engaging introduction that:
 - Acknowledges the challenge of finding the right {base_keyword}
 - Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
@@ -1212,22 +1212,14 @@ Create "Our Top Picks" section with Amazon affiliate links:
 - **Best Overall: [Product Name from data] ([Buy on Amazon](product_url))**
 - **Best Budget: [Different Product Name] ([Buy on Amazon](product_url))**
 - **Best Premium: [Third Product Name] ([Buy on Amazon](product_url))**
-- **Best for [Specific Use]: [Fourth Product Name] ([Buy on Amazon](product_url))**
+- **Best for [Specific Use]: ([Buy on Amazon](product_url))**
+- **Best for [Specific Use]: ([Buy on Amazon](product_url))**
+- **Best for [Specific Use]: ([Buy on Amazon](product_url))**
 
 Each pick needs 2-3 sentences explaining why it earned that designation.
 
-### 4. BUYING GUIDE SECTION
-Title: "What to Look for Before Buying the Best {title}"
 
-Include these subsections with detailed explanations:
-1. **Find Your Need** - Compatibility and use case considerations
-2. **Budget** - Setting realistic price expectations ($X-$Y ranges)
-3. **Key Features** - Most important technical specifications
-4. **Quality & Durability** - What to look for in construction
-5. **Brand Reputation** - Importance of established manufacturers
-6. **Portability/Size** - Considerations for space and storage
-
-### 5. PRODUCT REVIEWS SECTION
+### 4. PRODUCT REVIEWS SECTION
 Title: "{len(products)} Best {title}"
 
 For EACH product in the data, create:
@@ -1238,7 +1230,7 @@ For EACH product in the data, create:
 **Product Details:**
 - Use the actual product title from the data
 - Include Amazon affiliate link: [Buy on Amazon](product_url_from_data)
-- Write 200-300 words covering:
+- Write 150-200 words covering:
   - Main benefits and standout features
   - Technical capabilities from product features
   - What's included/accessories
@@ -1256,7 +1248,7 @@ For EACH product in the data, create:
 - Include 1-2 realistic drawbacks with ⚠️ emojis
 - Present as constructive feedback, not dealbreakers
 
-### 6. EDUCATIONAL CONTENT
+### 5. EDUCATIONAL CONTENT
 
 #### Value Proposition Section
 Title: "Is it A Wise Decision to Buy {base_keyword}?"
@@ -1272,7 +1264,7 @@ Title: "What Is the Best Way to Choose {base_keyword}?"
 - Common mistakes to avoid
 - When to upgrade vs. budget options
 
-### 7. FAQ SECTION
+### 6. FAQ SECTION
 Create 8-10 FAQs covering:
 - "What is the best {base_keyword} for beginners?"
 - "How much should I spend on {base_keyword}?"
@@ -1285,7 +1277,7 @@ Create 8-10 FAQs covering:
 
 Each answer should be 50-75 words with actionable advice.
 
-### 8. FINAL VERDICT
+### 7. FINAL VERDICT
 - Restate top recommendation with key selling points
 - Mention budget option for cost-conscious buyers
 - Highlight premium option for quality seekers
@@ -1334,13 +1326,13 @@ def generate_article(prompt):
         try:
             current_key = api_key_manager.get_current_key()
             client = genai.Client(api_key=current_key)
-            model = "gemini-2.5-flash-preview-05-20"
+            model = "gemini-1.5-pro-latest"
             contents = [types.Content(role="user", parts=[types.Part.from_text(text=prompt)])]
             generate_content_config = types.GenerateContentConfig(
                 temperature=0.8,
                 top_p=0.95,
                 top_k=64,
-                max_output_tokens=8192,
+                max_output_tokens=32000,
                 response_mime_type="text/plain",
             )
             print(f"Generating article (attempt {attempt + 1})...")
