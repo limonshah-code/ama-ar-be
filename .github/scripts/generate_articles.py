@@ -2493,13 +2493,13 @@ import AmazonProducts from '~/components/ui/AmazonProducts.astro';
 
 ## ARTICLE STRUCTURE REQUIREMENTS:
 
-### 1. OPENING SECTION (150-200 words)
+### 1. OPENING SECTION (70-120 words)
 Write an engaging introduction in Markdown that:
 - Acknowledges the challenge of finding the right {base_keyword}
 - Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
 - Introduces the concept of eco-friendly/safe options if applicable
 - Promises to help readers make an informed decision
-- Use "Best {title}" naturally in the first 100 words
+- Use "{title}" naturally in the first 100 words
 
 ### 2. TOP PICKS SECTION
 Next, include the <TopPicks /> component.
