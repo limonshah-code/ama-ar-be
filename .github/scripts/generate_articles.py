@@ -2512,13 +2512,17 @@ Next, include the <TopPicks /> component.
   - title: Shortened and engaging version of the product title from data (keep it concise and short)
   - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
   - link: Product URL from data
-  - image: Product image_medium or image_large from data
+  - image: Product image_large or image_medium from data
   - color: Cycle through 'indigo', 'teal', 'green', 'purple'
 
 Use actual product data to fill these.
 
 ### 3. PRODUCT REVIEWS SECTION
 Title: "## {len(products)} {title}"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
 
 For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
 For each component:
@@ -2530,10 +2534,10 @@ For each component:
 - description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
 - whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
 - userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
-- features: Array of 4-6 strings based on product features from data, with benefits
+- features: Array of 4-7 strings based on product features from data, with benefits
 - pros: Array of 3-5 strings, positive aspects
 - cons: Array of 2-3 strings, minor drawbacks
-- specs: Array of objects like {{ label: "Feature Name", value: "Value" }} - Generate 3-5 plausible specs from features or infer
+- specs: Array of objects like {{ label: "Feature Name", value: "Value" }} - Generate 3-6 plausible specs from features or infer
 
 Use actual data where possible, generate content based on it.
 
@@ -2563,6 +2567,7 @@ Title: "## What Is the Best Way to Choose {base_keyword}?"
 - Professional tips
 - Common mistakes to avoid
 - When to upgrade vs. budget options
+- add more option if available 
 
 ### 6. FAQ SECTION
 Title: "## FAQ"
@@ -2586,6 +2591,7 @@ Title: "## Final Verdict"
 - Mention budget option for cost-conscious buyers
 - Highlight premium option for quality seekers
 - End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
 
 ## WRITING GUIDELINES:
 
@@ -2607,7 +2613,7 @@ Title: "## Final Verdict"
 - Use H2/H3 headings properly
 - Include internal links where relevant: {json.dumps(relevant_links[:5], indent=2)}
 - Write scannable content with bullets and short paragraphs
-- Target 3,500-5,000 words total
+- Target 4,000-5,000 words total
 
 ## AMAZON PRODUCT DATA TO USE:
 {products_json}
@@ -2619,7 +2625,7 @@ Title: "## Final Verdict"
 4. Maintain consistent quality and structure across all articles
 5. Ensure all product claims are based on the provided data
 6. Create compelling reasons to buy each product
-7. Include proper MDX formatting throughout, with JSX for components and Markdown for text
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
 
 Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively."""
 
