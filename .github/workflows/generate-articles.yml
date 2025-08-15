@@ -135,9 +135,9 @@ name: Generate Articles
 
 on:
   schedule:
-    # Every 2 hours Bangladesh time (+06:00) = every 2 hours starting at UTC+0 hour 0, 2, 4, etc.
-    # Bangladesh time = UTC+6 → adjust if you want a specific local start time
-    - cron: "0 */2 * * *" # This is still UTC (runs at 0, 2, 4, ... UTC)
+    # Every 2 hours full-day (UTC)
+    # BD time = UTC+6 → runs at 6 AM, 8 AM, 10 AM, ... 4 AM BD
+    - cron: "0 */2 * * *"
   workflow_dispatch:
   push:
     branches: ["main"]
