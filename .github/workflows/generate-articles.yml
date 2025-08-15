@@ -2,12 +2,12 @@
 
 # on:
 #   schedule:
-#     - cron: '0 */2 * * *'
+#     - cron: "0 */2 * * *"
 #   workflow_dispatch:
 #   push:
-#     branches: [ main ]
+#     branches: [main]
 #     paths:
-#       - '.github/workflows/**'
+#       - ".github/workflows/**"
 
 # permissions:
 #   contents: write
@@ -45,8 +45,8 @@
 #       - name: 🐍 Set up Python 3.11
 #         uses: actions/setup-python@v5
 #         with:
-#           python-version: '3.11'
-#           cache: 'pip'
+#           python-version: "3.11"
+#           cache: "pip"
 
 #       - name: 📦 Install dependencies
 #         run: |
@@ -129,23 +129,24 @@
 #         run: |
 #           echo "::error:: Article generation workflow failed"
 #           echo "Check logs above for details"
+
+
 name: Generate Articles
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes (for testing only)
+    # Every 2 hours Bangladesh time (+06:00) = every 2 hours starting at UTC+0 hour 0, 2, 4, etc.
+    # Bangladesh time = UTC+6 → adjust if you want a specific local start time
+    - cron: "0 */2 * * *" # This is still UTC (runs at 0, 2, 4, ... UTC)
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: ["main"]
     paths:
-      - '.github/workflows/**'
-      - '.github/scripts/**'  # Added to trigger on script changes
+      - ".github/workflows/**"
 
 permissions:
   contents: write
-  actions: write  # Changed from read to write for better permissions
-  pages: write
-  id-token: write
+  actions: read
 
 jobs:
   generate-articles:
@@ -173,14 +174,14 @@ jobs:
       - name: ⬇️ Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUBTOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: 🐍 Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-          cache: 'pip'
+          python-version: "3.11"
+          cache: "pip"
 
       - name: 📦 Install dependencies
         run: |
@@ -190,7 +191,7 @@ jobs:
             scikit-learn nltk coverage nose pluggy py randomize \
             simplejson python-dotenv
           pip install --no-deps \
-            git+https://${{ secrets.GITHUBTOKEN }}@github.com/Telefonica/amazon-paapi5-sdk.git
+            git+https://${{ secrets.GITHUB_TOKEN }}@github.com/Telefonica/amazon-paapi5-sdk.git
 
       - name: 🗂️ Create required directories
         run: |
@@ -207,36 +208,25 @@ jobs:
 
       - name: 🚀 Run article generation script
         id: generate
+        continue-on-error: true
         run: |
           echo "Running article generator..."
-          echo "Current directory: $(pwd)"
-          echo "Files in .github/scripts/:"
-          ls -la .github/scripts/ || echo "No scripts directory found"
-          
           if [ -f ".github/scripts/generate_articles.py" ]; then
-            echo "Found generate_articles.py, executing..."
             python .github/scripts/generate_articles.py
-            echo "Script execution completed with exit code: $?"
           else
-            echo "::error:: generate_articles.py not found at .github/scripts/generate_articles.py"
-            echo "Searching for Python files..."
-            find . -name "*.py" -type f | head -10
+            echo "::error:: generate_articles.py not found"
+            ls -la .github/scripts/ || echo "No scripts directory"
             exit 1
           fi
 
       - name: 🔎 Check for file changes
         id: verify-changed-files
         run: |
-          echo "Checking for changes..."
-          git status --porcelain
-          
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected:"
-            git status
-          else
+          if git diff --quiet && git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git status
           fi
 
       - name: ✅ Commit and push changes
@@ -244,33 +234,10 @@ jobs:
         run: |
           git config --local user.name 'github-actions[bot]'
           git config --local user.email 'github-actions[bot]@users.noreply.github.com'
-          
-          # Stage all changes
           git add generated-articles/ data/ article-prompts/ .last_keyword_index || true
-          
-          # Check if there are actually staged changes
-          if git diff --staged --quiet; then
-            echo "No staged changes to commit"
-            exit 0
-          fi
-          
-          # Commit with timestamp
-          git commit -m "Auto-generate articles and prompts $(date -u '+%Y-%m-%d %H:%M:%S UTC') [skip ci]"
-          
-          # Push with retry logic
+          git commit -m "Auto-generate articles and prompts $(date -u '+%Y-%m-%d %H:%M:%S UTC') [skip ci]" || exit 0
           for i in 1 2 3; do
-            echo "Push attempt $i/3"
-            if git push; then
-              echo "Push successful"
-              break
-            else
-              echo "Push failed, retrying in 5 seconds..."
-              sleep 5
-              if [ $i -eq 3 ]; then
-                echo "::error:: Failed to push after 3 attempts"
-                exit 1
-              fi
-            fi
+            git push && break || sleep 5
           done
 
       - name: 📋 Create workflow summary
@@ -281,34 +248,19 @@ jobs:
           echo "- **Trigger**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Status**: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Timestamp**: $(date -u)" >> $GITHUB_STEP_SUMMARY
-          
-          # Count files more safely
-          ARTICLE_COUNT=$(find generated-articles -name "*.md" 2>/dev/null | wc -l)
-          PROMPT_COUNT=$(find article-prompts -name "*.txt" 2>/dev/null | wc -l)
-          
-          echo "- **Articles Generated**: $ARTICLE_COUNT" >> $GITHUB_STEP_SUMMARY
-          echo "- **Prompts Saved**: $PROMPT_COUNT" >> $GITHUB_STEP_SUMMARY
-          
-          echo "- **Repository**: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Articles Generated**: $(ls generated-articles/*.md 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Prompts Saved**: $(ls article-prompts/*.txt 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
 
       - name: 🕰️ Keep repository active
         if: always()
         run: |
-          echo "Last workflow run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .github/last_run.txt
-          echo "Trigger: ${{ github.event_name }}" >> .github/last_run.txt
-          echo "Status: ${{ job.status }}" >> .github/last_run.txt
-          
-          # Only commit if file actually changed
-          if ! git diff --quiet .github/last_run.txt 2>/dev/null; then
-            git add .github/last_run.txt
-            git commit -m "Update last run timestamp [skip ci]" || true
-            git push || true
-          fi
+          echo "Workflow completed at $(date -u)" > .github/last_run.txt
+          git add .github/last_run.txt || true
+          git commit -m "Update last run timestamp [skip ci]" || true
+          git push || true
 
       - name: ❌ Notify on failure
         if: failure()
         run: |
           echo "::error:: Article generation workflow failed"
-          echo "::error:: Check the logs above for specific error details"
-          echo "::error:: Common issues: missing files, API rate limits, permission problems"
+          echo "Check logs above for details"
