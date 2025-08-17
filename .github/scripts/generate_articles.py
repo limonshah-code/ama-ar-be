@@ -1450,7 +1450,7 @@
     
 #     products_json = json.dumps(products, indent=2)
     
-#     prompt = f"""Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with Markdown format.
+#     prompt = f"""Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
 
 # ---
 # publishDate: {publish_date}
@@ -2473,7 +2473,7 @@ def create_enhanced_article_prompt(title, article_number, image_url, products):
     
     products_json = json.dumps(products, indent=2)
     
-    prompt = f"""Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with Markdown format.
+    prompt = f"""Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
 
 ---
 publishDate: {publish_date}
