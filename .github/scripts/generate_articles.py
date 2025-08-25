@@ -369,7 +369,7 @@ def create_slug(title):
     return slug
 
 def link_to_keywords(link):
-    url_path = link.split('beacleaner.com/')[-1].strip('/')
+    url_path = link.split('homeessentialsguide.com/')[-1].strip('/')
     keywords = url_path.replace('-', ' ')
     return keywords
 
@@ -416,7 +416,7 @@ def create_enhanced_article_prompt(title, article_number, image_url, products):
     tomorrow = datetime.now() + timedelta(days=1)
     publish_date = tomorrow.strftime("%Y-%m-%dT%H:%M:%SZ")
     slug = create_slug(title)
-    canonical_url = f"https://www.beacleaner.com/{slug}"
+    canonical_url = f"https://www.homeessentialsguide.com/{slug}"
     
     # Extract category and create relevant tags
     category = extract_category_from_title(title)
@@ -817,7 +817,7 @@ def update_keyword_files(all_used_keywords, article_urls):
     else:
         print("Failed to update generated keywords file.")
     existing_links = get_existing_links(LINKS_FILE)
-    old_links = ["https://www.beacleaner.com/how-to-clean-a-ceiling"]
+    old_links = ["https://www.homeessentialsguide.com/how-to-clean-a-ceiling"]
     filtered_old_links = [link for link in old_links if link not in existing_links]
     filtered_new_links = [link for link in article_urls if link not in existing_links]
     if filtered_old_links or filtered_new_links:
@@ -915,7 +915,7 @@ def main():
         try:
             # Create URL slug and article URL
             slug = create_slug(title)
-            article_url = f"https://www.beacleaner.com/{slug}"
+            article_url = f"https://www.homeessentialsguide.com/{slug}"
             print(f"📝 Article URL: {article_url}")
             
             # Generate and upload header image
