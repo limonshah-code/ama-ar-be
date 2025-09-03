@@ -559,8 +559,7 @@ Title: "## Final Verdict"
 
 **Tone & Voice:**
 - Conversational and helpful
-- Authoritative but approachable
-- Use “we recommend” or clearly explain why it’s the best choice to build credibility
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
 - Address reader directly with "you"
 
 **Content Principles:**
@@ -568,8 +567,25 @@ Title: "## Final Verdict"
 - Use specific details from the product data
 - Include safety considerations
 - Balance enthusiasm with honest assessment
-- Natural keyword integration
-- Do not use any double quotes (") in any descriptions, texts, or fields throughout the article
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+Generate a Title
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes.
+
+Generate an Excerpt:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword "best steam cleaner for bathroom grout".
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-160 characters.
+  - Constraint: Do not use any double quotes.
 
 **SEO Structure:**
 - Use H2/H3 headings properly
