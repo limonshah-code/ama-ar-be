@@ -409,7 +409,7 @@ def extract_category_from_title(title):
         if any(keyword in title_lower for keyword in keywords):
             return category.capitalize()
     
-    return 'General'
+    return 'Reviews'
 
 def create_enhanced_article_prompt(title, article_number, image_url, products):
     """Enhanced article prompt following the comprehensive template structure"""
@@ -443,7 +443,7 @@ author: "Mason Everett"
 title: "{title}"
 excerpt: "Discover the {base_keyword} to enhance your experience. Find top solutions based on thorough testing and reviews."
 image: {image_url}
-category: "{category}"
+category: "Reviews"
 tags:
 {chr(10).join(f'  - {tag}' for tag in tags)}
 metadata:
