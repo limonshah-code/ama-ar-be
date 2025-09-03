@@ -578,13 +578,13 @@ Generate and use Seo Title in the article must:
 
 Generate and use Seo Excerpt in the article must:
 - Purpose: Function as a meta description designed to attract clicks from search engine results pages.
-- Keyword: Must include the primary keyword "best steam cleaner for bathroom grout".
+- Keyword: Must include the primary keyword.
 - Structure:
   - Hook: Start with a question that addresses the reader's pain point directly.
   - Value Proposition: State your authority and what you did.
   - Benefit: Promise a clear, desirable outcome.
   - Tone: Must be conversational and helpful, directly addressing the reader with "you".
-  - Length: Keep it concise and impactful, between 140-160 characters.
+  - Length: Keep it concise and impactful, between 140-150 characters.
   - Constraint: Do not use any double quotes and colon also.
 
 **SEO Structure:**
