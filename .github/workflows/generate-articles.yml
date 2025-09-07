@@ -2,10 +2,11 @@
 
 # on:
 #   schedule:
+#     # Every 2 hours full-day (UTC)
 #     - cron: "0 */2 * * *"
 #   workflow_dispatch:
 #   push:
-#     branches: [main]
+#     branches: ["main"]
 #     paths:
 #       - ".github/workflows/**"
 
@@ -39,7 +40,7 @@
 #       - name: ⬇️ Checkout repository
 #         uses: actions/checkout@v4
 #         with:
-#           token: ${{ secrets.GITHUBTOKEN }}
+#           token: ${{ secrets.GITHUB_TOKEN }}
 #           fetch-depth: 0
 
 #       - name: 🐍 Set up Python 3.11
@@ -56,13 +57,13 @@
 #             scikit-learn nltk coverage nose pluggy py randomize \
 #             simplejson python-dotenv
 #           pip install --no-deps \
-#             git+https://${{ secrets.GITHUBTOKEN }}@github.com/Telefonica/amazon-paapi5-sdk.git
+#             git+https://${{ secrets.GITHUB_TOKEN }}@github.com/Telefonica/amazon-paapi5-sdk.git
 
 #       - name: 🗂️ Create required directories
 #         run: |
 #           mkdir -p generated-articles
 #           mkdir -p data
-#           mkdir -p article-prompts  # Added to ensure directory exists
+#           mkdir -p article-prompts
 
 #       - name: 🧪 Check for required files
 #         run: |
@@ -130,28 +131,34 @@
 #           echo "::error:: Article generation workflow failed"
 #           echo "Check logs above for details"
 
-
 name: Generate Articles
 
 on:
-  schedule:
-    # Every 2 hours full-day (UTC)
-    # BD time = UTC+6 → runs at 6 AM, 8 AM, 10 AM, ... 4 AM BD
-    - cron: "0 */2 * * *"
   workflow_dispatch:
   push:
     branches: ["main"]
     paths:
       - ".github/workflows/**"
+  schedule:
+    # Every 2 hours UTC
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: write
   actions: read
 
 jobs:
+  # 🕒 Test job to confirm cron fires
+  test-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print trigger time
+        run: echo "Schedule triggered at $(date -u)"
+
   generate-articles:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    needs: test-schedule
 
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

@@ -40,7 +40,7 @@ KEYWORDS_FILE = "data/keywords.txt"
 PROCESSED_KEYWORDS_FILE = "data/processed_keywords.txt"
 GENERATED_KEYWORDS_FILE = "data/keywords-generated.txt"
 LINKS_FILE = "data/links.txt"
-ARTICLES_PER_RUN = 25
+ARTICLES_PER_RUN = 2
 TOP_LINKS_COUNT = 5
 
 # Ensure output directories exist
