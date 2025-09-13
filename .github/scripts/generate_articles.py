@@ -462,6 +462,7 @@ Write an engaging introduction in Markdown that:
 - Introduces the concept of eco-friendly/safe options if applicable
 - Promises to help readers make an informed decision
 - Use "{title}" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
 
 ### 2. TOP PICKS SECTION
 Next, include the <TopPicks /> component.
