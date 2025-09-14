@@ -570,24 +570,6 @@ Title: "## Final Verdict"
 - Balance enthusiasm with honest assessment
 - Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
 
-Generate and use Seo Title in the article must:
-- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
-- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
-- Tone: The title should be clear, informative, and engaging.
-- Length: Aim for 50-60 characters.
-- Constraint: Do not use any double quotes and colon also.
-
-Generate and use Seo Excerpt in the article must:
-- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
-- Keyword: Must include the primary keyword.
-- Structure:
-  - Hook: Start with a question that addresses the reader's pain point directly.
-  - Value Proposition: State your authority and what you did.
-  - Benefit: Promise a clear, desirable outcome.
-  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
-  - Length: Keep it concise and impactful, between 140-150 characters.
-  - Constraint: Do not use any double quotes and colon also.
-
 **SEO Structure:**
 - Use H2/H3 headings properly
 - Include internal links where relevant: {json.dumps(relevant_links[:5], indent=2)}
@@ -605,7 +587,23 @@ Generate and use Seo Excerpt in the article must:
 5. Ensure all product claims are based on the provided data
 6. Create compelling reasons to buy each product
 7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
 
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
 Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively."""
 
     return prompt
