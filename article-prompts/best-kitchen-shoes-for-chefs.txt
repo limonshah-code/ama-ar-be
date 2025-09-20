@@ -1,0 +1,340 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-09-21T08:48:57Z
+author: "Mason Everett"
+title: "Best Kitchen Shoes For Chefs"
+excerpt: "Discover the kitchen shoes for chefs to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1758358111/blog_image_1758358111_ymf5jl.webp
+category: "Reviews"
+tags:
+  - kitchen shoes for chefs
+  - Reviews products
+  - amazon reviews
+  - buying guide
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-kitchen-shoes-for-chefs
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right kitchen shoes for chefs
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Kitchen Shoes For Chefs" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Kitchen Shoes For Chefs"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Kitchen Shoes For Chefs"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy kitchen shoes for chefs?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose kitchen shoes for chefs?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best kitchen shoes for chefs for beginners?"
+- "How much should I spend on kitchen shoes for chefs?"
+- "What features are most important in kitchen shoes for chefs?"
+- "How do I maintain my kitchen shoes for chefs?"
+- "Are expensive kitchen shoes for chefs worth it?"
+- "What brands make the best kitchen shoes for chefs?"
+- "How long do kitchen shoes for chefs typically last?"
+- "Can I find good kitchen shoes for chefs on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Include internal links where relevant: [
+  "https://www.homeessentialsguide.com/best-kitchen-shoes-for-men",
+  "https://www.homeessentialsguide.com/best-knife-set-for-chefs",
+  "https://www.homeessentialsguide.com/best-steel-for-chefs-knives",
+  "https://www.homeessentialsguide.com/best-kitchen-shoes-for-flat-feet",
+  "https://www.homeessentialsguide.com/best-kitchen-shoes-for-plantar-fasciitis"
+]
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B09QLGQHGM",
+    "title": "Avia Flame Men's Clogs, Slip Resistant Shoes for Men Food Service, Non Slip Restaurant and Chef Shoes Men Slip Resistant for Kitchen Work or Nursing - Black, 10 Medium",
+    "url": "https://www.amazon.com/dp/B09QLGQHGM?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Avia",
+    "features": [
+      "NON SLIP KITCHEN SHOES FOR MEN - Avia work clogs in uniform friendly black are ideal for men who are on their feet all day and night, need strong slip resistance, and prefer an easy slip-on style when on the clock. Also great for the garden.",
+      "MENS SLIP RESISTANT WORK SHOES - Our oil & slip resistant technology provides an enhanced grip for kitchen workers, medical or hospital jobs, and anyone who needs shoes with sure footing on slippery surfaces. Tested in accordance with ASTM F2913.",
+      "ALL-DAY NONSLIP COMFORT CLOG - The anatomical cradle technology combined with a molded EVA sock and a wide toe creates superior durability and relief comfort with a supportive fit. The low 1 inch heel does not interfere with your steps.",
+      "EASY TO CLEAN - Messes happen in the workplace, but it's no problem for these Avia non slip clogs. Just wipe them with soap and water! The quick dry upper on these slip proof shoes for men won\u2019t disrupt your shift or your day.",
+      "MEN CLOGS - Available in size 7 to 15, these slip resistant work shoes for men with ventilation make great garden clogs, nurse clogs, hospital shoes or non slip shoes for men restaurant."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31DhK3U+bYL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31DhK3U+bYL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31DhK3U+bYL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CJ91DW86",
+    "title": "Bruno Marc Men's Non Slip Work Shoes Walking Zapatos Trabajo Black & Lightweight Food Service Chef Kitchen Restaurant Resistant Sneakers,Size 10.5,Black,SBWO2302M",
+    "url": "https://www.amazon.com/dp/B0CJ91DW86?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bruno Marc",
+    "features": [
+      "Confident Steps: These men's food service shoes are certified by ASTM F1677 for slip resistance on slippery, greasy, or wet surfaces. This work shoes treated to repel liquids from the surface, can prevent minor splashes of water.Walk and move with assurance in any environment.",
+      "Comfort & Support: Provides your feet with cushioning and the shock-absorbing EVA foam midsole and plush PU insole featuring arch support. Long hours on your feet are no longer a problem with these work shoes.",
+      "Lightweight Shoes: Each shoe weighs only 9.88oz, these non-slip shoes combat foot fatigue and your feet will thank you especially when standing or walking for long hours.",
+      "Move Freely: The airy and stretchy upper ensures your feet can breathe while allowing effortless movement. Stay comfortable, no matter how busy your day gets.",
+      "Your Ideal Work Companion: Crafted for those working in bars, restaurants, kitchen, yards, and beyond, these work shoes offer cushioned comfort and outstanding traction that makes your workdays easier."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31sVvFI59yL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31sVvFI59yL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31sVvFI59yL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DW3ZM4ZF",
+    "title": "Armadillo Chef Shoes for Men 2025 Newly Slip Resistant, Lightweight Waterproof Armadillo Clogs for Women, Ideal Work Shoes for Kitchens A Black",
+    "url": "https://www.amazon.com/dp/B0DW3ZM4ZF?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Snugeasy",
+    "features": [
+      "\u3010Non-Slip Traction\u3011Armadillo chef shoes men stay safe on slippery and oily floors Outsole grips the ground securely, and ergonomic construction ensures stability and safety wherever you tread",
+      "\u3010Easy to Clean\u3011The kitchen shoes feature a slip-resistant, waterproof upper that repels spills, oil, and stains, making cleanup quick and easy. Women's work shoes can be easily wiped down with a damp cloth to keep them fresh and ready for the next shift",
+      "\u3010All-Day Comfort\u3011Our armadillo footwear clogs ultra-light, flexible 3cm cloud sole encourages a natural walking pattern, helping to maintain proper foot alignment. This design effectively reduces common discomfort in your knees, hips, back, ankles, and feet",
+      "\u3010Wide Toe Box\u3011The wide toe box provides foot space and allows them to relax in their natural position. our clogs provide ample space for breathability and movement, They strengthen and increase the flexibility of your arches and help align your body for natural stability and balance",
+      "\u3010Cushioned Soles\u3011Unlike Shoes with stiff soles can lead to painful nerve-related issues and fail to support your body's natural movement throughout the day. Relieve foot pain with every step with cushioned soles that embrace your feet in cloud-like comfort"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41VwA-RSXLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41VwA-RSXLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41VwA-RSXLL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DL2ZLH73",
+    "title": "AVW Womens Non Slip Work Shoes Water Resistant Walking Sneakers Food Service Chef Kitchen Shoes Black",
+    "url": "https://www.amazon.com/dp/B0DL2ZLH73?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "AVW",
+    "features": [
+      "CUSHIONED SOLE: Women's non-slip work shoes use EVA midsole with non-slip rubber patches to provide cushioning and soft support to relieve fatigue from long hours of standing.",
+      "NON-SLIP SOLE\uff1aThe soles have excellent anti-slip and anti-oil features with strong grip, allowing you to get the job done safely in slippery environments, such as restaurant kitchens.",
+      "ARCH SUPPORT MEMORY FOAM INSOLE: Women's chef shoes feature a removable memory foam insole with arch support to relieve pressure from long hours of standing and enhance fit and comfort.",
+      "BREATHABLE AND WATER RESISTANT UPPER: The upper of the women's food service shoes is made of high-quality knitted sock fabric, as well as special anti-liquid treatment, which is breathable and water resistant , so that your feet are comfortable all day long.",
+      "SUITABLE FOR MULTIPLE OCCASIONS: These non-slip work shoes can do a lot of work, suitable for kitchens, restaurants, nursing homes, laboratories, factories, gas stations, warehouses and other work environments that require long periods of standing, and the fashionable design is also perfect for outdoor sports as well as daily traveling activities."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41yZ0Vyzq8L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41yZ0Vyzq8L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41yZ0Vyzq8L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CFF3DZX3",
+    "title": "HISEA Non Slip Work Shoes for Men, Water & Oil Resistant Leather Slip on Kitchen Shoes, Comfortable Mens Slip Resistant Chef Shoes for Restaurant Food Service, Lightweight Walking Shoes, Black",
+    "url": "https://www.amazon.com/dp/B0CFF3DZX3?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "HISEA",
+    "features": [
+      "Comfort & Worker Friendly: Get comfort, safety with this HISEA non slip shoes for men food service. Enjoy reduced strain on your body with the shock-absorbing EVA midsole. The flexible, anti-fatigue, and shock-absorbing removable foam insole provides additional comfort. Convenient slip-on design with dual side stretch panels, no more worries about shoelaces every day.",
+      "Superior Slip Resistance: Conquer slippery surfaces confidently! The thick slip resistant rubber outsole of this kitchen shoes for men provides excellent traction, minimizing the risk of accidental falls on oily floors or around spilled liquids. Enhanced non slip layers ensure durability in various environments, beyond that our slip on shoes for men meeting ASTM F1677-05 standard.",
+      "Water & Stain Resistant: Stay dry and clean, perfect as mens slip resistant work shoes. The durable and soft synthetic leather upper meets occupational needs. The added Special Chemical Coating (SCC tech.) causes water drops and stains to form beads on the surface, making this mens slip on sneakers easy to clean and quick to dry.",
+      "Memory Foam Cushioning: Memory foam molds to the unique contours of your feet, and relieves pressure points, while absorbing shock with each step on this work shoe. Experience unmatched comfort throughout your workday with this, say goodbye to fatigue.",
+      "Perfect Fit & Quality Assurance: Ensure the right fit by carefully checking the size chart before buying. We prioritize your satisfaction and offer One-Year Quality Assurance for peace of mind."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41OL9rsz0iL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41OL9rsz0iL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41OL9rsz0iL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F8QG9XPK",
+    "title": "VikoViren Non Slip Work Shoes for Men Restaurant or Food Service Sneakers Breathable Lightweight Water Resistant Walking Shoes Chef Kitchen Footwear Black 10.5",
+    "url": "https://www.amazon.com/dp/B0F8QG9XPK?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VikoViren",
+    "features": [
+      "NON-SLIP: These slip resistant work shoes for men have your back with patterned rubber outsoles, giving you excellent traction on wet, oily, and greasy floors, minimizing the risk of slips and falls so you can hustle worry-free in busy spots.",
+      "SLIP ON EASY: With slip-on design, these comfortable work sneakers allow for easy wear and removal, ensuring your quick transitions during busy workdays. Ideal for fast-paced environments like restaurants, kitchens, warehouses, and more.",
+      "WATER-RESISTANT: These chef shoes men are made with high-quality, water and spill-resistant materials to keep your feet dry and protected in the demanding kitchen environment.",
+      "COMFORT & SUPPORTIVE: Our black kitchen shoes featuring breathable, lightweight knitted upper and shock-absorption EVA midsole to keep your feet cool and without fatigue through those long shifts.",
+      "LONG-LASTING DURABILITY: Built to withstand the rigors of daily kitchen work, these restaurant shoes feature robust construction for extended durability and reliable performance."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/310HFr4WWSL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/310HFr4WWSL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/310HFr4WWSL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D29FFJ28",
+    "title": "Taquco Non Slip Work Shoes for Mens Slip On Sneakers Waterproof Chef Kitchen Shoe Hands Free Comfortable Slip Resistant Restaurant Footwear Hombre Zapatos de Trabajo (Black,9)",
+    "url": "https://www.amazon.com/dp/B0D29FFJ28?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Taquco",
+    "features": [
+      "SLIP ON SHOES MEN: The slip on shoes hands free just step in and walk away. This durable work shoe is perfect for wearing in various environments, making you feel comfortable and confident in your work.",
+      "NON SLIP MENS WORK SHOES: Our thick rubber soles provide excellent grip on wet and greasy surfaces, keeping you safe and stable on your feet.",
+      "WATERPROOF KITCHEN SHOES: The surface of the slip resistant shoes can effectively protect your feet from water and oil to keep them dry and comfortable all day. These chef shoes easy to clean, and quick to dry.",
+      "LIGHTWEIGHT: Black chef shoes are perfect for people who are on their feet all day. Weight (per shoe): 0.7 lb (based on size Men's 10).",
+      "Dual Comfort: Memory foam molds to the unique contours of your feet, and relieves pressure points, while absorbing shock with each step on this waterproof shoe. Experience unmatched comfort throughout your workday with this, say goodbye to fatigue."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41924Sc1tOL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41924Sc1tOL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41924Sc1tOL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FG2H7KBS",
+    "title": "Chef Shoes Men Women Non Slip Work Shoes Water Proof Slip Resitant Clogs for Nursing Kitchen Restaurant Food Service Black",
+    "url": "https://www.amazon.com/dp/B0FG2H7KBS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "TEYTAP",
+    "features": [
+      "Non Slip Clogs: Non-slip work shoes are built for busy kitchens, bustling restaurants, and slippery workshops. Featuring oil-resistant soles and advanced traction, they keep you steady on greasy floors. Perfect for chefs, waiters, and anyone working in damp or wet environments.",
+      "Waterproof & Easy to Clean: Made with Waterproof material, these non slip shoes wipe clean instantly, making them perfect for messy kitchens, car washes, and labs.",
+      "Soft & Secure Fit: Designed for comfort and stability, these lightweight slip-resistant work shoes feature a flexible sole and slip-on style, making them a favorite for nurses, servers, and industrial workers who need quick, reliable footwear.",
+      "Arch Support: These lightweight and comfortable work shoes feature arch support and a wide toe box design. The removable, highly elastic insole adds comfort and reduces fatigue during long shifts. Perfect for nurses, hospital staff, warehouse workers, and anyone who needs to stand all day.",
+      "Wide Application: From hospital corridors to factory floors, care homes to petrol stations, these chef shoes are designed for diverse work environments. Great for outdoor walking, commuting, or long shifts in restaurants and warehouses."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31d13j-PgyL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31d13j-PgyL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31d13j-PgyL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F2DV7F8G",
+    "title": "TEYTAP Non Slip Work Shoes for Men Women Waterproof Slip Resistant Shoes Kitchen Chef Restaurant Lightweight Slip on Loafers",
+    "url": "https://www.amazon.com/dp/B0F2DV7F8G?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "TEYTAP",
+    "features": [
+      "Slip-Proof Performance: These non-slip work shoes are built for busy kitchens, bustling restaurants, and slippery workshops. Featuring oil-resistant soles and advanced traction, they keep you steady on greasy floors. Perfect for chefs, waiters, and anyone working in damp or wet environments.",
+      "Waterproof & Easy to Clean: Made with stain-resistant microfiber leather, these waterproof shoes wipe clean instantly, making them perfect for messy kitchens, car washes, and labs. The waterproof construction protects against spills and light moisture.",
+      "Soft & Secure Fit: Designed for comfort and stability, these lightweight slip-resistant work shoes feature a flexible sole and slip-on style, making them a favorite for nurses, servers, and industrial workers who need quick, reliable footwear.",
+      "All-Day Comfort for Professionals: Lightweight and breathable, these kitchen shoes are designed with arch support and a flexible sole to reduce fatigue during long shifts. Ideal for nurses, hospital staff, warehouse workers, and anyone on their feet all day.",
+      "Wide Application: From hospital corridors to factory floors, care homes to petrol stations, these chef shoes are designed for diverse work environments. Great for outdoor walking, commuting, or long shifts in restaurants and warehouses."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41YBC8D3FXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41YBC8D3FXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41YBC8D3FXL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BRCVVJN7",
+    "title": "LARN SAFETY Non Slip Shoes for Men Slip-Resistant Chef Shoes Waterproof Kitchen Food Service Work Footwear Restaurant Walking Wide/10.5/Black",
+    "url": "https://www.amazon.com/dp/B0BRCVVJN7?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LARN SAFETY",
+    "features": [
+      "SLIP RESISTANT WORK SHOES: LARN SAFETY slip resistant footwear are crafted with extra grip to give you an edge over slippery surfaces.They help to secure sure footing in a slippery environment like a kitchen or restaurant.",
+      "ALL-DAY COMFORT: Premium insole provides long-lasting comfort and support. Shock-absorbing midsole reduces strain on the body during activity.",
+      "EASY TO CLEAN & DRY QUICKLY: The upper is made of leather material which is waterproof, easy to clean and dry quickly.",
+      "LIGHTWEIGHT & BREATHABLE: LARN SAFETY work shoes are made with lightweight and breathable materials, ensuring comfort and preventing excessive heat buildup during long hours of wear. The breathability of the shoes helps keep your feet dry and comfortable.",
+      "VERSATILE USE: These work shoes are specifically designed for use in restaurants, the food service industry, hospitals, clinics, and other work environments. Whether you're a chef, waiter/waitress, or healthcare professional, you can rely on these shoes to provide stability and comfort during your work."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41gsCbfsmbL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41gsCbfsmbL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41gsCbfsmbL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
