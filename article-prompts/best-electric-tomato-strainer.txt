@@ -1,0 +1,343 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-09-26T03:12:05Z
+author: "Mason Everett"
+title: "Best Electric Tomato Strainer"
+excerpt: "Discover the electric tomato strainer to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dky6urpy2/image/upload/v1758769899/blog_image_1758769899_m0o4pp.webp
+category: "Reviews"
+tags:
+  - electric tomato strainer
+  - Reviews products
+  - amazon reviews
+  - buying guide
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-electric-tomato-strainer
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right electric tomato strainer
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Electric Tomato Strainer" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Electric Tomato Strainer"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Electric Tomato Strainer"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy electric tomato strainer?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose electric tomato strainer?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best electric tomato strainer for beginners?"
+- "How much should I spend on electric tomato strainer?"
+- "What features are most important in electric tomato strainer?"
+- "How do I maintain my electric tomato strainer?"
+- "Are expensive electric tomato strainer worth it?"
+- "What brands make the best electric tomato strainer?"
+- "How long do electric tomato strainer typically last?"
+- "Can I find good electric tomato strainer on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Include internal links where relevant: [
+  "https://www.homeessentialsguide.com/best-pan-for-tomato-sauce",
+  "https://www.homeessentialsguide.com/best-pot-for-tomato-sauce",
+  "https://www.homeessentialsguide.com/best-sink-drain-strainer",
+  "https://www.homeessentialsguide.com/best-sink-strainer-basket",
+  "https://www.homeessentialsguide.com/best-pasta-pot-with-strainer"
+]
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B001TV95D2",
+    "title": "OMRA Spremy Electric Tomato Strainer 1/4 HP Model 850",
+    "url": "https://www.amazon.com/dp/B001TV95D2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Imperia",
+    "features": [
+      "Automatically Extracts the Tomato Puree, separating it from the seeds and the skin - Fresh or Cooked",
+      "Production up to 330 pounds (150 kg) of tomatoes for hour",
+      "Die-cast metal housing, stainless steel hopper, Food Grade Nylon Auger (worm)",
+      "Rotation of the worm 110 RPM - masticating style to preserve enzymes",
+      "(1/4 HP) Motor with Cooling Fan - Made in Italy"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41P0z17m8nL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41P0z17m8nL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41P0z17m8nL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F1MP2J66",
+    "title": "ARINOO Electric Tomato Strainer 450W Commercial Grade Tomato Sauce Maker Milling Machine with 304 Stainless Steel, Pure Copper Motor, 90\u2013160kg/h Output \u2013 Food Strainer for Jam & Sauce, 110V",
+    "url": "https://www.amazon.com/dp/B0F1MP2J66?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "ARINOO",
+    "features": [
+      "\u3010Automatic Food Straining, No Filter Needed\u3011 Features a dual-channel design that separates pulp and waste in one go\u2014delivering ultra-smooth, seed-free tomato sauce or jam with no need for additional filtering tools.",
+      "\u3010450W Pure Copper Motor for Fast Extraction\u3011 High-speed motor ensures powerful performance and quick juice output (90\u2013160 kg/h), while built-in noise-reduction keeps operation quiet and smooth.",
+      "\u3010304 Stainless Steel \u2013 Built to Last\u3011 Crafted from high-grade 304 stainless steel, this tomato strainer resists corrosion, deformation, and rust\u2014even in damp environments\u2014ensuring durability for years.",
+      "\u3010Quick Assembly & Easy to Clean\u3011 Easily disassembles for cleaning with no tools required. Complete accessories and detailed video instructions help you set up and clean up in minutes.",
+      "\u30105-Year Warranty & Lifetime Support\u3011 We stand behind our products with a 5-year factory warranty and lifetime customer service. We also stock replacement parts for a wide range of current and past models."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41xZwjs+0TL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41xZwjs+0TL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41xZwjs+0TL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FFMVDT88",
+    "title": "\u200b\u200bAIRMSEN Electric Meat Grinder & Tomato Sauce Press Maker with Strainer - Heavy Duty Food Mill Machine for Grinding Meat, Making Tomato Sauce, Sausage, Kibbeh for Home Kitchen\u200b Use",
+    "url": "https://www.amazon.com/dp/B0FFMVDT88?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "AIRMSEN",
+    "features": [
+      "All-Metal Construction for Durability -- The body is made of full stainless steel (even the bottom) and has a strong metal crankshaft instead of plastic, that helps reduce shaking and wear. The copper motor can reach up to 3000W at peak power and grinds up to 2kg of meat per minute. The stainless steel body and 34 holes at the bottom and back help release heat faster, preventing overheating and improving performance.\u3010Not Dishwasher Safe\u3011",
+      "5-in-1 Kitchen Workhorse -- More than just a meat grinder! Change the parts and it becomes a sausage maker, kibbeh tool, cheese & veggie shredder, or tomato strainer. One compact machine replaces five separate tools\u2014saving you space and money in your kitchen.\u3010Not Dishwasher Safe\u3011",
+      "Easy and Safe to Use -- Simply place meat in the hopper and switch it on to grind\u2014no need to worry about cutting your fingers. The dual switch design protects the circuit and prevents accidental start of the machine. The reverse button helps fix jams. Great for families and first-time users.",
+      "Great for Home Cooking & Meal Prep -- Comes with 2 blades, 3 grinding plates (medium hole, large hole, fan-shaped), and 3 shredding tools (thin shred, coarse shred, sliced). You can choose how fine or thick you want your meat and veggies. No mixing of flavors\u2014each tool is used separately.",
+      "Unique Tomato Strainer Kit -- Separate tomato into pulp & juice and tomato seeds & peel, saving you the hassle of removing seeds and skins, and making tomato sauce with ease",
+      "Cheese & Vegetable Shredder Kit -- The 3 cutting drums are perfect for shredding and slicing (2mm fine shreds, 5mm coarse shreds, and 4mm thick slices), easy to handle cheese, cucumbers, radishes, potatoes, and other vegetables",
+      "Friendly Reminder -- \u2460Hand wash only\u3010Not Dishwasher Safe\u3011. \u2461Chill meat a little before grinding for better results. Don\u2019t use bones or thick tendons. \u2462Not for business use, but perfect for home cooks who want fresh, tasty food.",
+      "Package Contents -- 1x Grinder body, 1x meat grinder head, 1x meat grinder tray, 1x meat pusher, 2x stainless steel blades, 3x grinding plates(medium hole, large hole, fan-shaped), 3x cutting drums(thin shred, coarse shred, sliced), 1x sausage kit, 1x kibbeh kit, 1x tomato strainer kit, 1x vegetable cutter kit"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51CfBHK-61L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51CfBHK-61L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51CfBHK-61L._SL75_.jpg"
+  },
+  {
+    "asin": "B083FFBPY2",
+    "title": "VBENLEM 110V Electric Tomato Strainer 370W Commercial Grade Tomato Milling Machine Stainless Steel Tomato Press and Strainer 90-160 Kg/H Pure Copper Motor Food Strainer and Sauce Maker",
+    "url": "https://www.amazon.com/dp/B083FFBPY2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VBENLEM",
+    "features": [
+      "DURABLE MATERIAL: Food strainer and sauce maker, made of full stainless steel. The parts that touched with food are all 304 stainless steel. Easy to disassemble and easy to clean.",
+      "POWERFUL MOTOR: Equipped with a 370W international pure copper motor, surrounded by a stainless steel outer casing for protection.",
+      "CONSIDERATE FUNNEL & TROUGH: Adopts 9-inch diameter funnel for sufficient feeding of fruits; angle adjustable trough for smooth discharging of sauce; trough brace for preventing splashing.",
+      "EASY CLEANING & QUIET: Able to operate with low noise; with a waterproof rating of level II, this tomato sauce maker is easy cleaning.",
+      "VERSATILE APPLICATION: This tomato sauce maker machine is widely used to make ketchup, strawberry sauce, blueberry sauce, and other jams."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/419TZrqmyDL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/419TZrqmyDL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/419TZrqmyDL._SL75_.jpg"
+  },
+  {
+    "asin": "B0C4NCM8HB",
+    "title": "Newhai 450W Electric Tomato Strainer Commercial Tomato Milling Machine Stainless Steel Food Press Sauce Maker Food Squeezer Machine 110volt",
+    "url": "https://www.amazon.com/dp/B0C4NCM8HB?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Newhai",
+    "features": [
+      "HIGH EFFICIENCY--- The stainless steel funnel has a generous diameter of 8.4 inches, enabling it to handle a substantial amount of raw materials simultaneously. Equipped with a high-powered 450W motor, the funnel exhibits exceptional work efficiency and has the capacity to produce up to 110 pounds of jam within an hour, thereby saving you valuable time and energy.",
+      "EASY TO ASSEMBLE AND USE--- With easy-to-follow instructions, installation of the trough, filter, screw feeder, and funnel is hassle-free. To make delicious tomato sauce, simply place the cut tomatoes into the funnel, apply pressure with the pestle, and the machine will automatically process them into delectable tomato sauce.",
+      "SAFE ASSURANCE--- The upgraded tomato sauce maker is equipped with a casing protection box that encases the motor, thereby delivering enhanced safety compared to models with exposed motors. The machine also comes with a pestle that lets you effortlessly pound the tomatoes during operation without worrying about injuring your hands.",
+      "EASY TO CLEAN--- Disassembling each part of the machine for cleaning purposes is effortless and can be accomplished quickly. Simply rinse each part with clean water (except for the motor), wipe the surface of the machine, allow it to air dry naturally, and it'll be ready for use the next time around.",
+      "WIDE APPLICATION--- This versatile electric tomato sauce making machine offers more than just homemade tomato sauce; you can also create other delicious fruit jams like strawberry and blueberry. This makes it an excellent choice for commercial use in establishments such as dessert shops and fruit markets."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/512F3YuQjcL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/512F3YuQjcL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/512F3YuQjcL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F2HQW147",
+    "title": "EJWOX 450W Stainless Steel Electric Jam Maker, Commercial Tomato Milling Machine Food Strainer Sauce Squeezer for Soft Fruits Home Kitchen Restaurant",
+    "url": "https://www.amazon.com/dp/B0F2HQW147?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "EJWOX",
+    "features": [
+      "Powerful 450W Motor & High Efficiency: Process up to 110 lbs of jam per hour! The large 8.4-inch wide funnel handles whole soft fruits and vegetables like tomatoes and strawberries with ease, saving you time and effort.",
+      "Food-Grade Stainless Steel & Durable: Constructed entirely from corrosion-resistant 304 stainless steel for superior durability, food safety, and effortless cleaning. Built to last in any kitchen.",
+      "User-Friendly & Anti-Clog Design: Features an angled trough and trumpet filter to minimize splashes and prevent clogging while seamlessly separating pulp from seeds and skins for smooth, seedless results.",
+      "Safe Operation with Overheat Protection: The fully enclosed motor ensures safety. An integrated heat dissipation system prevents overheating. For best performance, use in 15-minute cycles.",
+      "Versatile for Home & Commercial Use: Perfect for making homemade tomato sauce, strawberry jam, apple butter, and purees. Ideal for home kitchens, dessert shops, and farmers' markets."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31ijBDA8T-L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31ijBDA8T-L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31ijBDA8T-L._SL75_.jpg"
+  },
+  {
+    "asin": "B091CH76RX",
+    "title": "ZXMOTO Electric Tomato Strainer Machine 110V Commercial Stainless Steel Food Milling Press and Strainer Machine,Food Strainer and Sauce Maker, Fruit Press Squeezer",
+    "url": "https://www.amazon.com/dp/B091CH76RX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "ZXMOTO",
+    "features": [
+      "Safety - This food strainer and sauce maker made of stainless steel material, durable and sturdy. Features with non slip feet, provide more stability.",
+      "Considerate Design - This sauce maker features with an angle adjustable trough to discharge sauce and there is a trough brace to prevent splashing, keep kitchen tidy.",
+      "Powerful - This tomato sauce maker machine equipped with a 370w copper motor, help you squeeze fruit efficiently.",
+      "Easy to Wash - This sauce maker is detachable for easy washing.",
+      "Wide Application - This electric sauce maker is used to make tomato sauce, strawberry sauce, blueberry sauce, and other jams. Perfect for commercial and home use."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51j15fglSgL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51j15fglSgL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51j15fglSgL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FPQNZN33",
+    "title": "YIPONYT 450W Electric Tomato Sauce Maker, Commercial Tomato Milling Machine for Purees/Jams, Stainless Steel Food Press Sauce Maker Food Squeezer Machine, 110V",
+    "url": "https://www.amazon.com/dp/B0FPQNZN33?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "YIPONYT",
+    "features": [
+      "\u3010Powerful Function\u3011The tomato strainer is equipped with a powerful 450-watt motor that delivers strong power to process large quantities of tomatoes (not included) quickly. The machine also comes with a mortar and pestle, allowing you to effortlessly mash tomatoes during operation without worrying about hurting your hands",
+      "\u3010Easy To Assemble and Use\u3011With easy-to-follow instructions, installation of the trough, filter, screw feeder, and funnel is hassle-free. To make delicious tomato sauce, simply place the cut tomatoes into the funnel, apply pressure with the pestle, and the machine will automatically process them into delectable tomato sauce",
+      "\u3010Thoughtful Design\u3011Our food mill for tomato sauce is equipped with a large funnel that provides enough space to hold a large amount of tomatoes (not included). The adjustable trough ensures that the sauce drains out smoothly, which is very thoughtful. In addition, the slot holder prevents spills",
+      "\u3010High Quality Material\u3011This tomato sauce maker machine is made of stainless steel, which is impact-resistant and does not deform, which ensures your long-term use. This sauce strainer can be widely used to make ketchup, strawberry jam, blueberry jam and other sauces. The sturdy base provides stable support for the tomato juicer so that it will not shake easily",
+      "\u3010Wide Application\u3011This versatile electric tomato sauce making machine offers more than just homemade tomato sauce; you can also create other delicious fruit jams like strawberry and blueberry. This makes it an excellent choice for commercial use in establishments such as dessert shops and fruit markets"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41RUw29DcuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41RUw29DcuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41RUw29DcuL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FDWWBZQJ",
+    "title": "JAYGOVAN Electric Tomato Strainer Machine 450W 110V Commercial Tomato Milling Machine Stainless Steel Sauce Maker Machine Food Squeezer for Tomato Strawberry Blueberry Sauce",
+    "url": "https://www.amazon.com/dp/B0FDWWBZQJ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "JAYGOVAN",
+    "features": [
+      "\ud83c\udf45\u3010Quick Processing\u3011- The powerful 450 watt motor provides the power to quickly process large quantities of tomatoes (not included) and the practical pestle and mortar allows you to effortlessly mash tomatoes during operation",
+      "\ud83c\udf45\u3010Large Capacity Making\u3011- The large funnel provides enough space to hold a large quantity of tomatoes (not included). Adjustable chute ensures smooth drainage of the sauce and the chute holder prevents spills",
+      "\ud83c\udf45\u3010High Quality Materials\u3011- The electric tomato strainer is made of stainless steel, which is resistant to impact, corrosion and deformation, and the surface is simple and smooth, which can be easily cleaned after use",
+      "\ud83c\udf45\u3010Easy to Operate\u3011- Just one click on the red switch to turn on the tomato strainer, no need to assemble, can be used directly after receiving, save time and labor",
+      "\ud83c\udf45\u3010High Safety\u3011- Multiple cooling holes ensure timely heat dissipation to avoid high temperature damage to the tomato paste food mill, sturdy base provides stable support and makes it not easy to shake"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41NQDLcacdL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41NQDLcacdL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41NQDLcacdL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DLB62S5Y",
+    "title": "CRYBY Tomato Sauce Maker, 450W Electric Tomato Strainer Machine Commercial Tomato Milling Machine, Stainless Steel Tomato Press Making Machine Food Squeezer for Tomato Strawberry Blueberry Sauce, 110V",
+    "url": "https://www.amazon.com/dp/B0DLB62S5Y?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "CRYBY",
+    "features": [
+      "HIGH QUALITY MATERIAL: This tomato sauce maker machine is made of stainless steel, which is impact-resistant and does not deform, which ensures your long-term use. This sauce strainer can be widely used to make ketchup, strawberry jam, blueberry jam and other sauces. The sturdy base provides stable support for the tomato juicer so that it will not shake easily.",
+      "POWERFUL FUNCTION: The tomato strainer is equipped with a powerful 450-watt motor that delivers strong power to process large quantities of tomatoes (not included) quickly. The machine also comes with a mortar and pestle, allowing you to effortlessly mash tomatoes during operation without worrying about hurting your hands.",
+      "THOUGHTFUL DESIGN: Our food mill for tomato sauce is equipped with a large funnel that provides enough space to hold a large amount of tomatoes (not included). The adjustable trough ensures that the sauce drains out smoothly, which is very thoughtful. In addition, the slot holder prevents spills.",
+      "HIGH SAFETY: Multiple cooling holes ensure timely heat dissipation to avoid high temperature damage to the electric food mill, allowing you to use it safely. Rounded and smooth edges not only increase the beauty of the food strainer, but also improve the safety of use.",
+      "EASY TO OPERATE: Simply click the red switch to turn on the tomato mill for your convenience. The tomato press maker does not require assembly, you can use it directly after receiving it, which saves time and labor. The surface is simple and smooth and can be easily cleaned after use."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41nHGlacJRL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41nHGlacJRL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41nHGlacJRL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
