@@ -555,6 +555,7 @@ Title: "## Final Verdict"
 - Highlight premium option for quality seekers
 - End with clear, actionable next steps
 - Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
 
 ## WRITING GUIDELINES:
 
@@ -572,7 +573,6 @@ Title: "## Final Verdict"
 
 **SEO Structure:**
 - Use H2/H3 headings properly
-- Include internal links where relevant: {json.dumps(relevant_links[:5], indent=2)}
 - Write scannable content with bullets and short paragraphs
 - Target 4,000-5,000 words total
 
