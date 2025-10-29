@@ -41,7 +41,7 @@ PROCESSED_KEYWORDS_FILE = "data/processed_keywords.txt"
 GENERATED_KEYWORDS_FILE = "data/keywords-generated.txt"
 LINKS_FILE = "data/links.txt"
 ARTICLES_PER_RUN = 25
-TOP_LINKS_COUNT = 5
+TOP_LINKS_COUNT = 1
 
 # Ensure output directories exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -429,8 +429,6 @@ def create_enhanced_article_prompt(title, article_number, image_url, products):
     tags = [
         base_keyword,
         f"{category} products",
-        "amazon reviews",
-        "buying guide"
     ]
     
     products_json = json.dumps(products, indent=2)
