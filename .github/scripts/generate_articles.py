@@ -612,7 +612,7 @@ def generate_article(prompt):
         try:
             current_key = api_key_manager.get_current_key()
             client = genai.Client(api_key=current_key)
-            model = "gemini-2.5-flash-preview-05-20"
+            model = "gemini-2.5-flash"
             contents = [types.Content(role="user", parts=[types.Part.from_text(text=prompt)])]
             generate_content_config = types.GenerateContentConfig(
                 temperature=0.8,
