@@ -75,7 +75,7 @@ class APIKeyManager:
         self.api_keys = self._load_api_keys()
         self.current_key_index = 0
         self.key_usage_count = {}
-        self.max_requests_per_key = 60
+        self.max_requests_per_key = 6000
         self.failed_keys = set()
         
         for key in self.api_keys:
