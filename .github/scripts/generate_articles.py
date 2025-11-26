@@ -300,7 +300,7 @@ def generate_and_upload_image(title):
         try:
             current_key = api_key_manager.get_current_key()
             client = genai.Client(api_key=current_key)
-            model = "gemini-2.5-flash-image"
+            model = "gemini-2.0-flash-exp-image-generation"
             contents = [types.Content(
                 role="user",
                 parts=[types.Part.from_text(text=f"""Create a realistic blog header image for the topic: "{title}". Include the title text "{title}" overlaid on the image as a stylish, readable heading. Use clean typography. Image size should be 16:9 aspect ratio.""")]
