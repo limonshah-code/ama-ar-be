@@ -1,0 +1,301 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-11-30T09:32:31Z
+author: "Mason Everett"
+title: "Best Gifts For Housewarming"
+excerpt: "Discover the gifts for housewarming to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dpib87gkc/image/upload/v1764408729/blog_image_1764408729_frz5s8.webp
+category: "Reviews"
+tags:
+  - gifts for housewarming
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-gifts-for-housewarming
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right gifts for housewarming
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Gifts For Housewarming" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 8 Best Gifts For Housewarming"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Gifts For Housewarming"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy gifts for housewarming?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose gifts for housewarming?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best gifts for housewarming for beginners?"
+- "How much should I spend on gifts for housewarming?"
+- "What features are most important in gifts for housewarming?"
+- "How do I maintain my gifts for housewarming?"
+- "Are expensive gifts for housewarming worth it?"
+- "What brands make the best gifts for housewarming?"
+- "How long do gifts for housewarming typically last?"
+- "Can I find good gifts for housewarming on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0CZ3JSJNQ",
+    "title": "Younift Funny Scented Candle, House Warming Gifts New Home, Housewarming Gifts for Women, Men, Couple, New Homeowner - First Apartment Essentials - Closing Presents for Home Buyers - 9 oz",
+    "url": "https://www.amazon.com/dp/B0CZ3JSJNQ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Younift",
+    "features": [
+      "Our lavender & vanilla candles are made with premium essential oils; This classic fragrance of fresh lavender, blended with warm vanilla, creates a sweet herbal medley that calms and quiets the mind",
+      "These scented soy candles have a long burn time of up to 50 hours; Each of them is made with natural soy wax and a lead-free cotton wick for a clean and even burn",
+      "9 ounce aromatherapy candle comes with a reusable glass jar and a lid; This jar candle comes in a giftable box that will surely put a smile on the recipient's face",
+      "Whether you want to celebrate a milestone, express feelings, or make someone's day, our scented candles with hilarious messages are the perfect unique gifts for women and men",
+      "This decorative candle is the perfect housewarming gift or closing gift for a new home owner, new house owner, new condo owner, first time home buyer, client, or anyone getting a new place"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41giwr1Ge2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41giwr1Ge2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41giwr1Ge2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0BRSGRGBG",
+    "title": "Queekay Housewarming Gifts for Home Decoration Wooden Heart Coasters for Drinks 6 Set Farmhouse Coasters with Holder Funny for Family Coffee Table Protection, 4''(Farmhouse Color)",
+    "url": "https://www.amazon.com/dp/B0BRSGRGBG?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Queekay",
+    "features": [
+      "What You Receive: the package includes 6 pieces of home coasters in 6 styles and a coasters storage box, that the nice combination and enough quantity can meet your use and replacement needs in daily life",
+      "Convenient to Store: the farmhouse coasters for coffee table measure approx. 10 cm/ 4 inches in diameter and paired with a 11.5 x 5.5 x 6.5 cm/ 4.53 x 2.17 x 2.56 inches holder, which is nice for store without taking up too much space",
+      "Keep Your Table Clean: the farmhouse coasters with holder is practical to use in daily life, that can avoid your cup scratching the table, so it can keep your furniture or tabletop from wear or stains and you can enjoy your leisure time at ease",
+      "Sturdy and Reliable: these drink coasters with holder are mainly made of quality wood, well polished and no burrs, not easy to break or deform, with clear printing and long lasting, can serve you for a long time",
+      "Thoughtful Gift: you can share these coasters for drinks with your family members, friends, relatives or colleagues as appropriate gifts to show your care and regards, or as warm housewarming gifts for those moving into new home"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/516xRemmccL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/516xRemmccL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/516xRemmccL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CJYN69ZY",
+    "title": "Planters' Choice 9 Herb Indoor Window Garden Kit - House Plants Seeds - Best Unique Christmas Gift Ideas for Women, Mom, Friend, Her, Birthday, Housewarming, Mother - New Home Kitchen Gifts",
+    "url": "https://www.amazon.com/dp/B0CJYN69ZY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Planters' Choice",
+    "features": [
+      "A LUSH OASIS IN YOUR HOME: Elevate your indoor space with a vibrant array of nine gourmet herbs. Feel the unparalleled freshness that only home-grown herbs can offer.",
+      "THE ULTIMATE KIT: You get everything you need to start and sustain your herb garden. From seeds to full bloom, our kit ensures a seamless, hassle-free gardening experience. Grow Dill, Basil, Chives, Thyme, Parsley, Oregano, Cilantro, Sage, and Mustard.",
+      "NO GREEN THUMB REQUIRED: Whether you're a seasoned gardener or just starting, our step-by-step guide simplifies the process. Dive into our booklet's detailed soaking tips, sowing instructions, and herb-specific care routines, ensuring success for all skill levels.",
+      "PREMIUM QUALITY SEEDS: Our heirloom seeds, premium-sourced and vacuum-sealed, provide the best results. While others give you subpar seeds, we promise optimal germination rates and robust growth.",
+      "PLANT WITH POWER: Say goodbye to guesswork! Our nutrient-rich soil discs, pre-fertilized and expand 6-8 times their size, provide an optimal growth environment. Your plants will thank you with lush, vibrant growth.",
+      "GIVE MORE THAN JUST A GIFT: This kit is more than a product; it's an experience of growth, learning, and culinary exploration. Ideal for Mother's Day, birthdays, housewarming, or any occasion when you want to give a meaningful and unique present."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51Dm5Kdtx+L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51Dm5Kdtx+L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51Dm5Kdtx+L._SL75_.jpg"
+  },
+  {
+    "asin": "B01DTFF0Y8",
+    "title": "Charcuterie Board Gift Set - Bamboo Cheese Board and Knife Set - Housewarming Gifts for New Home, Wedding Gifts for Couples 2025, Bridal Shower Gifts, Birthday Gifts for Women",
+    "url": "https://www.amazon.com/dp/B01DTFF0Y8?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bamb\u00fcsi",
+    "features": [
+      "THE PERFECT CHARCUTERIE BOARD GIFT SET: This Bamb\u00fcsi charcuterie board gift set is ideal for Father's Day, Christmas, New Year's, and special occasions like housewarming gifts new home and bridal shower gifts. Packaged in a premium box, it's also perfect as Valentines Day gifts for her, making it one of the best housewarming gifts 2025 and the perfect choice for any celebration, offering beauty and practicality",
+      "LUXURIOUS CHARCUTERIE BOARD SET WITH HIDDEN DRAWER: Elevate your hosting experience with this elegant charcuterie board set featuring a hidden drawer stocked with bamboo cheese knives, meat knives, serving utensils, and a wine opener tool. Whether for a Valentine's Day dinner or house warming gifts new home, this cheese board set is designed to impress, making serving effortless and stylish",
+      "ALL-IN-ONE CHEESE BOARD SET WITH LABELS & MARKERS: This cheese board set includes everything you need for entertaining, from cheese knives to labeling slates and markers for easy identification of cheeses and meats. With a wine opener and serving tools tucked into the hidden drawer, this set is perfect for holiday hosting, bridal shower gifts, or creating memorable gatherings for Valentine's Day, Christmas, and New Year's",
+      "DURABLE & SUSTAINABLE BAMBOO CHEESE BOARD: Crafted from 100% natural bamboo, this cheese board set is both durable and eco-friendly, making it a lasting addition to your kitchen for regular use. Ideal for housewarming gifts new home, bridal shower gifts, or as part of your holiday table, this charcuterie board stands up to frequent use with style and sustainability",
+      "INNOVATIVE GROOVE DESIGN FOR EASY PRESENTATION: The functional groove around the edge of this BAMBUSI cheese board adds both style and practicality, providing extra space for crackers, fruits, nuts, or accompaniments. Combined with the included cheese and meat knives, labels, markers, and wine opener, it's perfect for creating an appetizing spread during Christmas, Thanksgiving, or New Year's gatherings, and makes an exceptional Valentines Day gift for her"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/514htCycp2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/514htCycp2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/514htCycp2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CTJGJL2T",
+    "title": "GODONLIF Candle Warmer Lamp with Timer Dimmable, Birthday Gifts for Women Mom, House Warming Gifts New Home Decor, Wax Melt Warmer for Jar Candles with 2 Bulbs",
+    "url": "https://www.amazon.com/dp/B0CTJGJL2T?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "GODONLIF",
+    "features": [
+      "Safety and Environmental Friendliness: Our electric Candl Warmer Lamp gently melting the candle from the top down. With no open flame, it eliminates concerns of flame, smoke, soot, and pollution. Ideal for homes with children and pets, it offers a safe and clean ambiance for households, apartments, and offices.",
+      "Fully Dimmable and 12-Hour Timing Function: Enjoy complete control over the ambiance with our dimmable knob, offering unrestricted dimming for personalized melting speeds. Additionally, our Candle+Warmer+Lamp boasts a convenient timer function, ensuring a perfect atmosphere tailored to your preferences, facilitating uninterrupted sweet dreams.",
+      "Sleek Design, Versatile Usage: Combining classical elegance with modern aesthetics, our lamp features a metal base and glass lampshade, exuding timeless sophistication. Perfect for illuminating family living rooms, bedrooms, studies, offices, yoga rooms, and more, it serves as both a functional and decorative accent.",
+      "Height-Adjustable: Adapt our Candle+Warmer+Lamp to various jar candle sizes with its adjustable pole, ensuring a perfect fit for any decor. Crafted with premium materials, its versatile design promises lasting, exquisite lighting, infusing your space with enduring charm and warmth.",
+      "Gifts Idea: The wax melter will be the best gifts for mom choice to show your love to your families, lover, or friends on Valentine's Day, Thanksgiving, Christmas, New Year, Housewarming or other special occasions. Birthday gifts for women, birthday gifts for men."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Ahz+ihkiL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Ahz+ihkiL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Ahz+ihkiL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DNW6THX1",
+    "title": "House Warming Gifts New Home - Housewarming Gifts for New House - Housewarming Gift Presents for Women, Couple - New House New Beginning -New House Owners Gift Ideas - Wooden Christmas Ornament 2025",
+    "url": "https://www.amazon.com/dp/B0DNW6THX1?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Sulevalt",
+    "features": [
+      "\ud83c\udfd8\ufe0fNEW HOME CHRISTMAS ORNAMENT 2025: NEW DESIGN House with Lucky Key 2025, Let our New Home Wood Ornament be a symbol of the new chapter in your life. Suitable for new home ornament 2025, new house ornament 2025, 1st christmas in new home ornament, funny new home gifts for home, house gifts for new home, gifts for a new home, new home gifts for couple,...",
+      "\ud83c\udfd8\ufe0fHOUSE ORNAMENT WITH KEY DESIGN: Our ornament is crafted by premium quality wood, the pattern is expertly printed on a 2-layered surface, each ornament is printed directly onto the woodboard, not sublimated or rubbed on by a film transfer, guaranteeing a bright and vivid image that will last for years to come.",
+      "\ud83c\udfd8\ufe0fKEEPSAKE QUALITY: This ornament makes a perfect keepsake to commemorate a couple's first home purchase. It also makes a wonderful \"thank you gift\" to new buyers. Make your family memories bright with this new house new/apartment Ornaments!",
+      "\ud83c\udfd8\ufe0fHoliday/Seasonal/New Office Car Decorations: Not only just for Christmas. Add a cozy touch to your Christmas tree with this unique ornament, Also Use it as part of your seasonal home decorations, or celebrate opening a new office or workspace, car pendant champagne charms, handbag charms and more!",
+      "\ud83c\udfd8\ufe0fORNAMENT SIZE DETAILS: This is a New Home Decoration Christmas Ornament with a height of 3.9 inches/ 10 cm and a thickness of 0.2 inches/0.5cm. Useful for christmas decor, christmas tree decorations, christmas decorations for tree, christmas decorations for home, christmas vacation decorations,..."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41-gUvdWM6L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41-gUvdWM6L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41-gUvdWM6L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CJBW2QSY",
+    "title": "Funny Housewarming Card for Friends, Unique New Home Card for Coworkers Relative Neighbors, Perfect House Gifts for Women Men, Congrats on Your New Hizzle",
+    "url": "https://www.amazon.com/dp/B0CJBW2QSY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LiuuLi",
+    "features": [
+      "This house warming greeting card is a good idea to congratulate a friend on moving into a new home.It is sure to bring smile to her/him.",
+      "You can express congratulate for the recipient. They will feel the love of you when receiving the greeting cards.",
+      "Designed with premium, smooth 300gsm paper for a high-quality feel.The card is blank inside.You can write what you want to express.",
+      "The new home card is measured with 8.0*5.3 inches and contains transparent plastic bag and golden envelope.",
+      "Our products are guaranteed.If the product you receive is damaged or stained,you can send us a message to inform us and solve it immediately for you."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/512HdRmRZIL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/512HdRmRZIL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/512HdRmRZIL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CDRDK6MR",
+    "title": "seenlast Candle Warmer Lamp with Timer Dimmer Adjustable Height for New Home Bedroom,Mothers Day Gifts,Vintage Home Decor for Scented Jar",
+    "url": "https://www.amazon.com/dp/B0CDRDK6MR?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "seenlast",
+    "features": [
+      "MAKE FRAGRANT CANDLES MELTS MORE EASILY. seenlast candle warmer lamp melts aroma candles in a cleaner, more efficient and long-lasting way. It melts the scented wax inside the candle jar by heat released from a heating effect. Natural release of fragrance within minutes. No flames, no soot, no indoor pollution, reducing the risk of fires caused by igniting candles.",
+      "ELECTRIC CANDLE WAX WARMER WITH TIMER. This wax melt warmer has a timing function. Three timer options for 2, 4, and 8 hours make the candle warmer easy to close. No more worries about forgetting blowing out the lit candles, more safe to use.",
+      "CANDLE LAMP WITH DIMMER & 4 BRIGHTNESS LEVELS. It has four brightness levels to fit different need. The brighter the light, the more heat the emits, therefore the faster the candle melts. It repeatedly melts the candle, release the fragrance naturally and evenly. The duration of fragrance is twice that of burning a candle. Ideal for relaxing when you are doing yoga, reading, partying, working, sleeping, etc.",
+      "HEIGHT ADJUSTMENT & FITS ALL CANDLE SIZES. The wax warmer is compatible with multiple candles of different heights. The height from the base to the lampshade is adjustable, range from 3.8 inches to 5.6 inches, It can hold jar candles up to 6 inches in height. With high-quality wooden base, anti slip pads under the base to ensure its stability.",
+      "PERFECT HOME DECOR & GIFTS. with elegant design and soft warm glow, the candle warmer lamp is a modern room decoration. Definitely an aesthetic home decor for living room, bedroom, kitchen, office,etc. Ideal gift to show your love to your lover, families and friends on Valentine's Day, Mother's Day, Father's Day, Thanksgiving, Christmas, New Year, Housewarming, Birthday Day, Anniversary Day."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/413aN+OeHYL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/413aN+OeHYL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/413aN+OeHYL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
