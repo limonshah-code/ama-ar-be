@@ -1,0 +1,325 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-01T12:30:37Z
+author: "Mason Everett"
+title: "Best Selling Scented Candles"
+excerpt: "Discover the selling scented candles to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dpib87gkc/image/upload/v1764505815/blog_image_1764505814_kqg0k8.webp
+category: "Reviews"
+tags:
+  - selling scented candles
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-selling-scented-candles
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right selling scented candles
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Selling Scented Candles" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 9 Best Selling Scented Candles"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Selling Scented Candles"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy selling scented candles?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose selling scented candles?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best selling scented candles for beginners?"
+- "How much should I spend on selling scented candles?"
+- "What features are most important in selling scented candles?"
+- "How do I maintain my selling scented candles?"
+- "Are expensive selling scented candles worth it?"
+- "What brands make the best selling scented candles?"
+- "How long do selling scented candles typically last?"
+- "Can I find good selling scented candles on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B01N0RSCBI",
+    "title": "Chesapeake Bay Balance + Harmony Scented Candle Water Lily Pear Fragrance 50 Hours Burn Time Warm & Decorative Soy Wax Blend",
+    "url": "https://www.amazon.com/dp/B01N0RSCBI?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Chesapeake Bay Candle",
+    "features": [
+      "Fragrance Profile: Juicy tropical fruits, ripened peach, delicious pear, combined with Rose, Violet, Waterlily, Cyclamen, featured in base notes of Sandalwood, Green Foliage, and Rosewood",
+      "Long-lasting: Approximate burn time of 50 hours",
+      "Attractive Package: Frosted jar candle allows the flame's light to shine through",
+      "Natural Soy Wax: Made from a natural soy wax blend featuring self-trimming wicks",
+      "USA-Made with Global Ingredients: Designed and poured in the USA, dimensions: 3.2 diameter x 4.6 height",
+      "Natural Essential Oils: Skillfully enhanced with all-natural essential oils for a balanced fragrance",
+      "Eco-Friendly: 100% recyclable in partnership with TerraCycle"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31v3Uel543L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31v3Uel543L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31v3Uel543L._SL75_.jpg"
+  },
+  {
+    "asin": "B0F3DQSZKT",
+    "title": "Yankee Candle Mid Summer's Night, Scented Candle, 22oz Large Jar with up to 150 Hour Burn, Giftable",
+    "url": "https://www.amazon.com/dp/B0F3DQSZKT?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Yankee Candle",
+    "features": [
+      "Midsummer's Night: Intoxicating and alluring, MidSummer's Night may inspire a romantic evening of stargazing on a cool summer night. Woody notes mingle with sage and cedarwood scents to form an earthy, herbaceous cologne.",
+      "Made with a premium plant wax blend and natural-fiber wick for optimal fragrance performance",
+      "Consistent, long-lasting fragrance from first to last burn",
+      "Long burning candle with up to 150 hours of room-filling fragrance",
+      "More fragrance in every burn",
+      "Quality you can trust",
+      "Made in the USA with globally sourced materials"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41QNvGjwKPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41QNvGjwKPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41QNvGjwKPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F3F2XGCX",
+    "title": "Yankee Candle French Vanilla, Scented Candle, 22oz Large Jar with up to 150 Hour Burn Time, Giftable, Holidays",
+    "url": "https://www.amazon.com/dp/B0F3F2XGCX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Yankee Candle",
+    "features": [
+      "French Vanilla: Beneath the gleaming glass case, under the glow of the bakery lights, fluffy cupcakes with swirls of sweet frosting beckon you to bliss. Redolent with pure French vanilla and fresh-churned butter, this delectable fragrance transports you there.",
+      "Made with a premium plant wax blend and natural-fiber wick for optimal fragrance performance",
+      "Consistent, long-lasting fragrance from first to last burn",
+      "Long burning candle with up to 15 hours of room-filling fragrance",
+      "More fragrance in every burn",
+      "Quality you can trust",
+      "Made in the USA with globally sourced materials"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41YWDwe7N1L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41YWDwe7N1L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41YWDwe7N1L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CR7L79Q2",
+    "title": "Candle Gift Set for Women \u2013 8 Pack Scented Candles for Home,Long Lasting Soy Wax Amber Jar Candles, Aromatherapy Candle Set,Perfect Holiday & Christmas Gifts",
+    "url": "https://www.amazon.com/dp/B0CR7L79Q2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Feibao",
+    "features": [
+      "Perfect Candle Gift Set for Women\uff1aDesigned for every special moment \u2014 this 8-pack scented candle set makes a thoughtful gift for women, moms, friends, or coworkers. Beautifully boxed and ready to give for Christmas, Thanksgiving, birthdays, or any holiday celebration.",
+      "Premium Scents & Elegant Amber Jars\uff1aIncludes 8 popular fragrances: Cedar Teakwood, Patchouli & Amber, Fresh Rose, Sweet Grapefruit, Rose & Garnetberry, Fig, Ocean, and Eucalyptus & Mint. Each candle is housed in an amber glass jar that adds a warm, cozy glow to any home decor.",
+      "Long Lasting & Clean Burning\uff1aCrafted with 100% natural soy wax and lead-free cotton wicks, each candle burns evenly for 25-30 hours with no black smoke. Enjoy long-lasting fragrance that fills your space with soothing aromas.",
+      "Relaxation & Aromatherapy Experience\uff1aLight these candles during yoga, bath, or bedtime for stress relief and relaxation. The natural essential oil blend helps create a peaceful and inviting atmosphere in your home.",
+      "Holiday Ready & Giftable Packaging\uff1aComes in a vintage-style box tied with a festive bow \u2014 no need for extra wrapping. Perfect as a Christmas candle gift or cozy home fragrance set to warm up the holiday season."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51PO65HdqIL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51PO65HdqIL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51PO65HdqIL._SL75_.jpg"
+  },
+  {
+    "asin": "B000YBFJQU",
+    "title": "Capri Blue Volcano Scented Candles - Luxury Glass Jar Candles for Home Scented with Tropical Fruit & Sugared Citrus - Soy Wax Blend - Blue Color (19 oz)",
+    "url": "https://www.amazon.com/dp/B000YBFJQU?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Capri Blue",
+    "features": [
+      "Capri Blue Signature Jar Candles (19 oz) - Experience the iconic Volcano candles that started it all. The unmistakable Capri Blue silhouette paired with the signature cobalt blue creates a bold statement that has become a staple for this cult classic. This Capri Blue Volcano candle has a burn time of up to 85 hours.",
+      "Volcano Scented Candles - With its familiar feel and cult-like following, Capri Blue Volcano is the perfect blend of tropical fruits and sugared citrus. Like the excitement and energy of a summer night rendezvous, this fragrance is simply unforgettable.",
+      "Luxury Candles - Our soy wax blend has been fine tuned to give the ultimate fragrance experience. Our high-quality ingredients help to provide long lasting candles as well as provide a more fragrant experience.",
+      "Candle Care - Always allow the top of the candle wax to liquefy fully before blowing it out to help avoid tunneling. Keep the wick trimmed to \u00bc\u201d & trim wick before the 1st burn. (Caution: Don\u2019t drop debris into the wax. While burning, never place your decorative candles on uneven or sensitive surfaces or leave unattended.) Discontinue use when \u00bd\u201d wax remains to prevent damages to surfaces. Repurpose these glass candle jars in fun and exciting new ways!",
+      "About Us - Inspired by contemporary fashion trends, Capri Blue creates exciting new products for every season. Our Capri Blue blended soy wax candles are available in several beautifully colored candle jars. From small candles to large candles, these beauties are available in black, blue, white, aqua, and more - Buy them all! You can\u2019t go wrong."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/21pkUxODcPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/21pkUxODcPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/21pkUxODcPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F3DQK6YY",
+    "title": "Yankee Candle Pink Sands, Scented Candle, 22oz Large Jar with up to 150 Hour Burn Time, Giftable, Birthdays",
+    "url": "https://www.amazon.com/dp/B0F3DQK6YY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Yankee Candle",
+    "features": [
+      "Pink Sands: Pink Sands is the exotic island escape you've always dreamed of. Juicy melon scents are softened by gentle aromas of osmanthus, giving you space to relax and clear your mind. Warm base notes, enriched by a touch of jasmine, complete the sense of paradise.",
+      "Made with a premium plant wax blend and natural-fiber wick for optimal fragrance performance",
+      "Consistent, long-lasting fragrance from first to last burn",
+      "Long burning candle with up to 15 hours of room-filling fragrance",
+      "More fragrance in every burn",
+      "Quality you can trust",
+      "Made in the USA with globally sourced materials"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31j0bxN8D+L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31j0bxN8D+L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31j0bxN8D+L._SL75_.jpg"
+  },
+  {
+    "asin": "B0043R48Z4",
+    "title": "NEST New York Scented Classic Christmas Candle, Holiday - 8.1 oz - Up to 60-Hour Burn Time - Reusable Glass Vessel",
+    "url": "https://www.amazon.com/dp/B0043R48Z4?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "NEST New York",
+    "features": [
+      "LUXURY GLASS CANDLE - Designed to burn cleanly and infuse your home with exceptional scent, this candle elevates everyday living and entertaining. It is housed in a glass vessel etched with a festive gold pattern that complements any holiday decor.",
+      "PERFECT FOR GIFTING - This holiday-inspired scent makes for an unforgettable Christmas gift.",
+      "CITRUS & WOODY - Pomegranate, mandarin orange, pine, cloves, and cinnamon blend with a hint of vanilla and amber in this sophisticated fragrance, instantly providing the aroma of a sparkling holiday season.",
+      "CLEAN BURN - This exquisitely fragranced candle is crafted with a proprietary premium wax, so the candle burns cleanly and evenly for 50-60 hours.",
+      "CRUELTY FREE - This decorative scented candle is vegan and made in the USA without animal testing.",
+      "SCENT YOUR WORLD - NEST New York\u2019s fragranced home, perfume, and body care collections transform the everyday by artfully blending notes of the familiar, the exotic, and the unexpected for a fragrance experience like no other."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/417dut7y0PL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/417dut7y0PL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/417dut7y0PL._SL75_.jpg"
+  },
+  {
+    "asin": "B0C9ZXYDNY",
+    "title": "Christmas Candle Gifts for Women \u2013 Large 36 oz Scented Candle Gift Set, Natural Soy Wax Amber Jar Candles with Lavender & Sage, 4-Pack Aromatherapy Set",
+    "url": "https://www.amazon.com/dp/B0C9ZXYDNY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "YINUO LIGHT",
+    "features": [
+      "\u2b50 Large 36 oz Total \u2013 Premium 10% Essential Oil Candles. Four full-size 9 oz candles for a total of 36 oz. Upgraded with 10% natural essential oils for richer scent and longer-lasting fragrance. Up to 200 hours of clean burn.",
+      "\ud83c\udf3fFour Luxury Aromatherapy Scents: A refined blend of Lavender, Sage, Amber, and Sandalwood to calm the mind, reduce stress, and create a soothing atmosphere for bedtime, meditation, or cozy nights at home.",
+      "\ud83d\udd6f Natural Soy Wax & Clean, Safe Burn: Made with 100% soy wax, 10% essential oils, and lead-free cotton wicks for a clean, non-toxic burn with no black smoke. Safe for families, pets, and daily home use.",
+      "\ud83c\udf81 Premium Christmas Candle Gift for Women: Beautifully packaged and gift-ready. A thoughtful holiday gift for women, moms, girlfriends, wives, teachers, and candle lovers. Perfect for Christmas, Thanksgiving, and winter celebrations.",
+      "\ud83d\udc4d 3-Year Satisfaction Guarantee (Hassle-Free Replacement): We stand behind our candles. Enjoy a 3-year satisfaction guarantee with hassle-free replacement if your candles arrive damaged or do not perform as expected."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51bOeG0sfML._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51bOeG0sfML._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51bOeG0sfML._SL75_.jpg"
+  },
+  {
+    "asin": "B07HJB8LMD",
+    "title": "Sweet Water Decor Warm and Cozy Candle - Pine Cinnamon & Fir Winter Scented Soy Candles for Home | 9oz Clear Jar, 40 Hour Burn Time, Made in The USA",
+    "url": "https://www.amazon.com/dp/B07HJB8LMD?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Sweet Water Decor",
+    "features": [
+      "EXPERIENCE LUXURY & WARMTH - Immerse your space in the delightful blend of Orange, Cinnamon, and Pine notes with our Sweet Water Decor Warm and Cozy Candle. Elevate your senses with a burn time of over 40 hours, creating an inviting atmosphere in your home.",
+      "HAND-POURED SOY CANDLES - Our signature Christmas candles are crafted with care, each cinnamon-scented candle is a testament to quality and sustainability. Enjoy a sensory journey with exclusive fragrances that set us apart.",
+      "CANDLE CARE & LONGEVITY - Follow our expert cinnamon candle care tips for a perfect burn every time. Trim the wick to 1/4\" before lighting, ensuring a clean, soot-free experience. Prevent wax tunneling by allowing the wax pool to reach the jar's edge. With a 9oz clear jar and a gold lid, our candles burn for over 40 hours, providing enduring warmth.",
+      "SEASONAL VERSATILITY - Perfect for the holiday season and beyond, our Warm and Cozy Winter Candle adds a touch of sophistication to any occasion. From festive gatherings to tranquil moments, experience the magic of our signature warm and cozy orange-scented candle, a harmonious blend of pine, cinnamon, cypress, and fir.",
+      "STYLISH - Our Sweet Water Decor Candles are not only functional, but stylish! They can blend in with any home decor style from rustic, to modern to farmhouse. They are the perfect home accessory that fits into any Christmas and holiday decor style."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41w4OyXo2SL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41w4OyXo2SL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41w4OyXo2SL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
