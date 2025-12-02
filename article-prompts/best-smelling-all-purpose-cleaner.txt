@@ -1,0 +1,341 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-03T02:48:35Z
+author: "Mason Everett"
+title: "Best Smelling All Purpose Cleaner"
+excerpt: "Discover the smelling all purpose cleaner to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dpib87gkc/image/upload/v1764643688/blog_image_1764643688_iutfmr.webp
+category: "Reviews"
+tags:
+  - smelling all purpose cleaner
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-smelling-all-purpose-cleaner
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right smelling all purpose cleaner
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Smelling All Purpose Cleaner" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Smelling All Purpose Cleaner"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Smelling All Purpose Cleaner"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy smelling all purpose cleaner?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose smelling all purpose cleaner?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best smelling all purpose cleaner for beginners?"
+- "How much should I spend on smelling all purpose cleaner?"
+- "What features are most important in smelling all purpose cleaner?"
+- "How do I maintain my smelling all purpose cleaner?"
+- "Are expensive smelling all purpose cleaner worth it?"
+- "What brands make the best smelling all purpose cleaner?"
+- "How long do smelling all purpose cleaner typically last?"
+- "Can I find good smelling all purpose cleaner on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B07RHTQP68",
+    "title": "Lysol All Purpose Cleaner Spray, Multi-Purpose Disinfecting Spray, Kitchen & Bathroom Cleaner, Mango & Hibiscus Scent, 32 Fl Oz",
+    "url": "https://www.amazon.com/dp/B07RHTQP68?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Lysol",
+    "features": [
+      "ALL PURPOSE CLEANER KILLS 99.9% OF VIRUSES and BACTERIA: Lysol All Purpose disinfectant spray kills 99.9% of viruses and bacteria including the COVID-19 virus to help keep your family protected",
+      "KILLS 99.9% OF GERMS FOR A DEEP CLEAN: This disinfectant spray kills 99.9% of germs, removes soap scum and cuts through tough grease and grime \u2014 a versatile, multipurpose cleaner you can count on",
+      "MULTI SURFACE CLEANER and DEGREASER: This cleaning spray can be used on hard, non-porous surfaces throughout your household including counters, sinks, stovetops, cabinets, appliance exteriors, high chairs, bathtubs and showers",
+      "0% BLEACH: Lysol multipurpose cleaner spray provides powerful cleaning and disinfecting without the harshness of bleach",
+      "CONVENIENT LYSOL SPRAY: This all purpose cleaner has fast-acting sanitization, so you can kill 99.9% of bacteria in a flash",
+      "TROPICAL FRAGRANCE: Lysol all purpose cleaner spray provides the disinfection you trust and leaves a tropical mango and hibiscus scent you'll love",
+      "ALL PURPOSE CLEANING SPRAY: Lysol spray can be used as a kitchen cleaner, stovetop cleaner, tile cleaner, sink cleaner, bathtub cleaner, wall cleaner, and more",
+      "LYSOL IS A LEADER IN DISINFECTION: Explore our range of top-rated Lysol disinfecting products, including Lysol All-Purpose Cleaners, Lysol Disinfecting Sprays, and Lysol Toilet Bowl Cleaners",
+      "When used as directed"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41dx4J9uFuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41dx4J9uFuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41dx4J9uFuL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CWHGTTDS",
+    "title": "PINALEN Luxury Scent Liquid Multipurpose Cleaner - Sunrise Memories - 28 fl oz - All Purpose Cleaner for Kitchen, Bathroom & Surfaces",
+    "url": "https://www.amazon.com/dp/B0CWHGTTDS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "PINALEN",
+    "features": [
+      "LUXURY FRAGRANCE EXPERIENCE: Crafted by master perfumers for an elevated clean with a long-lasting, luxurious Sunrise Memories scent with notes of pink peony and red fruits",
+      "POWERFUL DEEP CLEANING: Multisurface cleaner quickly cuts through dirt, grime, and tough messes, leaving your surfaces visibly clean, refreshed, and streak-free",
+      "TOUGH ON GREASE: Effectively dissolves stubborn kitchen grease and buildup, reducing scrubbing time for faster, effortless cleaning",
+      "ODOR-NEUTRALIZING FORMULA: Deodorizes as it cleans, eliminating unpleasant odors and leaving behind a fresh, inviting fragrance",
+      "MULTI-SURFACE PERFORMANCE: Perfect for kitchens, bathrooms, floors, countertops, appliances, and more, delivering a streak-free shine on every surface"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31hAy6cGnFL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31hAy6cGnFL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31hAy6cGnFL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CWHGKPTX",
+    "title": "PINALEN Luxury Scent Multipurpose Cleaning Spray - Opulence Bloom - 22 fl oz - All Purpose Cleaner for Kitchen, Bathroom & Surfaces",
+    "url": "https://www.amazon.com/dp/B0CWHGKPTX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "PINALEN",
+    "features": [
+      "LUXURY FRAGRANCE EXPERIENCE: Crafted by master perfumers for an elevated clean with a long-lasting, luxurious Opulence Bloom scent with notes of rose and vanilla orchid",
+      "POWERFUL DEEP CLEANING: Multisurface cleaner spray quickly cuts through dirt, grime, and tough messes, leaving your surfaces visibly clean, refreshed, and streak-free",
+      "TOUGH ON GREASE: Effectively dissolves stubborn kitchen grease and buildup, reducing scrubbing time for faster, effortless cleaning",
+      "ODOR-NEUTRALIZING FORMULA: Deodorizes as it cleans, eliminating unpleasant odors and leaving behind a fresh, inviting fragrance",
+      "MULTI-SURFACE PERFORMANCE: Ideal for kitchens, bathrooms, countertops, appliances, floors, and more\u2014conveniently packaged in an easy-to-use spray bottle"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31dABnJG3EL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31dABnJG3EL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31dABnJG3EL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CP4GGRXF",
+    "title": "Mr. Clean 2X Concentrated Multi Surface Cleaner with Unstopables Fresh Scent 41 fl oz",
+    "url": "https://www.amazon.com/dp/B0CP4GGRXF?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Clean",
+    "features": [
+      "2X Concentrated* *vs. Mr. Clean Original",
+      "Cuts through 100% of Dirt, Grease, and Grime",
+      "Multi surface cleaner cleans everything from floors to countertops and toilets",
+      "Mr. Clean 2X Concentrated Liquid is great as a wood floor cleaner because it is safe for finished wood floors* *use diluted only",
+      "Great as a bathroom cleaner for toilets and bathroom floors"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ysBwxv-vL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ysBwxv-vL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ysBwxv-vL._SL75_.jpg"
+  },
+  {
+    "asin": "B0848KV16X",
+    "title": "Capri Blue Volcano Multi Surface Cleaner Spray - Multi Purpose Cleaner - Cleaning Spray Safe for Countertops, Granite, & More - Vegan & Cruelty Free Cleaning Supplies (16 fl oz)",
+    "url": "https://www.amazon.com/dp/B0848KV16X?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Capri Blue",
+    "features": [
+      "Volcano Multi Surface Cleaner Spray (16 fl oz): Don't stress the mess and get to work, honey! Add this Volcano cleaning spray to your household essentials to pump up your daily cleaning needs while infusing your fav fragrance into those pesky chores!",
+      "Capri Blue Volcano Fragrance: This fragrance does not need much of an introduction. A cult favorite for the Capri Blue obsessed, Volcano has a way of putting you in the best mood. With notes of sugared citrus, this Volcano multipurpose cleaner spray transports you to the happiest of days and gives you that boost of confidence you need to take on the day.",
+      "Capri Blue Home Care: Put some pep back into your cleaning step with these all-purpose cleaners! Formulated without gluten, parabens, sulfates, and phthalates. No synthetic colors. Our Volcano counter cleaner spray is formulated with grapefruit, tangerine, and sandalwood essential oils.",
+      "How To Use: Apply counter spray directly on messy surface and wipe away. This hardworking formula is safe for countertops, bathroom fixtures, sealed stone, granite, porcelain and finished wood and tile floors.",
+      "About Us: Capri Blue is all about having fun, so why not make cleaning less of a chore too!?! Become the ultimate cleaning queen with our top-notch household cleaning supplies. Our non-toxic cleaning supplies are vegan and cruelty-free."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31iyZTGEa4L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31iyZTGEa4L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31iyZTGEa4L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CT5ZKV6S",
+    "title": "Lysol Power Clean Multi-Surface Cleaner, 2x Concentrated Pour, Mango & Hibiscus, 28 Fl Oz",
+    "url": "https://www.amazon.com/dp/B0CT5ZKV6S?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Lysol",
+    "features": [
+      "3 IN 1: Kills 99.9% of germs even when diluted. More cleaning power per oz in our 2x Concentrate Formula. 10 hour fragrance burst.",
+      "GREAT FOR A DEEP CLEAN: Lysol 2x Concentrate Power Clean Multi-Surface Cleaner powers through soap scum and cuts through tough grease & grime.",
+      "VERSATILE USE ON MULTIPLE SURFACES: Use to clean hard non-porous surfaces including the kitchen, bathroom and other areas of home.",
+      "EASY TO USE: Dilute Lysol 2x Concentrate Power Clean Multi-Surface Cleaner in water for easy cleaning.",
+      "LEADERS IN CLEANING: Looking for some of our other great household cleaning products. Try Lysol Disinfectant Cleaning Wipes, Lysol All Purpose Cleaners, and Lysol Bathroom Cleaners (packaging may vary)."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41VhXbzDKzL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41VhXbzDKzL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41VhXbzDKzL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CP4HBLB2",
+    "title": "Mr. Clean All Purpose Cleaner, Floor Cleaner for Mopping Home, Bathroom, & Kitchen, Cleaning Liquid for Mop & Bucket, Cleaning Supplies, Multi-Surface Dilutable, Meadows & Rain, 41oz",
+    "url": "https://www.amazon.com/dp/B0CP4HBLB2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Clean",
+    "features": [
+      "2X Concentrated* *vs. Mr. Clean Original",
+      "Cuts through 100% of Dirt, Grease, and Grime",
+      "Multi surface cleaner cleans everything from floors to countertops and toilets",
+      "Mr. Clean 2X Concentrated Liquid is great as a wood floor cleaner because it is safe for finished wood floors* *use diluted only",
+      "Great as a bathroom cleaner for toilets and bathroom floors"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ewETZLhJL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ewETZLhJL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ewETZLhJL._SL75_.jpg"
+  },
+  {
+    "asin": "B007AHO6CO",
+    "title": "Method All-Purpose Cleaner Spray, Lime + Sea Salt, Perfect for Most Counters, Tiles, Stone, and More, 28 oz Spray Bottles, (Pack of 1)",
+    "url": "https://www.amazon.com/dp/B007AHO6CO?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Method",
+    "features": [
+      "Contains 1 - 28oz spray bottles of Method All Purpose Surface Cleaner, Lime + Sea Salt.",
+      "Non-toxic, naturally derived formulas.",
+      "Powergreen technology cuts grease plus grime.",
+      "100% recycled plastic bottles.",
+      "Never tested on animals."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31nNI-T7whL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31nNI-T7whL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31nNI-T7whL._SL75_.jpg"
+  },
+  {
+    "asin": "B07T9C5CQR",
+    "title": "Stardrops The Pink Stuff Miracle Multi-Purpose Cleaner \u2013 Removes Grease, Grime, and Stains on Kitchens, Bathrooms, Floors, and More, 25 fl Oz",
+    "url": "https://www.amazon.com/dp/B07T9C5CQR?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Stardrops",
+    "features": [
+      "Powerful Cleaning Action: The Pink Stuff Multi-Purpose Cleaner is formulated to tackle tough stains and grime, leaving surfaces sparkling clean with minimal effort.",
+      "Versatile Use: Perfect for use on a wide range of surfaces, including countertops, stovetops, tiles, sinks, and more. This all-in-one cleaner is ideal for every room in your home.",
+      "Easy to Use: Simply spray and wipe for an instant clean. The convenient spray bottle design ensures an even application and makes cleaning quick and hassle-free.",
+      "Gentle on Surfaces: Despite its powerful cleaning capabilities, The Pink Stuff Multi-Purpose Cleaner is gentle on surfaces, ensuring no scratches or damage while effectively removing dirt and stains.",
+      "Fresh, Pleasant Scent: Enjoy a clean and fresh-smelling home with every use. The Pink Stuff Multi-Purpose Cleaner leaves behind a pleasant fragrance, making your cleaning experience more enjoyable.",
+      "Streak-Free Finish: Achieve a streak-free shine on surfaces like glass, stainless steel, and ceramic. The Pink Stuff Multi-Purpose Cleaner leaves no residue, ensuring a flawless finish every time.",
+      "Trusted Brand: From The Pink Stuff, a brand renowned for its high-quality and effective cleaning products. Trust in the reliability and performance of this multi-purpose cleaner to keep your home spotless."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/317MFjJ6TXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/317MFjJ6TXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/317MFjJ6TXL._SL75_.jpg"
+  },
+  {
+    "asin": "B0013FRRMK",
+    "title": "Method All-Purpose Cleaner Spray, French Lavender, Perfect for Most Counters, Tiles and More, 28 Fl Oz, (Pack of 1)",
+    "url": "https://www.amazon.com/dp/B0013FRRMK?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Method",
+    "features": [
+      "Contains (1) 28 ounce spray bottle of all purpose surface cleaner.",
+      "This all-purpose surface cleaner spray puts the hurt on dirt.",
+      "Biodegradable formula with plant-based cleaning power cuts through grease + grime.",
+      "Cleans most non-porous surfaces including counters, tile, stone, wood and glass.",
+      "Cruelty free. Tested by people, not on animals.",
+      "Bottle (minus nozzle) made with 100% recycled plastic (PCR).",
+      "French lavender is an enchanting scent medley of lavender, bergamot, purple sage + chamomile, perfect for any ch\u00e2teau",
+      "Proudly doing business with a purpose."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31gpHNXyv6L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31gpHNXyv6L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31gpHNXyv6L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
