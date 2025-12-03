@@ -1,0 +1,302 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2025-12-04T04:01:39Z
+author: "Mason Everett"
+title: "Best Coffee Scented Candle"
+excerpt: "Discover the coffee scented candle to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dpib87gkc/image/upload/v1764734477/blog_image_1764734476_uhfdyb.webp
+category: "Reviews"
+tags:
+  - coffee scented candle
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-coffee-scented-candle
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right coffee scented candle
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Coffee Scented Candle" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 8 Best Coffee Scented Candle"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Coffee Scented Candle"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy coffee scented candle?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose coffee scented candle?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best coffee scented candle for beginners?"
+- "How much should I spend on coffee scented candle?"
+- "What features are most important in coffee scented candle?"
+- "How do I maintain my coffee scented candle?"
+- "Are expensive coffee scented candle worth it?"
+- "What brands make the best coffee scented candle?"
+- "How long do coffee scented candle typically last?"
+- "Can I find good coffee scented candle on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0FMP8Z3R7",
+    "title": "COCORR\u00cdNA Fall Candles - Coffee & Chocolate 5 oz Soy Wax Scented Jar Candles for Home Scented, 31 Hours Burn Time, Aromatherapy Candle Gifts for Men Women",
+    "url": "https://www.amazon.com/dp/B0FMP8Z3R7?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "COCORR\u00cdNA",
+    "features": [
+      "Scent: Morning coffee meets a touch of cherry, while chocolate, cookie, and figolide notes warm the senses, finishing with comforting vanilla and cedarwood.",
+      "Premium Glass Jar & Clean, Even Burn \u2013 Housed in a clear glass jar with a refined golden lid for a festive and elegant display, this candle features a lead-free natural cotton flat braid wick with paper filaments, delivering a cleaner, steadier burn with reduced carbon build-up and minimal black soot.",
+      "Around 31 Hours of Long-Lasting, Cozy Fragrance \u2013 This 5oz candle provides approximately 31 hours of continuous scent, ideal for unwinding after a long day, stress relief, cozy winter nights, or creating a warm ambiance during gatherings.",
+      "Scented Gifts for upcoming Christmas \u2013 With its luxurious gold-lid design, it makes a thoughtful birthday gift, Christmas gift, Secret Santa surprise, or a heartfelt gift for friends, girlfriends, candle lovers, and home d\u00e9cor.",
+      "Elevate Any Space with a Festive Glow \u2013 Light it during bath time, meditation, reading, winter dinners, or holiday celebrations to instantly fill your space with warmth, serenity, and festive charm, available in enchanting scents like Lemon & Pomelo, Balsam & Fir, Coffee & Chocolate, Bourbon Vanilla, Balsam & Cedar, and Christmas Tree."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41pI961Hj8L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41pI961Hj8L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41pI961Hj8L._SL75_.jpg"
+  },
+  {
+    "asin": "B011IGQ6B6",
+    "title": "Village Candle Coffee Bean Glass Jar Scented Candle, Large, 21.25 oz, Brown",
+    "url": "https://www.amazon.com/dp/B011IGQ6B6?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Village Candle",
+    "features": [
+      "Fragrance Notes of Espresso, Roasted Pecans, Tonka Beans",
+      "This rich, deep brown candle is made with the highest quality food-grade paraffin wax for a clean and even burn. We source only the finest ingredients for a true-to-life, long lasting fragrance experience.",
+      "Pioneered by Village Candle, our dual wick technology is a unique design that ensures a cleaner, more efficient burn, as well as a superior fragrance experience. Before reaching your home our lead-free cotton wicks are hand-trimmed by our team.",
+      "Our candles have a long and consistent burn time of up to 170 hours (depending on the size of candle). Burn your candle for a minimum of 2 hours and no more than 4 hours, or until you reach a full wax pool. Dimensions are 3.8''L 3.8''W 6.75''H.",
+      "Born from a passion for New England craftsmanship that still burns strong to this day. Our candles are proudly made in America by our highly skilled candlemakers in Wells, Maine. From our Village to your village remains our inspiration all these years."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41UWh0aH+oL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41UWh0aH+oL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41UWh0aH+oL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F3DR3S4K",
+    "title": "Yankee Candle Caf\u00e9 Al Fresco, Scented Candle, 22oz Large Jar with up to 150 Hour Burn Time, Giftable",
+    "url": "https://www.amazon.com/dp/B0F3DR3S4K?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Yankee Candle",
+    "features": [
+      "Caf\u00e9 al Fresco: Notes of coffee, cinnamon, and caramel recreate the scents of a busy outdoor caf\u00e9, with hints of milk and crystalized sugar adding sweetness to the warm scene.",
+      "Made with a premium plant wax blend and natural-fiber wick for optimal fragrance performance",
+      "Consistent, long-lasting fragrance from first to last burn",
+      "Long burning candle with up to 15 hours of room-filling fragrance",
+      "More fragrance in every burn",
+      "Quality you can trust",
+      "Made in the USA with globally sourced materials"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/418cmtrw1ZL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/418cmtrw1ZL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/418cmtrw1ZL._SL75_.jpg"
+  },
+  {
+    "asin": "B003B6BQOY",
+    "title": "WoodWick Caf\u00e9 Sweets Trilogy Holiday Candle Gifts for Women and Men, 9.7 oz Medium Hourglass Trilogy Candle with Crackling Wick",
+    "url": "https://www.amazon.com/dp/B003B6BQOY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "WoodWick",
+    "features": [
+      "Cafe Sweets: The Caf\u00e9 Sweets Trilogy was composed by our fragrance curators with the layered scents of Vanilla Bean, Caramel, and Biscotti",
+      "Features three complementary fragrances that create an intriguing scent experience as the layers melt together",
+      "The patented Pluswick Innovation wick enhances the experience with a distinctive crackling sound",
+      "Hourglass shaped vessel creates an increased wax pool for greater fragrancing",
+      "Made with a premium blend of soy and paraffin wax"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ukBS03lPL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ukBS03lPL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ukBS03lPL._SL75_.jpg"
+  },
+  {
+    "asin": "B0F21RT1BQ",
+    "title": "Fresh Coffee Candles, Coffee Scented Candle, Natural Soy Candles for Home Scented, Long Lasting with 50 Hour Burn Time, Gifts for Men Women",
+    "url": "https://www.amazon.com/dp/B0F21RT1BQ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "DL DREAMY DEWLA",
+    "features": [
+      "Charm of Fresh Coffee Candles -- There\u2019s nothing quite like the rich, bold aroma of freshly brewed coffee\u2014the earthy depth of roasted beans, the hint of caramelized sweetness, and that invigorating warmth that promises a new beginning.",
+      "Instant Energy Boost -- Coffee Candle is more than just a candle \u2013 it\u2019s a mood booster, a stress reliever, and a way to bring a little piece of your favorite coffee shop into your home. With its rich, authentic coffee scent and long-lasting burn, it\u2019s the perfect addition to your self-care routine, home d\u00e9cor, or gift list. So, light up a Fresh Coffee Candle, sit back, relax, and enjoy the soothing scent of freshly brewed coffee \u2013 no caffeine required!",
+      "Quality Materials for a Long-Lasting Scent -- One of the standout features of the Scented Candle is its high-quality ingredients. Made with a blend of premium soy wax, natural essential oils, and cotton wicks, this candle burns cleanly and evenly, filling the room with its rich coffee scent for hours. Soy wax is eco-friendly and burns slower, so you\u2019ll get more enjoyment out of each burn.",
+      "Perfect for Any Space -- Whether you\u2019re looking to create a calming atmosphere in the living room, add some ambiance to your kitchen, or simply want a cozy touch to your workspace, the Fresh Coffee Candle fits seamlessly into any environment. Its neutral, sleek design makes it a stylish addition to your home d\u00e9cor, and it\u2019s perfect for those who enjoy functional yet chic home accessories.",
+      "A Great Gift for Coffee Lovers -- If you\u2019re searching for a thoughtful and unique gift for the coffee lover in your life, look no further. The Fresh Coffee Candle makes for an excellent gift for birthdays, holidays, or just as a special treat. It\u2019s an ideal present for anyone who loves the ritual of coffee brewing and enjoys filling their space with delightful, comforting scents."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41QSvo3-NJL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41QSvo3-NJL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41QSvo3-NJL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DFVWX5NL",
+    "title": "1OAK Coffee Candle - Espresso & Roast Coffee - Home Gifts - Scented Candles for Men (7oz.)",
+    "url": "https://www.amazon.com/dp/B0DFVWX5NL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "1OAK",
+    "features": [
+      "Coffee Scented Candles for Home - 7oz | 200g | 40 Hour Burn Time | Natural Cotton Wick | Soy Wax",
+      "Experience the signature charm of masculine candles, creating a commanding and refined scent that reflects both strength and sophistication.",
+      "Transform your space with masculine candles that promote mental focus. Scented candles create a stimulating atmosphere that sharpens your mind and boosts your concentration.",
+      "Elevate your environment with man candles, creating an inviting and opulent environment that radiates sophistication and self-assurance.",
+      "1OAK promise of satisfaction, buy with confidence. If there is any issue with the product or anything happens to your candle, we will work with you to fix the issue. Just contact 1OAK directly through Amazon."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31bHGmju0PL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31bHGmju0PL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31bHGmju0PL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D8C3KPFS",
+    "title": "Craft & Kin Premium Dark Roast Coffee Candle | Black Christmas Scented Candles for Home | Long Lasting with 45 Hour Burn Time, 7.6oz | Soy Holiday Candle | Aromatherapy at Home | Gifts for Men",
+    "url": "https://www.amazon.com/dp/B0D8C3KPFS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Craft & Kin",
+    "features": [
+      "Rich Coffee Aroma - Fill your space with the bold, invigorating scent of freshly brewed coffee, featuring deep, rich notes of a true Dark Roast.",
+      "Long Burn Time: Enjoy up to 45 hours of continuous burn time with our 8 oz fall candle, perfect for creating a warm, inviting atmosphere.",
+      "Ideal for coffee lovers: The perfect candle for creating a cozy, summer caf\u00e9-like atmosphere in your home.",
+      "Perfect Gift Idea: A thoughtful gift for coffee enthusiasts, housewarmings, birthdays, or celebrations.",
+      "Our Mission: The Craft & Kin Collection is carefully designed and crafted with your home and family in mind. We believe that your home should be a collection of people and things you love."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41y-FgV7nrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41y-FgV7nrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41y-FgV7nrL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DL6G64YK",
+    "title": "Our Own Candle Company, Morning Coffee Scented Mason Jar Candle, 100 Hour Burn Time, 13 Ounces",
+    "url": "https://www.amazon.com/dp/B0DL6G64YK?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Our Own Candle Company",
+    "features": [
+      "Specialty Blended Wax: 13 oz mason jar of our specially blended soy and paraffin wax.",
+      "100 Hour Burn Time. Lead-free wick with patented straightener to ensure proper burning every time.",
+      "About the Scent: Enjoy the aroma of a freshly brewed pot of coffee that everyone loves bright and early in the morning.",
+      "Perfect for gifts! Makes the perfect gift for any occasion or just because. Try our wide variety of scents!",
+      "For Best Results: Keep wick trimmed to 1/4\"; for the first burn allow wax to pool edge to edge."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41YlnA45WNL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41YlnA45WNL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41YlnA45WNL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
