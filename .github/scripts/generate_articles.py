@@ -957,7 +957,6 @@
 
 # if __name__ == "__main__":
 #     main()
-
 import os
 import time
 import random
@@ -1000,6 +999,11 @@ KEYWORDS_FILE = "data/keywords.txt"
 PROCESSED_KEYWORDS_FILE = "data/processed_keywords.txt"
 GENERATED_KEYWORDS_FILE = "data/keywords-generated.txt"
 LINKS_FILE = "data/links.txt"
+
+# --- NEW CONFIGURATION FOR NO ITEMS ---
+NO_ITEMS_FOLDER = "data/no_items_found"
+NO_ITEMS_FILE = os.path.join(NO_ITEMS_FOLDER, "NoItemFound.txt")
+
 ARTICLES_PER_RUN = 60
 TOP_LINKS_COUNT = 1
 
@@ -1009,6 +1013,8 @@ os.makedirs(ARTICLE_PROMPTS_DIR, exist_ok=True)
 os.makedirs(os.path.dirname(PROCESSED_KEYWORDS_FILE), exist_ok=True)
 os.makedirs(os.path.dirname(GENERATED_KEYWORDS_FILE), exist_ok=True)
 os.makedirs(os.path.dirname(LINKS_FILE), exist_ok=True)
+# Ensure the new No Items folder exists
+os.makedirs(NO_ITEMS_FOLDER, exist_ok=True)
 
 # Download NLTK data if needed
 try:
@@ -1786,6 +1792,17 @@ def update_keyword_files(all_used_keywords, article_urls):
         else:
             print("Failed to update links file.")
 
+def handle_no_items_found(keyword):
+    """Appends the keyword to the NoItemFound.txt file in the separate folder."""
+    try:
+        os.makedirs(NO_ITEMS_FOLDER, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(NO_ITEMS_FILE, 'a', encoding='utf-8') as f:
+            f.write(f"{keyword}\n") # Just the keyword, or add timestamp: f.write(f"{keyword} - {timestamp}\n")
+        print(f"🚫 Keyword '{keyword}' moved to NoItemFound.txt")
+    except Exception as e:
+        print(f"Error saving to NoItemFound.txt: {e}")
+
 def main():
     print(f"🚀 Starting Image Generation and Article Prompt Creation at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print_separator("INITIALIZATION")
@@ -1800,6 +1817,9 @@ def main():
         print(f"  {i}. {keyword}")
 
     successful_keywords = []
+    # Track keywords that returned no items so we can remove them from the main list
+    unsuccessful_keywords = [] 
+    
     article_urls = []
     prompt_lengths = []
     default_image_url = "https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png"
@@ -1819,6 +1839,14 @@ def main():
 
             if not products:
                 print("❌ No items found for this keyword.")
+                print("🚫 Moving keyword to No Items list...")
+                
+                # Move to separate folder/file
+                handle_no_items_found(title)
+                
+                # Add to unsuccessful list so it gets removed from main CSV
+                unsuccessful_keywords.append(title)
+                
                 print("🚫 Skipping header image generation and article creation.")
                 continue
 
@@ -1860,8 +1888,11 @@ def main():
             print("\n⏳ Waiting 10 seconds before next item...")
             time.sleep(10)
 
+    # Combine successful and unsuccessful keywords to remove ALL processed keywords from the source file
+    all_processed_keywords = successful_keywords + unsuccessful_keywords
+
     all_keywords = read_keywords_from_csv(KEYWORDS_FILE)
-    remaining_keywords_count = len(all_keywords) - len(successful_keywords)
+    remaining_keywords_count = len(all_keywords) - len(all_processed_keywords)
     total_prompts_count = count_generated_prompts()
 
     print_separator("FINAL RESULTS")
@@ -1872,7 +1903,8 @@ def main():
               f"{' (FAILED)' if status['failed'] else ''}")
 
     print("\n📁 Updating keyword files...")
-    update_keyword_files(successful_keywords, article_urls)
+    # Pass the combined list so both successful AND failed keywords are removed from keywords.txt
+    update_keyword_files(all_processed_keywords, article_urls)
 
     if successful_keywords:
         print("\n📧 Sending email notification...")
@@ -1887,6 +1919,7 @@ def main():
     print_separator("GENERATION COMPLETE")
     print(f"⏰ Completed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"✅ Successfully processed: {len(successful_keywords)} keywords")
+    print(f"❌ No items found (moved): {len(unsuccessful_keywords)} keywords")
     print(f"📈 Remaining keywords in file: {remaining_keywords_count}")
     print(f"📁 Total prompts in folder: {total_prompts_count}")
 
