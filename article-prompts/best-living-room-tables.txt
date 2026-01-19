@@ -1,0 +1,333 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-01-20T06:26:28Z
+author: "Mason Everett"
+title: "Best Living Room Tables"
+excerpt: "Discover the living room tables to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dpib87gkc/image/upload/v1768803988/blog_image_1768803987_ouueup.webp
+category: "Reviews"
+tags:
+  - living room tables
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-living-room-tables
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right living room tables
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Living Room Tables" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Living Room Tables"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Living Room Tables"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy living room tables?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose living room tables?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best living room tables for beginners?"
+- "How much should I spend on living room tables?"
+- "What features are most important in living room tables?"
+- "How do I maintain my living room tables?"
+- "Are expensive living room tables worth it?"
+- "What brands make the best living room tables?"
+- "How long do living room tables typically last?"
+- "Can I find good living room tables on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with product URL (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0CTH25RZH",
+    "title": "PESRAE Floor Lamp with Table, End Tables with Charging Station(USB & Type-C & AC Port), 3 Color Temperatures 9W LED Bulb, Modern Shelves Side Table for Bedroom, Living Room",
+    "url": "https://www.amazon.com/dp/B0CTH25RZH?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "PESRAE",
+    "features": [
+      "Sturdy Floor Lamp: The side table with lamp combination features a natural wood construction that adds vintage charm and includes adjustable foot pads that ensure its durability and stability. Waterproof and scratch-resistant, it's very easy to clean, and the built-in light won't fall over if your pet bumps into it.",
+      "Side Table with Charging Station: This LED floor lamp comes with a 5V/2A USB charging port &Type C charging port &AC socket. When you relax on the sofa or bed, you can use the end tables with USB ports and outlets to quickly and easily charge your phone, Bluetooth headset, or tablet, while enjoying the warm atmosphere of the floor lamp with the table.",
+      "Upgraded Warm Floor Lamp: Reading floor lamps are powered by energy-efficient E26 LED bulbs(3000K/4500K/6500K) and last more than 10,000 hours. Linen lampshades and warm light create a warm reading corner that will blend nice with your furniture.",
+      "Extra-Large Splice Plate: Floor lamp with table-attached 3-layer board maximizes the space of a small area, providing more storage and display areas for your phone, books, coffee cups, computers, magazines, and more. Great addition to adult rooms, craft rooms, bedrooms, or any tight corner.",
+      "Rotatable Cloth Cover & Easy Assembly: The floor lamp with shelves comes with assembly drawings and video installation methods, requiring no extra parts. You only need to put it together in a few minutes and it's very simple. After the installation of the lampshade can be rotated 180 degrees, you can freely and accurately shine it where you need."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41klR+05ksL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41klR+05ksL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41klR+05ksL._SL75_.jpg"
+  },
+  {
+    "asin": "B08JV2MTWZ",
+    "title": "VASAGLE Side Table, Small End Table, Tall Nightstand for Living Room, Bedroom, Office, Bathroom, Rustic Brown and Classic Black ULET273B01",
+    "url": "https://www.amazon.com/dp/B08JV2MTWZ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VASAGLE",
+    "features": [
+      "[For Small Spaces] Standing at 11.8\"D x 13.4\"W x 22.8\"H, this end table takes up little floor space while serving as a catchall with 3 storage tiers\u2014stage a chamomile cup on the top, a basket on the bottom, and your tablet in the middle",
+      "[Streamlined yet Stunning] Giving an industrial look to any space, from the living room to bedroom, this side table has a clean, understated design while making an impressive statement with its rustic brown tone and matte black steel accent",
+      "[Well-Built and Well-Balanced] With particleboard braced by steel side frames, this table is solid and stable, capable of holding 44 lb of items on each tier. Adjustable feet preventing wobbling on uneven floors is an extra factor for its stability",
+      "[Simple yet Smooth] Was assembling a piece of furniture in the past nerve-wracking? Not this time. With clear instructions and numbered parts, the assembly will be completed in 4 simple steps, going like clockwork",
+      "[What You Receive] An end table brimming with an industrial-inspired style, with 3 open tiers for ready-at-hand storage, working as either an occasional table or a nightstand"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41y5jxm65RL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41y5jxm65RL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41y5jxm65RL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DMVSDKVG",
+    "title": "OLIXIS Wood Lift Top Coffee Table with Hidden Compartment and Large Storage Shelf, Lift Tabletop Dining Center Table for Home Living Room Office, Black",
+    "url": "https://www.amazon.com/dp/B0DMVSDKVG?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "OLIXIS",
+    "features": [
+      "\u3010Lift Top Design\u3011The tabletop of this coffee table can be effortlessly raised to the right height (elevated to 6.3\u201d). It is not just a lift up coffee table, and it also serves perfectly as a temporary dining table or a computer desk with an elevated floating tabletop.",
+      "\u3010Storage Space\u3011There is a hidden storage space beneath the tabletop where you can place laptop, remote controls, cups and other daily items without getting dirty. The two shelves on the side of the coffee table with storage offer extra space to hold blankets, books, snacks and knick-knacks.",
+      "\u3010Special & Stable Design\u3011There is a notch on the side of the small coffee table where you can easily open the lid and avoid hurting your fingers. The high-quality metal mechanism enables the tabletop to be lifted up or lowered down easily without noise. The storage coffee table made of selected materials will not wobble once correctly assembled.",
+      "\u3010Modern Design\u3011The wood grain table top creates the natural beauty of a rustic coffee table and the Mid-century design matches your room style well. The wood coffee table with storage is undoubtedly a great piece of furniture for living room.",
+      "\u3010Easy Assembly\u3011The assembly for the coffee tables for living room is easy with the help of the enclosed parts, tools and illustrated assembly instructions. Any question before and after purchase, please contact us and we will find solution for you in 24 hours."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Rl7SAOzzL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Rl7SAOzzL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Rl7SAOzzL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CPQ4CPS8",
+    "title": "GreenForest Coffee Table with Storage, 39inch Modern 2-Tier Coffee Tables for Living Room, X-Frame Design Farmhouse Coffee Table Space Saving Living Room Small Tables, Easy Assembly, Grey Wash",
+    "url": "https://www.amazon.com/dp/B0CPQ4CPS8?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "GreenForest",
+    "features": [
+      "Sturdy Construction: The upgraded \"X\" shape design provides additional support for the coffee table, making it more sturdy and weight capacity up to 200 pounds. The 15CM thick coffee table top is durable, waterproof and easy to clean",
+      "2 Tier Storage Space: Coffee table with storage keeps the space better organized. Living room tables with 2 tier shelf provide additional open storage space and display space to better manage your supplies",
+      "Multiple Application: Coffee tables for living room with dimension: 39.37x 19.69x 18.62 inches(LxWxH). It can be used as a coffee table, side table, storage shelf. Ideal for living room, bedroom, study and other limited spaces",
+      "Modern Coffee Table: The minimalist design easily blends into any decorating style, and the textured surface of the desktop provides a cozy farmhouse atmosphere to your room",
+      "Easy Assembly: The coffee table comes with the necessary tools and instructions, all parts are clearly labeled, just follow the instructions step by step, you will get a farmhouse coffee table"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41VOd4uRusL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41VOd4uRusL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41VOd4uRusL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DHKY6B1C",
+    "title": "AWQM Coffee Table Set of 3, Industrial Coffee Table with 2 Square End Side Tables, Modern Living Room Table Set with Metal Frame for Apartment Home Office, Grey",
+    "url": "https://www.amazon.com/dp/B0DHKY6B1C?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "AWQM",
+    "features": [
+      "\u3010High Stability\u3011The modern coffee table set contains adjustable legs to prevent scratching the floor. When the table is unstable, the table legs can be adjusted to enhance the stability of the table. It is easy to operate and easy to set up",
+      "\u3010Sturdy and Durable\u3011: It is composed of a solid wood tabletop, a solid iron frame and a mesh shelf, which can provide long-term service. The structure is firm and stable; the surface is coated with matte black paint, which is waterproof and wear-resistant",
+      "\u3010Modern Coffee Table Set\u3011: This living room table set of 3 includes one coffee table and 2 end side tables. Coffee table size: 41.3\" L x 23.6\" W x 18.11\" H and end tables size: 17.7\" W x 17.7\" L x 22.04\" H",
+      "\u3010Plenty of Storage\u3011: This simple small square table can be used as a sofa table, coffee table, or bedside table. The 2 shelves provide more display space and storage space. You'll find the wooden coffee table is a great place to put your laptop and it can store snacks, plants, magazines, and the same large mesh shelf below provides enough space for all the needs in your living room",
+      "\u3010Easy Assemble\u3011: Includes all necessary hardware, can be easily assembled under a clear and understandable manual",
+      "The tabletop of the coffee table and side table is made of FSC-certified wood."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41MhrDT4+9L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41MhrDT4+9L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41MhrDT4+9L._SL75_.jpg"
+  },
+  {
+    "asin": "B097XJW28C",
+    "title": "VASAGLE Side Table, Small End Table, Tall Nightstand for Living Room, Bedroom, Office, Bathroom, Greige and Classic Black ULET273B02",
+    "url": "https://www.amazon.com/dp/B097XJW28C?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VASAGLE",
+    "features": [
+      "[For Small Spaces] Standing at 11.8\"D x 13.4\"W x 22.8\"H, this end table takes up little floor space while serving as a catchall with 3 storage tiers\u2014stage a chamomile cup on the top, a basket on the bottom, and your tablet in the middle",
+      "[Streamlined yet Stunning] Giving an industrial look to any space, from the living room to bedroom, this side table has a clean, understated design while making an impressive statement with its greige tone and matte black steel accent",
+      "[Well-Built and Well-Balanced] With particleboard braced by steel side frames, this table is solid and stable, capable of holding 44 lb of items on each tier. Adjustable feet preventing wobbling on uneven floors is an extra factor for its stability",
+      "[Simple yet Smooth] Was assembling a piece of furniture in the past nerve-wracking? Not this time. With clear instructions and numbered parts, the assembly will be completed in 4 simple steps, going like clockwork",
+      "[What You Receive] An end table brimming with an industrial-inspired style, with 3 open tiers for ready-at-hand storage, working as either an occasional table or a nightstand"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Qb9xB1SrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Qb9xB1SrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Qb9xB1SrL._SL75_.jpg"
+  },
+  {
+    "asin": "B0B9GXYT5D",
+    "title": "HOOBRO Side Table with Charging Station, Set of 2 End Tables with USB Port and Outlets, Nightstand with 2-Layer Storage Shelves for Small Spaces, Living Room, Bedroom, Rustic Brown BF09UBZP201",
+    "url": "https://www.amazon.com/dp/B0B9GXYT5D?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "HOOBRO",
+    "features": [
+      "End Table with Charging Station: With 4.9 feet long power cord, one 3-prong AC outlet, 1 USB port and 1 Type-C port, this side table offers you enough charging space for your electronic devices. Moreover, the simultaneous charging of your phone, tablet, desk lamp or laptop shall be a reality, no need for extra power strips",
+      "Dimensions: 15\"L x 11\"W x 21.7\"H. The sturdy panels are tightly attached to the firm metal legs so each nightstand with power strip will stand by your side year after year. This end table features two open shelves, offering plenty of storage space for your necessities",
+      "Multipurpose End Table: The 2-Layer side table is a multipurpose piece that can transform into a bedside table, night stand, phone table, snack table, couch table, etc. It's suitable for living rooms, bedrooms, study rooms, and more, adding functionality and organization to any space",
+      "Sturdiness Speaks: Premium particleboard and metal frame endow this bedside table with durability and steadiness while the adjustable feet ensure the balance even on uneven floors",
+      "Assembly is a Breeze: Thanks to the explanatory & easy-to-understand instructions and simple structure of the side table, all you need is to follow the specific steps and swing the Allen key supplied. Everything is done in minutes."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41kJnJnybVL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41kJnJnybVL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41kJnJnybVL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DD2Z8NHR",
+    "title": "47.2\" Large Lift Top Coffee Table,Modern High Glossy LED Coffee Tables for Living Room with Storage,Black Living Room Tables for Living Rooms,Dining Room,Bedroom Home Office,APP LED Lights\uff08Black\uff09",
+    "url": "https://www.amazon.com/dp/B0DD2Z8NHR?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "chartustriable",
+    "features": [
+      "Lift Top Coffee Table Design:47in Large Lift Top Coffee Tabl design to meet more needs,You can adjust it to the height you need.when lifting up, it becomes a dining or gaming coffee table, also it becomes a workstation for you; when lifting top is closed, modern coffee table is suitable for storing sundries and keep the tabletop clean and tidy.",
+      "Modern High Gloss Coffee Table:The size of the large coffee table is: 47.25in L, 20.0in W,(16.93in to 22.6in)H. and the surface of the coffee table is fully high gloss, waterproof and scratch resistant, not only complement sofa well but also fit well in both small and large spaces,making it a textured piece of furniture for decorating the living room.",
+      "Stable Structural Design:The range of tabletop lifting is 0in to 5.3in.Lift top coffee table with the advanced metal gas support lifting mechanism, Lifting is smooth without any lag, providing smooth and Sturdy worktops.Tall Coffee table with storage can be stably supported under greater pressure hold up to 180lbs.",
+      "With Practical Power Outlet: led coffee table desktop have 2 USB ports, 2 AC power outlets and a long 6.5FT power cord, providing unparalleled convenience for charging your basic devices such as computer, mobile phones and game consoles.Check all the accessories laying flat on the floor before assembly, then follow the instructions for quick assembly.",
+      "Smart APP RGB LED System Design:The LED light of the living room tables controls through the APP of the mobile phone, More than 70000 colors and 30 flashing modes.and you can directly connect to the RGB LED lighting system through the mobile phone, Fast and convenient. The LED light color changes with the rhythm of sound and music.for parties and various scenarios, make your living room shine."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/517fp2buXxL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/517fp2buXxL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/517fp2buXxL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BG442NY1",
+    "title": "GreenForest Coffee Table for Living Room with Round Corners Farmhouse Style Center Table with Storage Shelf 39 Inch Space Saving Easy Assembly Gray Wash",
+    "url": "https://www.amazon.com/dp/B0BG442NY1?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "GreenForest",
+    "features": [
+      "Round Corners Design: Round and smoothly corners, no worries about your kids or pets chasing and playing around it or sitting nearby,keeps your kids safe from bumping into a sharp edge",
+      "Sturdy Construction: X shape support legs ensure durability;sturdiness and weight capacity up to 200 pounds,High quality thick board with nice finished look and is water resistant and easy to clean",
+      "Ample Storage Space: Storage shelves provides extra storage and display space to make your things handy and keeps the space tidy and clean",
+      "Multiple Application: Living room table with dimension 39.37 x 20.47 x 18.7 inches(LxWxH) that can serve many purposes as coffee table, side table, storage rack and perfect for small room and apartment or other limited space",
+      "Farmhouse and Stylish Design: With a textured surface and metal frame creates a classic look,blends in your furniture fluently.The sofa center table is versatile and easy to move around while cleaning or rearranging"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/419ppE8EgkL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/419ppE8EgkL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/419ppE8EgkL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DSW6XZCY",
+    "title": "SLEEPING LAMB Side Table for Living Room, 3-Tier End Table for Small Space with Wide Storage Tabletop, Rustic Brown Narrow Nightstand for Bedroom, Sofa Couch",
+    "url": "https://www.amazon.com/dp/B0DSW6XZCY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "SLEEPING LAMB",
+    "features": [
+      "Works In Every Space: End table living room designs with a compact 23.6\u2019\u2019L x 11.8\u2019\u2019W x 24\u2019\u2019H frame, this small side table doesn\u2019t take up much space and totally fits into couch, sofa arms, corners, living room, bedroom, home office,or any small space, adding a stylish industrial touch to any room.",
+      "Spacious Tabletop Surface: Bedside table\u2018s top measures 23.6\u2019\u2019 L x 11.8\u2019\u2019 W and is crafted from two separate wood boards, end table giving you plenty of space for your laptop, books, magazines, coffee, meals, or anything else. Plus, the smooth finish makes cleanup a breeze\u2014just wipe it down!",
+      "Ample Storage: With three-tier open shelving, this narrow side table gives you massive storage space to neatly organize daily essentials, household gadgets, or even decorative items\u2014all while keeping your home tidy.",
+      "Built to Last: Engineered with a heavy-duty steel frame and solid wood shelves, this couch side table is a rock-solid workhorse\u2014each shelf holds up to 45 lbs without wobbling. The scratch-resistant adjustable feet don't just stabilize on uneven floors, they actively protect your floors with soft rubber pads. This slim end table combines stylish design with endurance.",
+      "Installation is a Breeze: This sofa side table for recliner comes complete with pre-labeled components, an easy-to-follow instruction manual, and a convenient Allen wrench. Just match the labels, snap the pieces together, and tighten a few bolts. You\u2019ll be set up in 15 minutes flat. (Yes, we timed it!)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41FO28Hw28L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41FO28Hw28L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41FO28Hw28L._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
