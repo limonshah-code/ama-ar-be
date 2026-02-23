@@ -1,0 +1,334 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-24T14:51:13Z
+author: "Mason Everett"
+title: "Best Mattress On The Go"
+excerpt: "Discover the mattress on the go to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - mattress on the go
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-mattress-on-the-go
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right mattress on the go
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Mattress On The Go" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Mattress On The Go"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Mattress On The Go"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy mattress on the go?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose mattress on the go?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best mattress on the go for beginners?"
+- "How much should I spend on mattress on the go?"
+- "What features are most important in mattress on the go?"
+- "How do I maintain my mattress on the go?"
+- "Are expensive mattress on the go worth it?"
+- "What brands make the best mattress on the go?"
+- "How long do mattress on the go typically last?"
+- "Can I find good mattress on the go on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B01INZBBZQ",
+    "title": "Best Choice Products 4in Portable Twin-Size Mattress, Tri-Fold Mattress for Camping, Guest, Toddler, Foam Plush w/Carry Case - Grey",
+    "url": "https://www.amazon.com/dp/B01INZBBZQ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Best Choice Products",
+    "features": [
+      "4IN PLUSH FOAM: Soft yet firm foam provides maximum comfort and padding while protecting your mattress from dirt, pet fur, dead skin, and other pollutants",
+      "MULTIPURPOSE: Great as a convenient guest bed, a comfy camping bed, or as a floor sofa during movie nights and gatherings with friends and family",
+      "PORTABLE AND SPACE-SAVING: Simply slip the included carrying case over the portable, tri-fold mattress and zip it up to keep it neat and secure while you travel",
+      "EASY SETUP: Open package in well-ventilated area to release harmless odor that should dissipate within several hours. Wait 24-72 hours for maximum expansion",
+      "SUGGESTED MAINTENANCE: To wash and care for the cover, spot clean with a damp cloth using cold water and mild soap before wiping dry with a dry cloth; FLAT: 75\"(L) x 39\"(W) x 4\"(Thick); FOLDED: 39\"(L) x 26.75\"(W) x 12\"(H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0030V4Z02",
+    "title": "Dream On Me Honeycomb Orthopedic Firm Fiber Standard Baby Crib Mattress, Greenguard Gold and JPMA Certified, 5\u201d Fiber Core Optimum Support, Fits Crib and Toddler Bed, Waterproof Vinyl Cover",
+    "url": "https://www.amazon.com/dp/B0030V4Z02?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Dream On Me",
+    "features": [
+      "SAFETY ALL THE WAY: This Dream On Me Crib Mattress is Greenguard Gold Certified and meets/exceeds all flammability (16 CFR 1632/1633), phthalate and lead tests. It is also designed, engineered, and proudly made in the USA, with a 10-year warranty.",
+      "FIRM SUPPORT FOR YOUR GROWING CHILD: This Mattress has a 5\u201d fiber core that provides the optimum foundation for your growing child and can be used for both infants and toddlers.",
+      "EASY MAINTENANCE: The mattress has a waterproof, vented cover that keeps liquids and stains out to maintain hygienic & safe sleep conditions, and ensure freshness.",
+      "STYLISH FINISH: The mattress comes in a chic, white honeycomb vinyl cover. In case it gets dirty, wipe clean with mild soap and warm water.",
+      "PRODUCT SPECS.: The mattress dimensions are 52\u201d L x 28\u201d W x 5\u201d H and it weighs 8 Lbs."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31X2bgT6e9L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31X2bgT6e9L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31X2bgT6e9L._SL75_.jpg"
+  },
+  {
+    "asin": "B0D9Y7GM8V",
+    "title": "Dream On Me Zodiak Baby Playard, Breathable Mesh Sides, Soft Comfortable Mattress, Quick & Easy to Fold with Travel Carry Bag, Compact Space Saving Design - Cool Grey",
+    "url": "https://www.amazon.com/dp/B0D9Y7GM8V?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Dream On Me",
+    "features": [
+      "Portable and Travel Friendly: Designed for on-the-go families, this lightweight 16.6 lb playard folds easily and includes a convenient travel bag, making it simple to carry, store, or take along for vacations, visits to grandparents, or everyday use.",
+      "Quick and Easy Setup: No tools required\u2014sets up in minutes and folds down compactly for easy travel or storage. The strong, stable frame delivers dependable support for daily routines at home or on the go.",
+      "Breathable Mesh Sides \u2013 Full mesh paneling promotes healthy airflow and allows you to easily keep an eye on your child, while your little one stays calm and connected to their surroundings. Mesh sides provide excellent airflow and allow parents to keep an eye on their little one at all times.",
+      "Safe and Secured: Built to meet ASTM safety standards, the playard features breathable mesh sides that promote airflow and allow clear visibility, helping parents keep an eye on their little one while maintaining a safe, comfortable environment. Suitable for children under 35\u201d in height and up to 30 lbs.",
+      "Comfortable Space: Offers a spacious interior measuring 37\u201d L x 27.5\u201d W x 25.5\u201d H, complete with a padded mattress that provides a cozy, supportive surface for naptime, playtime, or diaper changes. Designed for use from infant (6months) through toddler stages.",
+      "East to Clean and Compact: Features a removable mattress cover and wipeable surfaces for quick cleanup. Folds neatly into the included tote bag with compact folded dimensions of 7\u201d W x 25.4\u201d H, and is backed by a 1-year limited warranty for added peace of mind."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31JgfAoResL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31JgfAoResL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31JgfAoResL._SL75_.jpg"
+  },
+  {
+    "asin": "B073VQBK4W",
+    "title": "Dream On Me 2-in-1 Breathable Two-Sided 3\" Portable Mini Crib Mattress, Greenguard Gold Certified, Vinyl and Breathable Fabric, White",
+    "url": "https://www.amazon.com/dp/B073VQBK4W?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Dream On Me",
+    "features": [
+      "General Note: Please allow 24 - 72 hours for your Mattress to regain its full shape. Any memory foam will expand faster in a warmer room. In cold temperature, at delivery, your mattress may take a bit longer to return to full sized from its compressed state.The expansion time of the mattress will vary as per the surrounding.",
+      "SAFETY FIRST ALWAYS: This mattress is Greenguard Gold Certified to ensure the highest level of health, safety and peace of mind; All our mattresses are CPSC tested and pass all flammability tests (16 CFR 1632 /1633) phthalate, lead and toxicity tests.A HEALTHY ENVIRONMENT: Reinforced, waterproof and vinyl cover and lock-stitched binding help resist liquids from seeping in; Easy to maintain - simply wipe clean with mild soap and water",
+      "2-IN-1 MATTRESS: The white infant side is covered with breathflow material; the white embossed toddler side has a waterproof cover with lock stitch seams; Two Certi-Pur certified layers promote airflow and provide cushioned comfort",
+      "PRODUCT SPECIFICATIONS: This mattress fits standard size portable and mini cribs and the Mattress dimensions is 38L x 24W x 3H inches; Square corners ensure snug fit",
+      "MADE IN THE USA: All our mattresses are designed, engineered and proudly Made in the USA using the best quality, non-toxic materials and meet the most rigorous safety and quality standards"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31YgnijTPrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31YgnijTPrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31YgnijTPrL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DC1YZXKL",
+    "title": "Oaktiv Queen Air Mattress with Frame, Self Inflating/Deflating Bed for Adults - PeakRest Blow Up Bed, Camping Cot with Mattress for Adults - Portable Queen with Travel Rolling Case on Wheels",
+    "url": "https://www.amazon.com/dp/B0DC1YZXKL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Oaktiv",
+    "features": [
+      "The PeakRest self inflating bed is a top-tier bed on wheels self inflatable solution. This air mattress with frame offers effortless setup with its battery-powered pump. The air bed functions as a self inflating air bed, a perfect queen guest bed.",
+      "This is a premium foldable air mattress with a built in frame, perfect for Home & Travel. The air mattress has a self inflatable design for durability, it functions like an Amazon Anywhere Bed, making it the best self inflating air mattress.",
+      "The PeakRest self inflatable mattress with frame sets up in just 3\u20134 minutes, making it the perfect air mattress with frame self inflating solution. This fold up air mattress with frame is a compact bed on wheels, offering comfort & convenience.",
+      "The Oaktiv anywhere inflatable bed is a premium self inflatable bed, perfect for travel. It features smooth wheels for easy transport. As an easy bed self inflatable mattress, it\u2019s lightweight and portable, conveniently folds into a sleek case.",
+      "Inspired by the Innovation air mattress, it offers premium comfort, ensures an easy, quick setup. The air mattress on wheels comes with a rolling case, making storage seamless and effortless."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51zueRLQMYL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51zueRLQMYL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51zueRLQMYL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DMBYD4VX",
+    "title": "Best Price Mattress 8 Inch Memory Foam Mattress, Medium Firm, Cooling Gel Infused, Certified Safe Foams & Fabric, Mattress in a Box, Twin",
+    "url": "https://www.amazon.com/dp/B0DMBYD4VX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Best Price Mattress",
+    "features": [
+      "GEL-INFUSED MEMORY FOAM \u2013 Adapts to your body, offering personalized comfort and precise support",
+      "COOLING TECHNOLOGY & PRESSURE RELIEF \u2013 Infused gel helps regulate temperature while easing stress on pressure points for deeper, more restful sleep",
+      "BREATHABLE DESIGN \u2013 Enhances airflow to maintain a fresh, cool sleep environment",
+      "MEDIUM-FIRM FEEL \u2013 A medium-firm design perfectly balances support and comfort for a sleep setup that feels just right",
+      "COMPACT PACKAGING \u2013 Arrives compressed for convenient setup and expands to full size within 72 hours after unboxing"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Da8Trx2tL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Da8Trx2tL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Da8Trx2tL._SL75_.jpg"
+  },
+  {
+    "asin": "B07WPW1YYC",
+    "title": "Dream On Me Zodiak Baby Playard, Breathable Mesh Sides, Soft Comfortable Mattress, Quick & Easy to Fold with Travel Carry Bag, Compact Space Saving Design - Black",
+    "url": "https://www.amazon.com/dp/B07WPW1YYC?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Dream On Me",
+    "features": [
+      "Portable and Travel Friendly: Designed for on-the-go families, this lightweight 16.6 lb playard folds easily and includes a convenient travel bag, making it simple to carry, store, or take along for vacations, visits to grandparents, or everyday use.",
+      "Quick and Easy Setup: No tools required\u2014sets up in minutes and folds down compactly for easy travel or storage. The strong, stable frame delivers dependable support for daily routines at home or on the go.",
+      "Breathable Mesh Sides \u2013 Full mesh paneling promotes healthy airflow and allows you to easily keep an eye on your child, while your little one stays calm and connected to their surroundings. Mesh sides provide excellent airflow and allow parents to keep an eye on their little one at all times.",
+      "Safe and Secured: Built to meet ASTM safety standards, the playard features breathable mesh sides that promote airflow and allow clear visibility, helping parents keep an eye on their little one while maintaining a safe, comfortable environment. Suitable for children under 35\u201d in height and up to 30 lbs.",
+      "Comfortable Space: Offers a spacious interior measuring 37\u201d L x 27.5\u201d W x 25.5\u201d H, complete with a padded mattress that provides a cozy, supportive surface for naptime, playtime, or diaper changes. Designed for use from infant (6months) through toddler stages.",
+      "East to Clean and Compact: Features a removable mattress cover and wipeable surfaces for quick cleanup. Folds neatly into the included tote bag with compact folded dimensions of 7\u201d W x 25.4\u201d H, and is backed by a 1-year limited warranty for added peace of mind."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41f+r4K5CQL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41f+r4K5CQL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41f+r4K5CQL._SL75_.jpg"
+  },
+  {
+    "asin": "B07PZS12TS",
+    "title": "Pack and Play Sheets Mattress Pad Protector Fitted Waterproof Playard Mattress Cover, Compatible with Graco Pack n Play & Dream On Me & Pamo Babe, Playpen/Playard Sheet Quilted, Gray, 39\" x 27\"",
+    "url": "https://www.amazon.com/dp/B07PZS12TS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Biloban",
+    "features": [
+      "Quilted & Ultra Soft: Mattress protector for pack and play with ultra soft microfiber fabric surface and extra thick padding including friendly fiber filling for your little feel comfortable, Special for your little one's sensitive skin. No more worry for leaky bottle messes, or potty training misses.",
+      "Absorbent & Waterproof: Waterproof layers are made by high-quality TPU layer, It means no dangerous and toxic off-gassing or no crinkly plastic noise when your little one moves, and against everyday liquids and stains. You also not need to worry about bed wetting anymore, playard sheet quilted will quickly draw moisture away to ensure a sweet sleep for babies.",
+      "Perfectly Fit: 39\" x 27\" Playard mattress cover up to 5'' deep fitted stretch skirt made of elasticized fabric that will securely compatible with most pack and play mattress, playard mattress or mini crib mattress.",
+      "Easycare: Super easy to tuck in and take off. This mattress pad cover for pack and play is wash & dryer machine friendly. And the high quality construction won\u2019t melt, rip, tear, warp or shrink in the dryer even after 300+ cycles.",
+      "Multiple Colors: With a palette of soft, soothing colors to choose from, the Biloban playard mattress pad seamlessly blends into any nursery theme. It's the perfect way to add a charming touch to your little one's sleep sanctuary."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41GYSYKojZL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41GYSYKojZL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41GYSYKojZL._SL75_.jpg"
+  },
+  {
+    "asin": "B00F18FMZ4",
+    "title": "Dream On Me Twilight 5\u201d 88 Coil Inner Spring Crib & Toddler Mattress \u2013 Brown Cloud, Greenguard Gold & BSA Certified, Waterproof & Stain-Resistant Cover, Fits Standard Full-Size Cribs & Toddler Beds",
+    "url": "https://www.amazon.com/dp/B00F18FMZ4?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Dream On Me",
+    "features": [
+      "Extra Firm Support for Safe Sleep \u2013 Designed with an 88 Bonnell coil system and 1\" fiber padding, this mattress delivers the firm, stable surface recommended for safe infant sleep, while evenly distributing weight for lasting comfort.",
+      "Superior Edge & Center Support \u2013 Reinforced perimeter and balanced coil system ensure consistent support across the entire mattress, keeping your baby secure and comfortable during sleep and play.",
+      "Dual Cushion Construction \u2013 Designed with fiber padding on both sides of an 88-coil innerspring, this mattress balances extra-firm support for infants and cushioned comfort for toddlers as they grow. Flip and rotate every 2\u20133 months to maintain shape and performance.",
+      "Easy-Clean Waterproof Cover - Waterproof Protection That Lasts \u2013 The sturdy vinyl cover with lock-stitched binding prevents moisture buildup and stains. An integrated airflow pocket maintains freshness without the use of metal vents.",
+      "Certified Safe \u2013 This crib mattress is JPMA and GREENGUARD Gold Certified, independently tested for low chemical emissions to ensure healthier indoor air. Expertly crafted in the USA with certified materials, it contains no toxic fire retardants."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41X-W8+DOIL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41X-W8+DOIL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41X-W8+DOIL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CPDVK6NB",
+    "title": "Wonder Living Baby Bassinet Mattress Compatible with Dream On Me/Fisher-Price Baby Bedside Sleeper, Breathable, Premium Foam, Oval Shaped with Removal Waterproof Cover,15\" x 30\" x 2''",
+    "url": "https://www.amazon.com/dp/B0CPDVK6NB?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Wonder Living",
+    "features": [
+      "BREATHABLE MATTRESS PAD - Made with Waterproof Exterior, Thick, Soft and Breathable Premium Foam Interior for the ultimate in comfort for your baby.",
+      "OVAL SHAPE MATTRESS PAD - Approx 30IN Length / 15IN Width / 2IN Thickness. To ensure the perfect fit, be sure to measure the inside dimension of your Cradle before ordering.",
+      "EXTRA COMFORT AND SUPPORT - Premium foam provides support for your baby to ensure maximum comfort while they sleep or play.",
+      "REMOVAL WASHABLE MATTRESS Cover - Our bassinet mattress cover could be take off by zipper lock , so it can be easily wipes clean in the messiest of situations.",
+      "ECO-FRIENDLY SHIPPING - Our mattress ships compressed in a carry box. Please open box carefully, remove the cover and pat the foam to let air flow in adequately, allow 24-36 hours for mattress to fully regain it's shape."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31DL5BpuJOL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31DL5BpuJOL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31DL5BpuJOL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
