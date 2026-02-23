@@ -1,0 +1,334 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-24T21:03:14Z
+author: "Mason Everett"
+title: "Best Mattress That Stays Cool"
+excerpt: "Discover the mattress that stays cool to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - mattress that stays cool
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-mattress-that-stays-cool
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right mattress that stays cool
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Mattress That Stays Cool" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Mattress That Stays Cool"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Mattress That Stays Cool"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy mattress that stays cool?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose mattress that stays cool?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best mattress that stays cool for beginners?"
+- "How much should I spend on mattress that stays cool?"
+- "What features are most important in mattress that stays cool?"
+- "How do I maintain my mattress that stays cool?"
+- "Are expensive mattress that stays cool worth it?"
+- "What brands make the best mattress that stays cool?"
+- "How long do mattress that stays cool typically last?"
+- "Can I find good mattress that stays cool on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0GF25PCY5",
+    "title": "Novilla AiryFlow 12 Inch Queen Size Mattress, Gel Memory Foam Queen Mattress for Cool Night, Spinal Alignment & Pressure Relief, Queen Mattress in a Box, CertiPUR-US Certified, Medium Firm",
+    "url": "https://www.amazon.com/dp/B0GF25PCY5?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Novilla",
+    "features": [
+      "AiryFlow Cooling System Stay Cool All Night - The queen size mattress actively regulate temperature for cooler rest due to its integrated three-layer design. Our cooling Ice silk cover offers 30% greater breathability for instant coolness. NanoGEL memory foam actively draws heat away to boost cooling comfort, while the 3D breathable mesh sides collaborate with the cover to create a closed-loop circulation system, all\u2011around ventilation accelerates heat dissipation and enhances breathability.",
+      "Immediate Cooling Sensation - The Novilla AiryFlow queen memory foam Mattress features advanced cooling ice silk cover, can rapidly absorbs and disperses heat from skin contact points, delivering an instant cooling sensation upon lying down for immediate comfort. Works in synergy with NanoGEL memory foam to actively draw heat away from your body while preventing moisture buildup\u2014ensuring you stay cool and dry from dusk till dawn, ideal for hot sleepers.",
+      "Ergonomic Spinal Alignment - Ergonomically designed with dual-layer support, this queen mattress combines a high-density support foam with a green tea-infused support foam base to deliver 20% stronger reinforcement than standard memory foam. By cradling key pressure points, it promotes natural spinal alignment and provides scientifically balanced back support, ensuring lasting comfort, full-body pressure relief, and deeper, restorative sleep.",
+      "Maintains a Fresh Sleep Environment All Night - The Novilla AiryFlow mattress queen is infused with natural green tea extracts that work to continuously absorb and neutralize odors, cultivating a subtly fresh and clean sleep environment. This natural infusion not only renews the air around you but also adds a layer of lasting freshness to your nightly routine, promoting a consistently pleasant and revitalizing rest throughout the night.",
+      "Healthy Sleep & Worry-Free Purchase - The Novilla AiryFlow memory foam mattress queen features CertiPUR-US certified foams and an OEKO-TEX certified cover, ensuring a verified safe and healthier sleep environment. The mattress queen size is compressed, rolled, and shipped in a box for easy setup and fits most bed bases and frames. For best performance, allow 72 hours for full expansion and enjoy confidence with our 100-night risk-free trial and 10-year limited protection."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51hmJ1OGHQL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51hmJ1OGHQL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51hmJ1OGHQL._SL75_.jpg"
+  },
+  {
+    "asin": "B07D5DN269",
+    "title": "Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green",
+    "url": "https://www.amazon.com/dp/B07D5DN269?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Niagara Sleep Solution",
+    "features": [
+      "ULTRA SOFT: Niagara Queen Mattress Topper is made from viscose made from bamboo fiber and fits mattresses 8-20 inches deep. The mattress topper queen is 60x80 inches in size, gentle on sensitive skin, and ultra-soft.",
+      "CLOUD-LIKE SLEEP: This queen mattress topper adds an extra cushion to potentially ease back pain. The back support mattress topper queen is also cool and sweat-absorbent for extra comfort.",
+      "EASY TO USE: The cooling bed pad has a deep pocket, is easy to put on, and has extra-length stretchy sides for thick mattresses. The puffy mattress topper is machine-washable and is packed in a compressed package. After taking it out from package, shake and pat it, leaving it for 48 hours or tumble dry on low heat for 20 minutes.",
+      "MACHINE-WASHABLE: The queen matress topper is safe for washing machines and has no harmful chemicals like latex or formaldehyde. The queen bed pad is easy to put on and won\u2019t slide off.",
+      "SATISFACTION: Get 100% satisfaction with the active cooling mattress topper. Our queen mattress toppers are backed by a promise that you\u2019ll love them. Enjoy sound sleep today with a soft topper!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL75_.jpg"
+  },
+  {
+    "asin": "B07BTRDGRM",
+    "title": "Classic Brands Cool Gel Chill Memory Foam 14-Inch Mattress with 2 BONUS Pillows |CertiPUR-US Certified |Bed-in-a-Box, Queen",
+    "url": "https://www.amazon.com/dp/B07BTRDGRM?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "COOL GEL",
+    "features": [
+      "Advanced Cooling Gel Memory Foam Mattress: Our bed mattress features a 3.5-inch ventilated cooling gel memory foam layer, this cooling memory foam mattress queen conforms to your body, enhancing airflow, temperature regulation, & personalized comfort",
+      "Pressure-Relieving Medium Firm Support: This medium firm queen memory foam mattress offers high-density support that cradles pressure points, promotes spinal alignment, and reduces discomfort, making it ideal for back, side, and stomach sleepers.",
+      "Breathable Open-Cell Design for Cooling: Features a ventilated open-cell structure that enhances airflow and heat dissipation. This queen bed mattress ensures a cool and comfortable sleeping environment all night long, preventing overheating.",
+      "Proudly Made in the USA: Our queen mattress bed is made with eco-friendly, CertiPUR-US certified foam - free from fiberglass or toxic chemicals. Designed for comfort, durability, and peace of mind for a healthier night\u2019s sleep.",
+      "CertiPUR-US Certified: Fiberglass-free & certified for durability, emissions, and performance. Our luxury medium firm mattress queen meets strict standards for emissions, durability, & performance, offering peace of mind with every night's sleep.",
+      "Available in Multiple Sizes: Cool Gel Memory Foam Mattress Queen dimensions: 60\" x 80\" x 14-Inch. Our Memory Foam Bed Mattresses are available in California King, King Mattress, Queen, Full Mattress, Twin XL, & Twin Mattress as well as 8, 10, 12, & 14-inch Depths."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL75_.jpg"
+  },
+  {
+    "asin": "B0B4JL1JPL",
+    "title": "3 Inch Queen Size Memory Foam Mattress Topper, Cooling Gel Bed Topper with Removable Cover, Soft & Pain Relief & Breathable, CertiPUR-US & Oeko-Tex Certified",
+    "url": "https://www.amazon.com/dp/B0B4JL1JPL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "JOYRIDE SLEEP",
+    "features": [
+      "\u3010RELIEVE PRESSURE\u3011The memory foam adapts to your curves when it comes into contact with your body, providing different support for parts of your body that are more deeply pressurized, keeping your spine neatly aligned, helping to reduce pressure points and improve sleep comfort.",
+      "\u3010SLEEPS COOLER\u3011The cooling gel absorbs heat while the ventilation holes increase airflow, allowing for heat capture and dissipation. Helps take heat away from your body faster so you can enjoy a cooler night's sleep. It can protect you from night sweats which will affect your sleep.",
+      "\u3010ANTI-SLIP & WASHABLE TOPPER COVER\u3011Adjustable retention strap + anti-slip silicone dots on the bottom of the cover ensure that the matter topper stays on the bed, and reduces the hassle of frequently adjusting the mattress position. Zipper closure for convenient disassemble and clean.",
+      "\u3010SAFE & SKIN-FRIENDLY\u3011 The memory foam is CertiPUR-Us certified, and the mattress topper cover are OEKO-TEX certified to ensure that theitem do not contain harmful chemical residues, are skin-friendly and healthy.Creating a safe sleep environment.",
+      "\u3010TO BRING NEW LIFE TO A MATTRESS\u3011The queen mattress toppers can extend the life of your bed and can also be used to compensate for sleeping surface defects. 3 inch does make a difference in terms of contouring and softness, which allows for better pressure point release on the hips, back and neck.",
+      "\u3010BUY IN CONFIDENCE\u3011JOYRIDE SLEEP after-sales team has been, any questions and suggestions, please feel free to tell us, we will provide you with solutions within 24H!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41PxyWmV+kL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41PxyWmV+kL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41PxyWmV+kL._SL75_.jpg"
+  },
+  {
+    "asin": "B083YXZP19",
+    "title": "Novilla King Size Mattress, 12 Inch Gel Memory Foam King Mattress for Cool Night & Pressure Relief, Medium Plush Feel with Motion Isolating, Bliss",
+    "url": "https://www.amazon.com/dp/B083YXZP19?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Novilla",
+    "features": [
+      "General Note: Please allow 24 - 72 hours for your Mattress to regain its full shape. Any memory foam will expand faster in a warmer room. In cold temperature, at delivery, your mattress may take a bit longer to return to full sized from its compressed state.The expansion time of the mattress will vary as per the surrounding.",
+      "COOL and HIGHLY BREATHABLE- Novilla king size mattress constructed with a 4-layer all-foam system. The foam mattress on top is a gel-infused memory foam that keeps you cool. The egg crate designed foam layer increases airflow through all areas of this king size memory foam mattress. The mattress cover can also increase breathability by 30%. Ensures you stay asleep longer with this bed mattress.",
+      "RELIEVES PAINS and DAMPENS PARTNER\u2019S MOVEMENTS- Novilla 12'' gel memory foam medium firm king mattress includes 4 different foam layers. Gel memory foam is combined with comfort foam to distribute pressure and mold to your body. And the two layers high density foam that improve durability, which to give your body support for proper spinal alignment. Also to resist sagging and prevent roll-off. Whether you sleep alone or next to a partner, there is no disruption.",
+      "A SAFE and COMFORTABLE SLEEP ENVIRONMENT- Mattress is made of CertiPUR-US Certified foam, without any harmful off-gassing and substances like formaldehyde, mercury, and other heavy metals. The bed mattress cover use skin-friendly rayon fabric, heavenly soft to touch. Novilla king size memory foam mattress gives you a healthier and cloud-like experience.",
+      "KING MATTRESS IN A BOX and FITS ALL BED FRAMES- Such fun to receive a mattress that\u2019s rolled and compressed in a box . Follow the instructions and see how the magic happens. It is easy to set up and fits all kinds of bed frames, even on the floor. Please note that the new mattress is compressed and rolled for shipping, so it is recommended to wait 72 hours for the mattress to air out and fully reshape it for better performance."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41xwSaLbFyL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41xwSaLbFyL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41xwSaLbFyL._SL75_.jpg"
+  },
+  {
+    "asin": "B083HCHTFY",
+    "title": "StretchSnug Full/Full XL Size Fitted Sheet Only - 4-Way Stretchy, Snug Fit, Wrinkle Free & Stay in Place, No More Slipping Off for Mattress, Soft & Comfortable - Light Gray",
+    "url": "https://www.amazon.com/dp/B083HCHTFY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "N&Y HOME",
+    "features": [
+      "Stay Put All Night: The full size fitted sheet with 4-way flexibility tech stretches over the mattress full or extra long full size and stays in place securely all night, no more slipping off, moving or wrinkling, fits tightly and prevent scratching from your pets like dog or cat, also kids friendly",
+      "No More Coming Off: Deep pocketed design and the elastic all the way around the entire bottom & staying underneath, which keeps corners from popping up even if you toss and turn. The full fitted sheet keeps its shape, NO MORE tucking the sheet everyday or buying straps or clips",
+      "Tailored Sheet for Mattress/Box Spring: This stretchy fitted sheet fits for any mattress/boxspring up to 16\" depth. Great for memory foam-type mattress, adjustable bed, and even odd sized mattresses. Other Uses: Using the stretch fitted sheet as sofa cover, couch cover or others if the size meets",
+      "Ultimate Sleep Support: The bottom Jersey sheet is super soft and comfortable, like T-shirt feeling and stays smooth & cool, let you enjoy a great sleeping experience",
+      "Included 1 Full Size Fitted Sheet Only in package"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/514JyE2gUIL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/514JyE2gUIL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/514JyE2gUIL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DWK7DTNW",
+    "title": "Novilla 12 Inch Queen Mattress in a Box, Gel Memory Foam Queen Size Bed Mattress for Cooling Night Sleep, Comfort Sleep & Pressure Relief, CertiPUR-US Certified,White",
+    "url": "https://www.amazon.com/dp/B0DWK7DTNW?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Novilla",
+    "features": [
+      "Cooling & Breathable - The Novilla 12 inch queen size memory foam mattress addes 30% more NanoGel, which will increase the heat absorption capacity, promotes airflow and provides a refreshing cooling effect, thereby delivering an enhanced sleep experience. Enjoy all-night comfort and relaxation, say goodbye hot and restless nights.",
+      "Comfort Support - Novilla 12 inch queen size mattress features 3 foam layers, providing superior noise and vibration absorption during sleep movements. This ensures that your deep sleep remains undisturbed by your partner's tossing and turning or getting up, enhancing overall sleep comfort. The high-density foam offers balanced support to maintain proper spinal alignment. The combination of gel memory foam and comfort foam effectively relieves pressure points.",
+      "All-Night Freshness - This Novilla queen foam mattress is engineered with advanced foam technology that effectively absorbs odors and moisture. Creating a dry, hygienic and comfortable sleeping environment. This allows you to experience refreshing sleep and wake up feeling rejuvenated.",
+      "Healthy Sleep - Novilla gel memory foam mattress is quilted with a breathable knitted fabric, offering a soft and luxurious feel. All foams in the Novilla mattress are CertiPUR-US certified, and the mattress cover is OEKO-TEX certified, ensuring the absence of harmful substances. This provides a safe and healthy sleep environment for your family. Additionally, it comes with a 10-year protection, ensuring a decade of worry-free.",
+      "Queen Mattress in a Box - Novilla 12 inch memory foam queen mattress is vacuum-compressed and packaged in a compact box for easy delivery. Easy to setup and fits all kinds of queen bed frames, even on the floor. Mattress is recommended 72 hours for air out and reshape."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41zSNunTJEL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41zSNunTJEL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41zSNunTJEL._SL75_.jpg"
+  },
+  {
+    "asin": "B086K3V4D5",
+    "title": "DREAMCARE King Size Sheets Set \u2013 6 pcs Cooling Bed Sheets \u2013 up to 21\u201d Deep Pocket King Sheet Set \u2013 2500 Supreme Collection \u2013 Extra Soft 100% Brushed Microfiber Hotel Luxury with Side Pocket \u2013 L Gray",
+    "url": "https://www.amazon.com/dp/B086K3V4D5?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "DREAMCARE",
+    "features": [
+      "\u2714 SOFT AND LONG-LASTING: Dreamcare bed sheets are crafted from 100% fine brushed microfiber polyester, resulting in a top-quality product that is wrinkle and fade resistant.",
+      "\u2714 6 PIECE EXTRA DEEP POCKET KING SHEETS SET: Included in this king bed sheet set is 1 fitted sheet, 1 flat sheet, and 4 pillowcases. The fitted bed sheet is extra deep pocket and is fully elasticized at the bottom with a smooth fit corner strap to ensure a snug fit and no slips on mattresses up to 21\u201d thick.",
+      "\u2714 BONUS SIDE POCKET LUXURY SHEETS: On the side of the fitted sheet is a pocket perfect for storing your phone, a book, your glasses, or even the TV remote!",
+      "\u2714 EASY TO CLEAN AND CARE FOR MICROFIBER KING SHEETS: Simply wash the sheet & pillowcase sets at a low temperature and they will be as good as new. No risk of fading and quick to dry, these soft sheets are made to stand the test of time.",
+      "\u2714 READ THE MANUAL CAREFULLY: Please read the instruction manual provided with the DreamCare bed sheets set closely before use. If you have any questions or issues regarding the set, please do not hesitate to send the seller a message through Amazon and we will respond within 24 hours."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41L4ZQkRRhL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41L4ZQkRRhL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41L4ZQkRRhL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FWJ6822R",
+    "title": "Bamtek Cooling Mattress Topper Queen Size - Plush Soft Pillow Top Mattress Pad - 100% Viscose Derived from Bamboo Outer Shell - Mattress Topper for Back Pain Relief - 60\" x 80\"",
+    "url": "https://www.amazon.com/dp/B0FWJ6822R?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bamtek",
+    "features": [
+      "Ever wake up feeling stiff or sore? Yeah, we\u2019ve been there. That\u2019s why we added 30% more filling on our queen size mattress topper, a generous 1150gsm! to give you that sink-in softness you\u2019ve been craving. It hugs your back, hips, and shoulders in all the right places, so you wake up actually feeling rested.",
+      "Hot sleeper? Not a problem here. Bamtek cooling mattress topper features a breathable outer cover and moisture-wicking 3D microfiber fill, so you stay cool, comfy, and dry, no sweaty wake-ups, no tossing and turning. Just that sweet, breezy sleep you dream about.",
+      "Upgrade your mattress without replacing it. Add a plush, protective layer that extends your mattress\u2019s life - best of all, for a fraction of the cost. This queen plush mattress topper softens things up just right, cradling pressure points like your lower back and hips so you can finally relax into your bed. It\u2019s completely noiseless and helps reduce motion transfer (your partner\u2019s midnight wiggles? You won\u2019t even notice).",
+      "Tired of mattress toppers that bunch up or slide around? Same. That\u2019s why we designed this pillow top mattress cover with 18\u201321\u201d extra deep pockets and a snug elastic edge. It grips your mattress just right and stays perfectly in place, no slipping, no shifting, no hassle.",
+      "Yes! you can just toss it right in the wash, no special care needed. Even better? This mattress topper for queen size beds is totally odor-free, with none of those weird chemical smells and Oeko-Tex Standard 100 certified, so it\u2019s been tested for over 100 harmful substances. Just safe, fresh, skin-friendly comfort that makes life easier."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41jHe+fFlHL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41jHe+fFlHL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41jHe+fFlHL._SL75_.jpg"
+  },
+  {
+    "asin": "B07JQSWJJS",
+    "title": "Ultra Soft Full Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green",
+    "url": "https://www.amazon.com/dp/B07JQSWJJS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Niagara Sleep Solution",
+    "features": [
+      "ULTRA SOFT: Niagara Full Mattress Topper is made from viscose made from bamboo fiber and fits mattresses 8-20 inches deep. The mattress topper full is 54x75 inches in size, gentle on sensitive skin, and ultra-soft.",
+      "CLOUD-LIKE SLEEP: This full mattress topper adds an extra cushion to potentially ease back pain. The back support mattress topper full is also cool and sweat-absorbent for extra comfort.",
+      "EASY TO USE: The cooling bed pad has a deep pocket, is easy to put on, and has extra-length stretchy sides for thick mattresses. The puffy mattress topper is machine-washable and is packed in a compressed package. After taking it out from package, shake and pat it, leaving it for 48 hours or tumble dry on low heat for 20 minutes.",
+      "MACHINE-WASHABLE: The full matress topper is safe for washing machines and has no harmful chemicals like latex or formaldehyde. The full bed pad is easy to put on and won\u2019t slide off.",
+      "SATISFACTION: Get 100% satisfaction with the active cooling mattress topper. Our full mattress toppers are backed by a promise that you\u2019ll love them. Enjoy sound sleep today with a soft topper!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41HHjJYNAXL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
