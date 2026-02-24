@@ -1,0 +1,334 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-25T10:12:10Z
+author: "Mason Everett"
+title: "Best Mattresses That Can Be Flipped Over"
+excerpt: "Discover the mattresses that can be flipped over to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - mattresses that can be flipped over
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-mattresses-that-can-be-flipped-over
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right mattresses that can be flipped over
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Mattresses That Can Be Flipped Over" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Mattresses That Can Be Flipped Over"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Mattresses That Can Be Flipped Over"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy mattresses that can be flipped over?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose mattresses that can be flipped over?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best mattresses that can be flipped over for beginners?"
+- "How much should I spend on mattresses that can be flipped over?"
+- "What features are most important in mattresses that can be flipped over?"
+- "How do I maintain my mattresses that can be flipped over?"
+- "Are expensive mattresses that can be flipped over worth it?"
+- "What brands make the best mattresses that can be flipped over?"
+- "How long do mattresses that can be flipped over typically last?"
+- "Can I find good mattresses that can be flipped over on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B07BTRDGRM",
+    "title": "Classic Brands Cool Gel Chill Memory Foam 14-Inch Mattress with 2 BONUS Pillows |CertiPUR-US Certified |Bed-in-a-Box, Queen",
+    "url": "https://www.amazon.com/dp/B07BTRDGRM?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "COOL GEL",
+    "features": [
+      "Advanced Cooling Gel Memory Foam Mattress: Our bed mattress features a 3.5-inch ventilated cooling gel memory foam layer, this cooling memory foam mattress queen conforms to your body, enhancing airflow, temperature regulation, & personalized comfort",
+      "Pressure-Relieving Medium Firm Support: This medium firm queen memory foam mattress offers high-density support that cradles pressure points, promotes spinal alignment, and reduces discomfort, making it ideal for back, side, and stomach sleepers.",
+      "Breathable Open-Cell Design for Cooling: Features a ventilated open-cell structure that enhances airflow and heat dissipation. This queen bed mattress ensures a cool and comfortable sleeping environment all night long, preventing overheating.",
+      "Proudly Made in the USA: Our queen mattress bed is made with eco-friendly, CertiPUR-US certified foam - free from fiberglass or toxic chemicals. Designed for comfort, durability, and peace of mind for a healthier night\u2019s sleep.",
+      "CertiPUR-US Certified: Fiberglass-free & certified for durability, emissions, and performance. Our luxury medium firm mattress queen meets strict standards for emissions, durability, & performance, offering peace of mind with every night's sleep.",
+      "Available in Multiple Sizes: Cool Gel Memory Foam Mattress Queen dimensions: 60\" x 80\" x 14-Inch. Our Memory Foam Bed Mattresses are available in California King, King Mattress, Queen, Full Mattress, Twin XL, & Twin Mattress as well as 8, 10, 12, & 14-inch Depths."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41oMggC4NrL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FC2S1LTS",
+    "title": "Queen Mattress, 14 Inch Hybrid Mattresses in a Box with Durable Support, Fiberglass Free, Motion Isolation & Individually Pocket, 100 Night Trial, Queen Size, Pressure Relief for Silent Sleep",
+    "url": "https://www.amazon.com/dp/B0FC2S1LTS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VISCOUNTESS",
+    "features": [
+      "Quality Materials: The queen mattresses are made of high quality memory foam structure with individual pocket springs, giving you a comfortable experience, allowing you to have a cloud experience, mattress queen size are certified by CertiPUR US and Oeko-Tex Standard 100.",
+      "Fitting Body Curves: VISCOUNTESS fiberglass free mattresses are ergonomically designed to perfectly fit all parts of the body, with effective support, and with medium hardness can provide you with effective support and relaxation,mattress queen giving you a full sense of security while you sleep, and also bringing you a happy life.",
+      "Motion Isolated: Queen size mattresses use independent pocket springs to provide a quiet sleep environment, no rattling when flipped, allowing you to sleep at ease, but also independently packaged springs will also give you effective support,queen bed mattress bringing you a comfortable night's sleep.",
+      "Mattress in a Box: InnerFiberglass Free Mattress is compressed in a box, easy to carry, at the same time, queen hybrid mattress can be used in a wide range of platform beds, on the floor, in the study and so on. Let you use it without worry, warm tips: leave it for 24 hours to let the hybrid mattress queen fully rebound.",
+      "Professional After Sales Service: We have a professional team, you can contact us in time when you encounter problems, we will solve the problem for you within 24 hours, at the same time, queen mattress 14 inch provide 10 years warranty, it is our honor to provide you with satisfactory service."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FC2QYX7G",
+    "title": "VISCOUNTESS Full Size Mattress, 14 Inch Hybrid Mattresses with Durable Support, Motion Isolation & Individually Pocket, 100 Night Trial, Pressure Relief for Silent Sleep",
+    "url": "https://www.amazon.com/dp/B0FC2QYX7G?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VISCOUNTESS",
+    "features": [
+      "Quality Materials: The full mattresses are made of high quality memory foam structure with individual pocket springs, giving you a comfortable experience, allowing you to have a cloud experience, mattress full size are certified by CertiPUR US and Oeko-Tex Standard 100.",
+      "Fitting Body Curves: VISCOUNTESS fiberglass free mattresses are ergonomically designed to perfectly fit all parts of the body, with effective support, and with medium hardness can provide you with effective support and relaxation,full size bed mattress giving you a full sense of security while you sleep, and also bringing you a happy life.",
+      "Motion Isolated: Full size mattresses use independent pocket springs to provide a quiet sleep environment, no rattling when flipped, allowing you to sleep at ease, but also independently packaged springs will also give you effective support,full mattress in a box bringing you a comfortable night's sleep.",
+      "Mattress in a Box: InnerFiberglass Free Mattress is compressed in a box, easy to carry, at the same time, hybrid mattress full can be used in a wide range of platform beds, on the floor, in the study and so on. Let you use it without worry, warm tips: leave it for 24 hours to let the mattress fully rebound.",
+      "Professional After Sales Service: We have a professional team, you can contact us in time when you encounter problems, we will solve the problem for you within 24 hours, at the same time, 14 inch full size mattress provide 10 years warranty, it is our honor to provide you with satisfactory service."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41tcxVzg8QL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FDGGNLDZ",
+    "title": "Espsilto Full Size 75''x54'' Folding Bed with Mattress for Adult - Extra Large Wide Rollaway Bed for Guest, Comfortable Sleep in a Large Space",
+    "url": "https://www.amazon.com/dp/B0FDGGNLDZ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Espsilto",
+    "features": [
+      "\u3010Extra Large Size\u3011This is a truly full-size folding bed with a width of 54 \". It can be used by people with larger body types, and at the same time, it can also provide a more spacious and comfortable sleep for people with moderate body types, making you less cramped when turning over at night. Please confirm whether the size is suitable for your room according to the picture before purchasing.",
+      "\u3010Easy to Assembly\u3011The rollaway bed takes about half-hour to set up. Note: Please make sure that each screw is tightened and follow our installation guide. Comes with everything you need, Installation manual, tools and screws. If you encounter any problems during installation, please feel free to contact us.",
+      "\u3010Removable & Comfortable Mattress\u3011The package comes with a soft mattress, which is filled with high quality memory foam and base support foam to provide you with a comfortable sleeping experience. The mattress can be removable, so you will be very convenient to change the mattress cover or wash it.",
+      "\u3010Space Saving\u3011The folding bed with mattress is fitted with 4 smooth-rolling wheels to ensure easy portability, also lockable when you want to place it. The smooth wheels have minimal noise while using and will not leave scratches on the floor. This day bed is applicable for living room, bed room or guest room. Suitable for small apartment, a guest and office nap.",
+      "\u3010Strong & Stable Bed Frame \u3011This foldable bed is built with a high-quality metal frame that is reinforced for maximum durability. The full-steel wire lattice frame is designed to support up to 450 lbs. The 54-inch wide design allows you to have a wider sleeping space."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41OT-4Q2kzL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41OT-4Q2kzL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41OT-4Q2kzL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DP5G2NSL",
+    "title": "Nectar Kids Twin Mattress 8\u201d - 2-Sided Design for Growing Children - Pressure Relieving Memory Foam - Fiberglass Free - 365 Night Trial - Mattress in a Box",
+    "url": "https://www.amazon.com/dp/B0DP5G2NSL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Nectar",
+    "features": [
+      "THE NECTAR KIDS MATTRESS - Nectar\u2019s Kids Mattress is expertly crafted to support your child's growth, featuring dual-side comfort that adapts to different life stages, ensuring a restful night's sleep. Designed with durability in mind, this mattress is built to last through the various stages of childhood, offering both safety and comfort for your little one.",
+      "2-SIDED DESIGN FOR GROWING CHILDREN - This mattress adapts to your child's evolving needs, extending its usability and ensuring they get the best sleep at every stage. One side offers firmer, cradling support, ideal for promoting proper spinal alignment in younger children. As they grow, simply flip the mattress to the softer, cushioning side, which provides extra contouring comfort that older kids will love.",
+      "DESIGNED WITH SAFETY IN MIND - The Nectar Kids mattress prioritizes your child\u2019s safety with OEKO-TEX Standard 100 certified fabrics, CertiPUR-US certified foams, and a 100% fiberglass-free construction. These measures ensure the materials meet strict safety and quality standards, giving you peace of mind.",
+      "REMOVABLE & MACHINE WASHABLE COVER - Keep your child\u2019s mattress clean with its removable, machine-washable cover. Its stain-resistant and moisture-repellent design makes maintenance a breeze, offering long-lasting protection.",
+      "365-NIGHT HOME TRIAL - Our industry-leading year-long trial period starts the day your Nectar mattress is delivered. Sleep on it in all four seasons.",
+      "2-SIDED, FLIPPABLE DESIGN - The Cradling Support side is recommended for kids ages 3-7, while the Memory Foam Comfort Layer side is recommended for kids ages 8+, extending its usability as your child grows and their sleep needs evolve."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51oJPLKBJcL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51oJPLKBJcL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51oJPLKBJcL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D7ZYCZFD",
+    "title": "Best Choice Products 4in Portable Twin XL-Size Mattress, Tri-Fold Mattress for Camping, Guest, Toddler, Foam Plush w/Carry Case - Grey",
+    "url": "https://www.amazon.com/dp/B0D7ZYCZFD?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Best Choice Products",
+    "features": [
+      "4IN PLUSH FOAM: Soft yet firm foam provides maximum comfort and padding while protecting your mattress from dirt, pet fur, dead skin, and other pollutants",
+      "MULTIPURPOSE: Great as a convenient guest bed, a comfy camping bed, or as a floor sofa during movie nights and gatherings with friends and family",
+      "PORTABLE AND SPACE-SAVING: Simply slip the included carrying case over the portable, tri-fold mattress and zip it up to keep it neat and secure while you travel",
+      "EASY SETUP: Open package in well-ventilated area to release harmless odor that should dissipate within several hours. Wait 24-72 hours for maximum expansion",
+      "SUGGESTED MAINTENANCE: To wash and care for the cover, spot clean with a damp cloth using cold water and mild soap before wiping dry with a dry cloth; FLAT: 80\"(L) x 39\"(W) x 4\"(Thick); FOLDED: 39\"(L) x 26.75\"(W) x 12\"(H)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41IHt7yQO2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0FC2RW163",
+    "title": "VISCOUNTESS Twin Mattress, 12 Inch Hybrid Mattresses in a Box with Durable Support, Fiberglass Free, Motion Isolation & Individually Pocket, 100 Night Trial, Pressure Relief for Silent Sleep",
+    "url": "https://www.amazon.com/dp/B0FC2RW163?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "VISCOUNTESS",
+    "features": [
+      "Quality Materials: The twin mattresses are made of high quality memory foam structure with individual pocket springs, giving you a comfortable experience,twin bed mattress allowing you to have a cloud experience, VISCOUNTESS mattresses are certified by CertiPUR US and Oeko-Tex Standard 100.",
+      "Fitting Body Curves: VISCOUNTESS fiberglass free mattresses are ergonomically designed to perfectly fit all parts of the body, with effective support, and with medium hardness can provide you with effective support and relaxation, mattress twin giving you a full sense of security while you sleep, and also bringing you a happy life.",
+      "Motion Isolated: Twin size mattresses use independent pocket springs to provide a quiet sleep environment, no rattling when flipped, allowing you to sleep at ease, but also independently packaged springs will also give you effective support,mattress twin size bringing you a comfortable night's sleep.",
+      "Mattress in a Box: InnerFiberglass Free Mattress is compressed in a box, easy to carry, at the same time, hybrid mattress king can be used in a wide range of platform beds, on the floor, in the study and so on. Let you use it without worry, warm tips: leave it for 24 hours to let the mattress fully rebound.",
+      "Professional After Sales Service: We have a professional team, you can contact us in time when you encounter problems, we will solve the problem for you within 24 hours, at the same time, twin mattress 12 inch provide 10 years warranty, it is our honor to provide you with satisfactory service."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41c04uWwumL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41c04uWwumL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41c04uWwumL._SL75_.jpg"
+  },
+  {
+    "asin": "B082WP7L58",
+    "title": "Lucid 5 Inch Memory Foam Mattress \u2013 Low Profile - Firm Feel - Infused with Bamboo Charcoal and Gel - Bed in a Box - Temperature Regulating - Breathable - Twin Size",
+    "url": "https://www.amazon.com/dp/B082WP7L58?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LUCID",
+    "features": [
+      "SHIPS IN A BOX AND ARRIVES COMPRESSED: Your memory foam mattress is compressed, rolled, and shipped in a box right to your doorstep; mattress will expand more quickly in a warm room, but please allow 24-48 hours for mattress for full expansion",
+      "FIRM FEEL: This Lucid mattress includes 1 inch of ventilated memory foam infused with gel and bamboo charcoal and 4 inches of supportive base foam for a firm feel ideal for stomach and back sleepers and perfect for teens and growing children",
+      "BAMBOO CHARCOAL AND GEL INFUSIONS: This comfortable memory foam mattress is infused with cooling gel to help you sleep cooler and bamboo charcoal to help capture odors to keep your bed fresh all day every day",
+      "LOW PROFILE DESIGN: This all-foam mattress has layers that contour to your shape and help align the spine for pressure relieving comfort with a versatile height that fits well in RVs, trundle beds, or bunk beds, and works with most any bed frame",
+      "RELIABLE AND QUALITY COMFORT: CertiPUR-US Certified to meet quality standards, this mattress has a 10-year limited warranty and can be relied on to provide comfort for all your loved ones through every stage of life"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ZNeNHTbXL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ZNeNHTbXL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ZNeNHTbXL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FMVRLSZX",
+    "title": "Linenspa 8 Inch Gel Infused Memory Foam Mattress \u2013 Queen Size \u2013 Medium Feel - Cooling Gel - Mattress in a Box - Primary or Guest Bedroom - Pressure Relieving and Breathable \u2013 CertiPUR-US Certified",
+    "url": "https://www.amazon.com/dp/B0FMVRLSZX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Linenspa",
+    "features": [
+      "CONTOURING COOLING COMFORT: One inch of cooling gel-infused memory foam, 3.75 inches of convoluted transition foam, and 3.75 inches of convoluted base foam create a breathable, medium-feel mattress",
+      "VERSATILE SIZE AND FEEL: The 8-inch profile is perfect for kids\u2019 bedrooms, guest bedrooms, rental properties, or primary bedrooms with a universal medium feel that appeals to all sleep styles",
+      "CHOOSE YOUR FRAME: This Linenspa mattress is designed to be used with any bed frame including a metal grid, platform, slat, or traditional box spring.",
+      "EASY SETUP: Gel memory foam mattress is rolled, compressed, and boxed for convenient delivery and setup; remove the packaging and allow the mattress to decompress for 24-72 hours, may take longer in a colder environment",
+      "ASSEMBLED IN THE USA: Linenspa gel memory foam mattress is fiberglass free and backed by a 10-year warranty that guards against manufacturer defects; CertiPUR-US certified and OEKO-TEX Standard 100 certified; assembled in the United States"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41BSfaUfpSL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41BSfaUfpSL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41BSfaUfpSL._SL75_.jpg"
+  },
+  {
+    "asin": "B083Z16P9G",
+    "title": "Novilla Queen Mattress, 10 Inch Gel Memory Foam Queen Size Mattress for Cool Night & Pressure Relief, Medium Plush Bed Mattresses, Bliss",
+    "url": "https://www.amazon.com/dp/B083Z16P9G?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Novilla",
+    "features": [
+      "General Note: Please allow 24 - 72 hours for your Mattress to regain its full shape. Any memory foam will expand faster in a warmer room. In cold temperature, at delivery, your mattress may take a bit longer to return to full sized from its compressed state.The expansion time of the mattress will vary as per the surrounding.General Note: Please allow 24 - 72 hours for your Mattress to regain its full shape. Any memory foam will expand faster in a warmer room. In cold temperature, at delivery, your mattress may take a bit longer to return to full sized from its compressed state.The expansion time of the mattress will vary as per the surrounding.",
+      "GET UP WITHOUT ANY PAINS- Novilla queen size mattress with 4 layers all-foam system, the foam mattress not too soft nor too firm for all sleep positions. This medium firm mattress is made of gel memory foam combined with comfort foam, plus high-density foam underneath, which aligns your spine and evenly disperses your body weight to relieve pressure points while you are sleeping.",
+      "COOLING QUEEN MATTRESS FOR RESTFUL SLEEP- Novilla 10 inch queen size mattress is designed with gel-infused memory foam to keep you cool & stay comfortable all night long. The mattress cover can also increase breathability by 30%. The middle foam layer is designed as an airflow channel to increase airflow through all areas of this queen foam mattress.",
+      "ODORLESS & PLUSH FEEL- Mattresses are made of CertiPUR-US Certified foam, without any harmful off-gassing and substances like formaldehyde, mercury, and other heavy metals. The queen bed mattress cover use skin-friendly rayon fabric, heavenly soft to touch. Novilla queen memory foam mattress gives you a healthier and cloud-like experience.",
+      "QUEEN MATTRESS IN A BOX & FITS ALL BED FRAMES- Such fun to receive a mattress that\u2019s rolled and compressed in a box . Follow the instructions and see how the magic happens. It is easy to set up and fits all kinds of queen bed frames, even on the floor. Please note that the new mattress is compressed and rolled for shipping, so it is recommended to wait 72 hours for the mattress to air out and fully reshape it for better performance."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/414eSBtVZpL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/414eSBtVZpL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/414eSBtVZpL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
