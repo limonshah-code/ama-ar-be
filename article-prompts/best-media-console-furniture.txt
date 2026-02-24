@@ -1,0 +1,300 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-25T11:40:11Z
+author: "Mason Everett"
+title: "Best Media Console Furniture"
+excerpt: "Discover the media console furniture to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - media console furniture
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-media-console-furniture
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right media console furniture
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Media Console Furniture" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 8 Best Media Console Furniture"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Media Console Furniture"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy media console furniture?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose media console furniture?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best media console furniture for beginners?"
+- "How much should I spend on media console furniture?"
+- "What features are most important in media console furniture?"
+- "How do I maintain my media console furniture?"
+- "Are expensive media console furniture worth it?"
+- "What brands make the best media console furniture?"
+- "How long do media console furniture typically last?"
+- "Can I find good media console furniture on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0G52296MW",
+    "title": "AMERLIFE 70\" Modern TV Stand for TVs Up to 80\", Wood TV Console with Curved Profile Design & 2 Storage Cabinets, Media Console Entertainment Center for Living Room, Brown",
+    "url": "https://www.amazon.com/dp/B0G52296MW?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "AMERLIFE",
+    "features": [
+      "MODERN CURVED DESIGN: Smooth curved edges paired with a natural wood finish bring a warm, sleek look to your living room while reducing sharp-corner risks, making the TV stand safer for families with kids and pets",
+      "SPACIOUS STORAGE SPACE: Features a wide tabletop, 3 open cubbies and 4-door storage cabinets, this modern media console easily organizes your soundbars, game consoles, books and decors for a tidy living space",
+      "STABLE LOWBOARD SRRUCTURE: Reinforced high-quality MDF with back support ensures this TV console remains stable and strong supports up to 250 lbs, ensuring stability and long-term use without wobbling or tipping",
+      "USER-FRIENDLY DETAILS: Three pre-drilled cable management holes keep cords neat and hidden, while soft-close hinges ensure smooth, quiet use. The open bottom space allows easy robot-vacuum access for simple daily cleaning",
+      "EASY ASSEMBLY SAFE USAGE: With clear labels & step-by-step instructions, two people can assemble the console in about 30 minutes. Anti-tip hardware is included to ensure secure and family-friendly use"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51Ach+fRGLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51Ach+fRGLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51Ach+fRGLL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FNRNHT6H",
+    "title": "Evermagin 67\" Walnut Fluted TV Stand for TVs up tp 75\", Mid-Century Modern Entertainment Center with Storage Cabinets and Fluted Doors, Wood Media TV Consoles for Living Room and Bedroom Furniture",
+    "url": "https://www.amazon.com/dp/B0FNRNHT6H?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Evermagin",
+    "features": [
+      "\u3010Stylish Fluted Design\u3011The 67\" credenza storage cabinet features elegant fluted detailing, adding texture and visual interest to any room. Its modern design complements a wide range of interior styles making it a versatile statement piece",
+      "\u3010Endless Versatility\u3011This muebles para la sala tv is perfect for multiple spaces. Use it as a stylish TV console, a chic coffee bar, or a functional storage console. Its adaptable design works beautifully in living rooms dining areas or entryways",
+      "\u3010Sturdy and Durable Construction\u3011Crafted from high-quality materials this TV cabinet with storage offers exceptional stability and long-lasting durability. Its solid construction ensures everyday use without wobbling or concerns about wear",
+      "\u3010Ample Storage and Organization\u3011With spacious compartments, this long TV console provides plenty of room to organize media accessories decor or storage items while maintaining a sleek and tidy appearance",
+      "\u3010Easy Assembly and Support\u3011The morden entertainment center comes with detailed assembly instructions and clearly labeled parts for quick setup. Our dedicated customer service team is available to assist with any questions for a smooth experience"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/511s7FgD+YL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/511s7FgD+YL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/511s7FgD+YL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FQV5QFTY",
+    "title": "OKD 70\" Mid Century Modern Fluted TV Stand, Entertainment Center, Sideboard, Media Console for Living Room with 2 Soft Close Door/Adjustable Shelves (Dark Walnut)",
+    "url": "https://www.amazon.com/dp/B0FQV5QFTY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "OKD",
+    "features": [
+      "\ud835\uddd8\ud835\uddf9\ud835\uddf2\ud835\uddf4\ud835\uddee\ud835\uddfb\ud835\ude01 \ud835\uddd7\ud835\uddf2\ud835\ude00\ud835\uddf6\ud835\uddf4\ud835\uddfb: This TV stand boasts exquisite fluted details and a curved profile, echoing the timeless elegance of mid-century modern style. Its modern twist makes it a stylish and versatile addition to any interior.",
+      "\ud835\uddd4\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf2 \ud835\uddee\ud835\uddfb\ud835\uddf1 \ud835\uddd6\ud835\ude02\ud835\ude00\ud835\ude01\ud835\uddfc\ud835\uddfa\ud835\uddf6\ud835\ude07\ud835\uddee\ud835\uddef\ud835\uddf9\ud835\uddf2 \ud835\udde6\ud835\ude01\ud835\uddfc\ud835\uddff\ud835\uddee\ud835\uddf4\ud835\uddf2: Equipped with two cabinets and an open shelf, this stand offers ample, adjustable storage to keep your entertainment area organized. It's perfect for media equipment and delicate items alike.",
+      "\ud835\udde9\ud835\uddf2\ud835\uddff\ud835\ude00\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddf9\ud835\uddf2 \ud835\uddee\ud835\uddfb\ud835\uddf1 \ud835\udde0\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddff\ud835\uddfb \ud835\udde7\ud835\udde9 \ud835\udde6\ud835\ude01\ud835\uddee\ud835\uddfb\ud835\uddf1: Ideal for a 65-inch TV, this stand accommodates screens up to 75 inches. Its modern design integrates seamlessly with various decor styles, enhancing any home.",
+      "\ud835\udde0\ud835\ude02\ud835\uddf9\ud835\ude01\ud835\uddf6-\ud835\uddd9\ud835\ude02\ud835\uddfb\ud835\uddf0\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb\ud835\uddee\ud835\uddf9 \ud835\udde8\ud835\ude00\ud835\uddf2: Beyond a TV stand, it serves as an elegant console table, sideboard, or bedroom addition. The spacious top is perfect for displaying art, vases, or family photos, adding to your space's aesthetic."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51d8KPGTg5L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51d8KPGTg5L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51d8KPGTg5L._SL75_.jpg"
+  },
+  {
+    "asin": "B0FQV27LCS",
+    "title": "OKD 70\" Mid Century Modern Fluted TV Stand, Entertainment Center, Sideboard, Media Console for Living Room with 2 Soft Close Door/Adjustable Shelves (Natural Oak)",
+    "url": "https://www.amazon.com/dp/B0FQV27LCS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "OKD",
+    "features": [
+      "\ud835\uddd8\ud835\uddf9\ud835\uddf2\ud835\uddf4\ud835\uddee\ud835\uddfb\ud835\ude01 \ud835\uddd7\ud835\uddf2\ud835\ude00\ud835\uddf6\ud835\uddf4\ud835\uddfb: This TV stand boasts exquisite fluted details and a curved profile, echoing the timeless elegance of mid-century modern style. Its modern twist makes it a stylish and versatile addition to any interior.",
+      "\ud835\uddd4\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf2 \ud835\uddee\ud835\uddfb\ud835\uddf1 \ud835\uddd6\ud835\ude02\ud835\ude00\ud835\ude01\ud835\uddfc\ud835\uddfa\ud835\uddf6\ud835\ude07\ud835\uddee\ud835\uddef\ud835\uddf9\ud835\uddf2 \ud835\udde6\ud835\ude01\ud835\uddfc\ud835\uddff\ud835\uddee\ud835\uddf4\ud835\uddf2: Equipped with two cabinets and an open shelf, this stand offers ample, adjustable storage to keep your entertainment area organized. It's perfect for media equipment and delicate items alike.",
+      "\ud835\udde9\ud835\uddf2\ud835\uddff\ud835\ude00\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddf9\ud835\uddf2 \ud835\uddee\ud835\uddfb\ud835\uddf1 \ud835\udde0\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddff\ud835\uddfb \ud835\udde7\ud835\udde9 \ud835\udde6\ud835\ude01\ud835\uddee\ud835\uddfb\ud835\uddf1: Ideal for a 65-inch TV, this stand accommodates screens up to 75 inches. Its modern design integrates seamlessly with various decor styles, enhancing any home.",
+      "\ud835\udde0\ud835\ude02\ud835\uddf9\ud835\ude01\ud835\uddf6-\ud835\uddd9\ud835\ude02\ud835\uddfb\ud835\uddf0\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb\ud835\uddee\ud835\uddf9 \ud835\udde8\ud835\ude00\ud835\uddf2: Beyond a TV stand, it serves as an elegant console table, sideboard, or bedroom addition. The spacious top is perfect for displaying art, vases, or family photos, adding to your space's aesthetic."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41rnAJOsBYL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41rnAJOsBYL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41rnAJOsBYL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DHH65S5G",
+    "title": "Sweetcrispy TV Stand for 55 60 inch TV, Modern Mid Century Entertainment Center with Storage, Media Console Table 2 Cabinet, Soft Hinge, Handle Door, Wooden Living Room, Office Furniture, Black",
+    "url": "https://www.amazon.com/dp/B0DHH65S5G?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Sweetcrispy",
+    "features": [
+      "Wood TV Stand: This modern TV stand can hold TVs up to 55 and 60 inches. Please confirm the full-size of this tv table is: 53.54\"W x 15.75\"D x 18.9\"H. Designed in a mid-century modern style, this tv stand is not only an entertainment center for your family but also an excellent decoration for your living room, bedroom, office or lounge",
+      "Soft Hinge and Cable Management: This TV table with 2 cabinets provide ample storage for your home. You can ensure a tight cabinet door closure by TIGHTENING or LOOSENING the SOFT HINGES on the door. With cable holes behind each cabinet, you can place a game console, router, or other device and hide their cables, keeping the place tidy",
+      "3-Level Shelf: The open center shelf of this tv stand is adjustable to 3 levels, allowing the shelf to accommodate a variety of items at different heights. The center leg at the bottom of the console table is also adjustable to ensure stability on uneven floors",
+      "Stable and High-Quality: 5 legs provide strong support for the TV table while leaving enough space for cleaning. Foot pads on each leg protect the floor from scratches. Constructed of high-quality board, this entertainment center will remain solid and sturdy for many years. Just wipe this tv stand with a dry or damp cloth and you can keep it clean easily",
+      "Easy Assembly: Each part of this TV stand is numbered and comes with a detailed installation manual, a complete set of installation tools, and installation videos to help you complete the installation"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41EhrQnyShL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41EhrQnyShL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41EhrQnyShL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DWK4VHQB",
+    "title": "gaoyangjiaju 94.48\" Mid Century Modern TV Stand for TVs up to 70\"-90\",Tv Console with 4 Storage Cabinets, Media Furniture for Living Room or Bedroom,Walnut",
+    "url": "https://www.amazon.com/dp/B0DWK4VHQB?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "gaoyangjiaju",
+    "features": [
+      "Mid-Century Modern Design: This long TV stand features a mid-century modern aesthetic with a walnut wood grain finish and slat doors on the cabinet doors, providing a stylish and timeless look that complements any vintage home decor",
+      "Ample Storage:With 4 spacious storage compartments,this TV stand is perfect for tucking away clutter and keeping your living area organized.Whether displaying decor or storing media accessories,this versatile piece combines style and practicality,making it an ideal addition to any home",
+      "Round Cable Hole: In order to make your TV or other electronic equipment power supplies neatly arranged, the back of the TV stand is designed with a drilling design, which allows your electronic equipment power supplies to be easily connected without messy placement.",
+      "Wide Range of Applications: The design of TV stand is modern and fashionable, suitable for most home decoration. You can put it in the living room, bedroom, lounge, activity room and many other places. We believe it will stand out in any room.",
+      "High-Quality & Durable Materials:Crafted from premium fiberboard with a real wood veneer surface and solid white ash wood slatted doors, this TV stand is built to last. Its sturdy internal structure and quality hardware ensure it remains stable over time, resisting deformation or cracking while",
+      "Easy Assembly and Cleaning: This TV cabinet comes with detailed installation instructions, making your setup simple and quick. Its smooth surface allows you to simply wipe it with a damp cloth and dry it, restoring your TV console to a like-new condition.\u200c"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/413StQn7-hL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/413StQn7-hL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/413StQn7-hL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FHHN4W79",
+    "title": "Farmhouse TV Stand for 65/60/55 Inch Tvs, Rustic Entertainment Center with Storage Cabinets & Sliding Barn Doors, Modern Media Console Table, Wood Television Furniture for Living Room, Bedroom, Grey",
+    "url": "https://www.amazon.com/dp/B0FHHN4W79?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Xixini",
+    "features": [
+      "\u3010Modern Farmhouse Style\u3011The wood entertainment center blends rustic charm with contemporary aesthetics, making it a perfect storage solution for your living room or bedroom. Its stylish wood finish and sliding barn doors creating a cozy atmosphere. Vintage farmhouse design adds a touch of classic",
+      "\u3010Sliding Barn Doors & Cable Management\u3011Two sliding barn doors on tv console for convenient access to cabinets and shelves. The movable metal rails ensure smooth and noiseless movement. Two Holes on the back allow cables from various devices to pass through. The cable management system keeps your wires hidden to ensure a clean and tidy appearance",
+      "\u3010Solid Material & Study Construction\u3011The media console is constructed from optimal MDF, P2 engineered wood and metal slide rail ensure long-term use and scratch resistant, load-bearing for the top up to 175 lbs. The floor-standing base design enhances the stability and sturdiness of the modern tv table",
+      "\u3010Ample Storage Capacity \u3011Support TV up to 55 inches, 60 inches, 65 inches. Spacious desktop: 59 '' x 15.6''. The open shelves give you spots to display DVD players and media box, while 2 tall side cabinets provide extra space to stash your collection of entertainment accessories",
+      "\u3010Versatile Usage\u3011Except for being tv stand in your bedroom or as a console table for living room, this storage cabinet also can be used as coffee bar or entryway cabinet. Ideal for any space",
+      "\u3010Easy Assembly\u3011Measuring 59\u00d715.55\u00d727.55 inch/ 150\u00d739.5\u00d770 cm(L\u00d7W\u00d7H) and weighs 37.4 lbs/ 33.25 kg. The tv cabinet is easy to assemble, comes with instruction and accessory bags, you can complete the living room furniture in about 2H. Of course, the time will be shortened if you use your own power tools"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51ZbeCKmDVL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51ZbeCKmDVL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51ZbeCKmDVL._SL75_.jpg"
+  },
+  {
+    "asin": "B0GJL3VF4M",
+    "title": "T4TREAM 70\" Modern Fluted TV Stand, Long TV Table Entertainment Center with Storage, Media Console for Living Room with Door and Adjustable Shelves (Natural Oak)",
+    "url": "https://www.amazon.com/dp/B0GJL3VF4M?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "T4TREAM",
+    "features": [
+      "Timeless Elegance Meets Modern Chic: This modern TV stand features sleek recessed panels and elegant gold-toned handles for a sophisticated look. The rounded corners add graceful curves while ensuring safety for homes with kids and pets.",
+      "Perfectly Sized Media Center\u200b: At 70 inches wide, this entertainment center\u200b is designed to perfectly fit 65\" TVs and can accommodate up to 80\" screens. Designed for flexibility, this TV console\u200b works beautifully as a media center in the living room and bedroom, or a slim side table in the hallway. Its adaptable style and functional design meet a variety of home decor needs.",
+      "Smart, Organized Storage\u200b: Enjoy a clean setup with a wide top surface, two door-closed cabinets, and an open middle storage area. Adjustable shelves let you customize space for media players, game consoles, books, and decor.",
+      "Durable & Sturdy Construction: Crafted from high-quality MDF and reinforced with thick frames, this TV console\u200b offers outstanding stability and durability. It\u2019s designed to securely support your TV and all your entertainment essentials.",
+      "Effortless Assembly: T4TREAM Furniture streamlines the assembly process with clear, user-friendly instructions. Each component is meticulously labeled with serial numbers, and we supply a pack of spare parts in case of loss of hardware during assembly. And your package will ship protected with Styrofoam sheets and protect boards."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41pDgQnVzsL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41pDgQnVzsL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41pDgQnVzsL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
