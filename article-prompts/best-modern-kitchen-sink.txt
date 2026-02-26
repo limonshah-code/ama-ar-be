@@ -1,0 +1,332 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-27T14:23:40Z
+author: "Mason Everett"
+title: "Best Modern Kitchen Sink"
+excerpt: "Discover the modern kitchen sink to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - modern kitchen sink
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-modern-kitchen-sink
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right modern kitchen sink
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Modern Kitchen Sink" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Modern Kitchen Sink"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Modern Kitchen Sink"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy modern kitchen sink?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose modern kitchen sink?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best modern kitchen sink for beginners?"
+- "How much should I spend on modern kitchen sink?"
+- "What features are most important in modern kitchen sink?"
+- "How do I maintain my modern kitchen sink?"
+- "Are expensive modern kitchen sink worth it?"
+- "What brands make the best modern kitchen sink?"
+- "How long do modern kitchen sink typically last?"
+- "Can I find good modern kitchen sink on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0F13QFBHZ",
+    "title": "COZHAO 33x22 Inch 304 Stainless Steel Kitchen Sink with Pull-Out Swivel Faucet, Water Purification, Soap Dispenser Smart Digital Features, Single Bowl Double Waterfall Design",
+    "url": "https://www.amazon.com/dp/B0F13QFBHZ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "cozhao",
+    "features": [
+      "\u3010304 Stainless Steel with Nano-Coating\u3011Matte black 304 stainless steel sink features anti-scratch nano-coating, protecting tableware from abrasions and leaving zero residue. Reinforced thickened soundproof pad at the bottom eliminates condensation drips, ensuring dry storage and easy cleaning.",
+      "\u30104-in-1 Smart Faucet System\u3011Swivel 360\u00b0pull-out faucet with 4 water modes for versatile cleaning. Built-in cup washer restores sparkle in seconds, while dedicated water purification spout delivers instant filtered drinking water. Integrated soap dispenser slot streamlines dishwashing, all-in-one convenience.",
+      "\u3010Smart Sink Tech with Digital Control\u3011Innovative flow-sensing power generation powers real-time water temperature display (digital LED screen). Manual wheel adjusts temperatures from 32\u00b0F to 194\u00b0F (1\u00b0C-38\u00b0C) with \u00b11\u00b0F precision, supporting simultaneous hot/cold water mixing. No batteries required\u2014self-powered by water flow!",
+      "\u3010Dual-Track Multi-Tasking System\u3011Sturdy dual-track design holds vegetable trays, colanders, and draining baskets simultaneously. Vertical space-saving layout ideal for small bars or urban kitchens.",
+      "\u3010Dimensions\u301133\"L x 22\"W; Internal dimensions are: 30.5\"L x 17.1\"W x 10\"D; Underwater OD 120mm; Slot panel thickness: 3.5mm; Basin gall bladder: 1mm; Bowl Depth: 10\"| Standard 3.5\" drain opening will fit any garbage disposal unit\uff1b video guide + PDF tutorial simplifies installation."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41hU75gaQyL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41hU75gaQyL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41hU75gaQyL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FLD7XTC9",
+    "title": "ATTOP 33 Inch Black Drop in Double Bowls Kitchen Sink,33x22 Inch Nano Black Handmade Stainless Steel Double Drop in Kitchen Sink",
+    "url": "https://www.amazon.com/dp/B0FLD7XTC9?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "ATTOP",
+    "features": [
+      "33 Inch double bowls drop in kitchen sink: 33\" L x 22\" W (front-to-back) x 9\", 3.0mm edge plate and 18 Gauge bowl stainless steel thickness.",
+      "Nano black mini bead embossed finish prevent scratches during daily use ,prevent oil stains and floating rust from remaining on the sink.Liquid flows as if on the surface of the lotus leaf,easier to clean.",
+      "Nano black mini bead embossed stainless steel finish ensures that it is highly resistant to dirt and grime,easy to clean and long-lasting .10mm radius corner for easy cleaning and modern look.",
+      "Heavy duty sound guard undercoating and thick rubber padding to minimize noise and reduce condensation,USA standard 3.5'' drain opening will fit any garbage disposal unit Drain placement.placement.Rear drain placement ensures dishes don't settle on the drain.",
+      "Stainless steel basket strainer drain that traps goods waste and can be easily emptied into the trash."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41I0NWW2z4L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41I0NWW2z4L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41I0NWW2z4L._SL75_.jpg"
+  },
+  {
+    "asin": "B0DNK9Q5NG",
+    "title": "Gunmetal Black Kitchen Sink 30 Inch Modern Stainless Steel Drop in kitchen Sink Workstation Scratch Resistant Single Bowl Kitchen Sinks Farmhouse Deep with Faucet Combo",
+    "url": "https://www.amazon.com/dp/B0DNK9Q5NG?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Wupste",
+    "features": [
+      "MULTI FUNCTIONAL KITCHEN SINK and faucet combo set\uff1astainless steel sink\uff0ckitchen faucets\uff0csink cutting board\uff0cStainless steel colander\uff0cSink Drain Assembly\uff0csoap dispenser\uff0cKitchen Storage Accessories",
+      "Drop in Kitchen Sink Dimension: Exterior Dimensions: 30\"L x 18\"W x 9\"D, Interior Dimensions: 28\"L x 14\"W x 9\"D. Standard 3-1/2\" Drain Opening That Fits the Most Common Garbage",
+      "Indestructible SUS304 Construction & NANO-PVD Finished: Constructed from proprietary 304 stainless steel for superior strength and durability. NANO-PVD technology finish application ensures superior performance at anti-physical scratching, anti-rust, anti-pot bowl bump\uff0canti-water trace, anti-fingerprints and stains resistance. Easy to clean and long lasting.",
+      "Workstation Kitchen Sink Drop in\uff1aTracks on the front and back of the sink allow to place and slide\uff0cincluding the cutting board and colander on the sink, It can be switched to a cutting board or a separate sink mode. You can to slide the accessories across the sink to streamline meal prep and cleanup with out losing space on the kitchen counter",
+      "Fast Drainage and Noise Cessation :The X groove is designed for easy drainage the a slight dip at the bottom to prevent water accumulation Use 3mm sound guard undercoating and thick rubber padding,Ultra quiet designs with thicker softer Rubber Noise Reduction Pads"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41FOmGvuGUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41FOmGvuGUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41FOmGvuGUL._SL75_.jpg"
+  },
+  {
+    "asin": "B07S2DX7J9",
+    "title": "KRAUS Kore 32-Inch Undermount Workstation 16 Gauge Single Bowl Stainless Steel Kitchen Sink with Accessories, KWU110-32",
+    "url": "https://www.amazon.com/dp/B07S2DX7J9?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Kraus",
+    "features": [
+      "WORKSTATION SINK with integrated ledge for sliding accessories allows you to work right over the sink while minimizing clutter on the kitchen counter \u2013 Chop and slice on the durable bamboo cutting board or dry dishes on the heavy-duty rolling mat",
+      "OUTER SINK DIMENSIONS: 32\" L x 19 in. W x 10 1/2\" D \u2013 BOWL DIMENSIONS: 30\" L x 16\" W x 10\" D \u2013 Min cabinet: 36 in. \u2013 KIT INCLUDES: Sink for kitchen, cutting board, roll-up dish rack, protective bottom grid, drain assembly with cover, hardware, template",
+      "UNDERMOUNT SINK INSTALLATION creates a seamless transition from sink to countertop with no exposed mounting deck to trap debris \u2013 Simplifies cleanup by letting you wipe water and crumbs right into the sink",
+      "HEAVY-DUTY 16 GAUGE SINK: Designed for lasting durability, high-performance TRU16 gauge stainless steel sink stands up to everyday use with great resistance to corrosion, dents, and damage",
+      "SMOOTH SATIN FINISH is easy to keep clean and not prone to corrosion \u2013 Gently rounded corners on the bottom of the stainless steel kitchen sink help reduce build-up \u2013EASY DRAINING with sloped bottom and channel grooves to keep water from pooling"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ZPPVeCcAL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ZPPVeCcAL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ZPPVeCcAL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DGKR3TKV",
+    "title": "33inch Waterfall Kitchen Sink Drop In Metal Black -Feibus 33x22x10 with Faucet Combo Double Step Workstation 16 Gauge Multifunctional Stainless Steel Single Bowl",
+    "url": "https://www.amazon.com/dp/B0DGKR3TKV?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Feibus",
+    "features": [
+      "WATERFALL SINK:Innovative waterfall kitchen sink. The built-in waterfall faucet has two water outlet modes. The pull-out faucet has three spray modes. Various water outlet modes can be turned on respectively through a knob. Another oval knob can be adjusted in four directions. The faucet is equipped with a Celsius temperature display. Adjust the water temperature and water flow rate of the outlet water according to your needs.",
+      "HONEYCOMB EMBOSSING:The innovative honeycomb embossing process forms a honeycomb-like texture on the surface of the sink. It can increase the hardness and wear resistance of the sink, is scratch-resistant, beautiful and durable, so that the protection of the sink grid may not be needed. The surface sandblasting treatment also has hydrophobicity, making sink cleaning convenient.",
+      "DOUBLE WORKSTATION STEPS:This innovative double-step design allows you to slide and store and drain on the lower layer in one space, and you can continue to cut and wash vegetables on the upper layer, maximizing the space utilization rate of the sink and improving the convenience and efficiency of kitchen operations. It is more flexible and convenient to use.",
+      "PROCESS DETAILS:The sink retains all the characteristics of an ordinary sink, including: R10 angle, X water guide line, nano sandblasting treatment, reserved soap dispenser hole position, anti-condensation coating, rubber silent pad, etc. The 3.5-inch drain hole uses the installation of a universal garbage disposer.",
+      "SIZE AND ACCESSORIES:Drop in method sink with a 3MM thick panel T-304 Stainless steel and a 16 Gauge basin. Exterior size: 33\"L x 22\"W x 10\"D; Interior size: 31\"L x 18\"W x 10\"D. Accessories include: Waterfall Sink Faucet Combo and Pipe kit, Rosewood Chopping Board, Roll Up Drying Rack, Colander for Waterfall Sink, and Strainer Basket for Drain"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51j4xreXt5L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51j4xreXt5L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51j4xreXt5L._SL75_.jpg"
+  },
+  {
+    "asin": "B0CBPK6NVQ",
+    "title": "ARTLINE Black Kitchen Sink, Stainless Steel Single Bowl Sink, Drop In/Topmount Workstation Sink with Sliding Accessories, Farmhouse Workstation sink with Multiple Accessories (19.7 x 17.7in), RXZE031",
+    "url": "https://www.amazon.com/dp/B0CBPK6NVQ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "ARTLINE",
+    "features": [
+      "\u3010Package Contents\u3011This kitchen sink accessory has a black pull-out faucet, black purifying faucet, soap dispenser, retractable draining blue, undermount, hot and cold water inlet pipes, and angle valve.",
+      "\u3010QUALITY MATERIALS\u3011Black stainless steel sink with commercial grade NANO brushed finish, like water on a lotus leaf, without leaving a trace of water. Very easy to clean, with super strength and durability, durable.",
+      "\u3010Drain Quickly and Thoroughly\u3011The bottom of the deep black kitchen sink is slightly sloped, the specific X-shaped guide groove can quickly drain water and debris into the groove, stains or grease can be easily removed to improve your work efficiency.",
+      "\u3010Practical Accessories\u3011This black kitchen sink is equipped with an extended colander basket for a variety of vegetables and fruits or draining utensils, allowing you to multi-task in the kitchen at the same time.",
+      "\u3010Service Guarantee\u3011If at any time you are not completely satisfied with this set, please email us and we will refund 100% of your purchase price. Please click \"Add to Cart\"."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41VsD5tOjCL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41VsD5tOjCL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41VsD5tOjCL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FH5DC6ZD",
+    "title": "Kunoqi 33x22 Inch Smart Waterfal Kitchen Sink Workstation, Gunmetal Black Drop-In Sink Handmade 16 Gauge Stainless Steel Single Bowl",
+    "url": "https://www.amazon.com/dp/B0FH5DC6ZD?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Kunoqi",
+    "features": [
+      "\ud83c\udf1f Multi functional integrated faucet, enjoy modern kitchen technology to the fullest Equipped with high-performance faucets that integrate multiple water outlet modes such as waterfall, rain shower, and column flow. The innovative piano style buttons allow you to easily switch, and the pressure spray gun designed specifically for rinsing cups can instantly clean residue. There is also an LED temperature display screen with water flow conversion power generation, which displays water temperature in real time without the need for batteries or plugs, making it safe, convenient, and full of technological sense.",
+      "\ud83d\udc8e Honeycomb embossing process, extremely wear-resistant and easy to clean Adopting innovative honeycomb embossing technology, the surface hardness and scratch and wear resistance of the sink are significantly improved. Combined with hydrophobic nano sandblasting coating, it can effectively resist oil and water stains, and can be wiped clean in daily cleaning without the need for additional sink protection, balancing aesthetics and super durability.",
+      "\ud83d\ude80 Revolutionary dual step workstation, doubling efficiency The unique double step design completely revolutionizes the kitchen workflow. You can slide the drain basket or small basin on the lower level for cleaning and draining, while the upper space continues to be used for cutting vegetables and preparing meals, achieving multi-purpose use in one area. This clever use of space greatly enhances the convenience and efficiency of kitchen operations, making cooking easy and orderly.",
+      "\ud83d\udd27 Thoughtful detail design, easy installation and silent operation The sink adopts a beautiful and easy to clean R10 rounded design, and is equipped with a rubber sound-absorbing pad to effectively reduce noise. Standard 3.5-inch drain port, perfectly compatible with the vast majority of kitchen waste shredders. Reserve soap dispenser holes and apply anti condensation layer. Drop in installation method, simple and fast, time-saving and labor-saving.",
+      "\ud83d\udce6 Top tier materials and accessories, a complete solution that can be used right out of the box High quality 16 gauge T-304 stainless steel is selected, with a panel thickness of 3mm and a sturdy and durable structure. The set includes a stainless steel sink body, a bowl and dish rolling shutter rack, a drainage grille, an environmentally friendly cutting board, a small water basin, a water filter basket, and a drainage basket, among a series of practical accessories, providing you with a one-stop kitchen water area solution with full value."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51BCIPuGJBL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51BCIPuGJBL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51BCIPuGJBL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DGCMKFXP",
+    "title": "BRONSTARZ 33x22 Inch Nano Black Kitchen Single Bowl Sink With Flying Rain Waterfall, Integrated Workstation, Pull-Out Tap, Drain Basket, Two Waterfalls (33 * 22 * 10 Inch)",
+    "url": "https://www.amazon.com/dp/B0DGCMKFXP?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "BRONSTARZ",
+    "features": [
+      "\u3010Drop-in & Undermount Design\u3011This sink can be installed as either drop-in or under-mount type, according to your countertop type. Perfect for any applications, such as wet bar area, kitchen, laundry, outdoor area, and utility area.",
+      "\u3010Digital display nano sink\u3011 Stylish grey colour with brushed stainless steel work, it becomes a sight to behold in your kitchen. Double track design, 5 water outlet modes, stainless steel material is wear-resistant and easy to clean. The unique digital screen shows the water temperature and time of use in real time, and when the water starts to flow, the blue mood light comes on to give you a great visual effect, making your kitchen tidier and your life better.",
+      "\u3010Piano button - 5 water modes\u3011 Pull-out tap, contains 3 water outlet modes plus 2 waterfall modes, large cleaning area, soft and non-splash, you can switch at will according to your needs, greatly improving your work efficiency. Creative piano buttons for independent control of 2 waterfalls, cup washer and pull-out taps and pure water tap.",
+      "\u3010Double step design\u3011 On the side of the sink, it is designed with double steps. You can operate the chopping board, the internal basin or the draining basket at the same time. Easy to move from side to side, you can make better use of space for more efficient partitioning and a new experience.",
+      "\u3010Widely Used\u3011 We offer accessories such as Pure water Faucets, Faucets, Cup washers, soap dispensers, as well as draining basket, small basin and chopping board for a new and versatile experience. Great use in a variety of places such as bars, balconies, dining tables, kitchens etc."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51rfVul1L2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51rfVul1L2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51rfVul1L2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0DDT6HNB7",
+    "title": "Lonsince Black Undermount Kitchen Sink,16 Gauge Stainless Steel Sinks,Single Bowl Workstation Sink,Modern Kitchen Sink Offset Drain (30\" X 18\")",
+    "url": "https://www.amazon.com/dp/B0DDT6HNB7?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Lonsince",
+    "features": [
+      "Undermount kitchen sink with offset drain design,sink can be installed with drain on the left side or right side,the plumbing and garbage disposal under the sink is on one side,giving you extra cabinet space for storage",
+      "Black kitchen sink comes with cutting board,colander,sink drain strainer,sink grid and new design foldable dish rack,which is wider and more stable for upgrade performance",
+      "Single bowl kitchen sink,exterior dimensions 30\"x18\"x10\",interior bowl dimension 28\"x16\"x9\",minimum cabinet size is 33\"",
+      "Kitchen sink offset drain,constructed by commercial grade stainless steel with brushed finish for long-lasting durability,high scratch and stain resistance",
+      "Stainless steel workstation sink,providing a track for sliding the built-in accessories,R10 round corners for easy cleaning,the deep basin prevents splashing from happening"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41IBsfLDMAL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41IBsfLDMAL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41IBsfLDMAL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CC1B8FNF",
+    "title": "SANYCASA 30 Inch Undermount Kitchen Sink Superior Drain Kitchen Sinks 11 Gauge (3mm) Stainless Steel, Single Bowl Integrated Ledge Multifunctional Workstation Set -",
+    "url": "https://www.amazon.com/dp/B0CC1B8FNF?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "SANYCASA",
+    "features": [
+      "KITCHEN SINK SETS with SINGLE TRACK: Designed with an integrated single-tier rail for sliding built-in custom accessories, the Workstation Sink provides you with a versatile, efficient space for all your kitchen tasks. The package includes deep kitchen sink, cutting board, colander, stretchable roll-up drying rack, bottom rinse grid, strainer and more. There are two styles of drain baskets. The standard style slides more easily during use, while the upgraded style is easier to handle. You will get one of them randomly.",
+      "FASTER DRAINING DESIGN: The undermount kitchen sink has X-shaped drain grooves on the bottom that slope gently towards the drain for quick drainage and prevent water from pooling, keeping the work area clean. The sink also has a bottom grid that shields the deep sink surface from scratches and allows water to flow beneath for optimal drainage when rinsing items.",
+      "11 Gauge THICKER MATERIAL FOR EXTRA DURABILITY: The single bowl kitchen sink is made of SUS304 premium stainless steel that is easy to clean, and durable with resistance to stains, scratches, and corrosion. The thickness of the sink edge is 11 gauge (3 mm) ensuring that the edges will not warp. The stainless steel sink is ideal for most kitchen appliances.",
+      "PRACTICAL PERFORMANCE: R10 radius rounded corners for easy wiping of sinks; Anti-condensation coating reduces condensation and prevents moisture buildup; Thick silicone pads reduce noise and sound; The openable lid at the top of the pipe stops food debris from clogging the pipe opening. For everyday meal preparation or hosting a great party, this kitchen sink is a functional, intelligent kitchen must-have.",
+      "30 INCH WORKSTATION KITCHEN SINK: 30\" (wide) x 19\" (length) x 10\" (depth). The undermount kitchen sink's exterior design ensures a modern and elegant aesthetic while maximizing the available space to accommodate large dishes pots and pans."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41mmdG+pjCL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41mmdG+pjCL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41mmdG+pjCL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
