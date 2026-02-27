@@ -1,0 +1,333 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-28T17:46:08Z
+author: "Mason Everett"
+title: "Best Newborn Mattress"
+excerpt: "Discover the newborn mattress to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - newborn mattress
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-newborn-mattress
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right newborn mattress
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Newborn Mattress" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best Newborn Mattress"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Newborn Mattress"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy newborn mattress?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose newborn mattress?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best newborn mattress for beginners?"
+- "How much should I spend on newborn mattress?"
+- "What features are most important in newborn mattress?"
+- "How do I maintain my newborn mattress?"
+- "Are expensive newborn mattress worth it?"
+- "What brands make the best newborn mattress?"
+- "How long do newborn mattress typically last?"
+- "Can I find good newborn mattress on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0CQJRST1T",
+    "title": "KATU 100% Organic Latex+Coconut 2-Stage Crib Mattress for Infant/Newborn/Toddler Safe Non-Toxic Hypoallergenic Breathable GOTS GOLS w",
+    "url": "https://www.amazon.com/dp/B0CQJRST1T?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "KATU",
+    "features": [
+      "FINALLY, A PLASTIC-FREE CRIB MATTRESS - Many mainstream crib mattresses are glorified plastic - research shows that many emit Volatile Organic Compounds that are harmful to babies. Our organic crib mattress is here to change that",
+      "THE PEACE OF MIND YOU\u2019VE BEEN LOOKING FOR - All materials used in this crib mattress are sourced from leading organic-certified (GOLS and GOTS) suppliers around the world, you can rest assured that your baby is sleeping safely",
+      "FOR CUSTOMERS WHO VALUE QUALITY OVER QUANTITY - Not only are our non-toxic crib mattresses expertly crafted from the finest materials, the design is 2-sided (coconut fibre side for infants, latex side for toddlers) meaning you\u2019ll get 4+ years of use out of this single crib mattress!",
+      "TRY WITHOUT RISK - We\u2019re so confident in our artisan-handcrafted breathable crib mattresses that we offer a lifetime guarantee - rest assured you\u2019ll never be buying a crib mattress again!",
+      "TAKING DOWN PLASTIC MATTRESSES, ONE AT A TIME"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41MhEGdT0NL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41MhEGdT0NL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41MhEGdT0NL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DC9FMT3F",
+    "title": "Baby Bassinet Mattress 32x 18 inches- Firm Support and Comfort Premium Foam,Noiseless and Odorless,Hypoallergenic Small Crib Mattress, Fits Moses Basket, Dual Sided with Soft Breathable Fabric",
+    "url": "https://www.amazon.com/dp/B0DC9FMT3F?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LILYVIBEBEARHAPPY",
+    "features": [
+      "Smell: Baby Bassinet Mattress Meets Filled with high-quality foam, no odor, no collapse, no deformation 16 CFR 1241 Federal Tests. Please feel free to use.",
+      "Design: Double-sided use is a very creative design of this product, The front is made of skin friendly and breathable cotton, with cute cartoon prints, this side is more comfortable, suitable for sleeping at home time, and the other side is made of waterproof membrane TPU material, which can prevent any liquid from leaking into your mattress, so this side is relatively hard and waterproof function. It is suitable for outdoor use such as traveling, camping, or baby play.",
+      "Humanized Rounded Corners & Fine Solid Edges: Medium hardness foam has better support and stability when the baby rolls over, it is firmly impossible to cause the edge to sink, thus preventing the risk of bodily injury and suffocation.",
+      "Quietness: Strong anti-disturbance performance, lying and rolling on the mattress for small crib, no sound.",
+      "after-sale service: We insist on a commitment to quality and have incredible customer support to ensure your satisfaction. If you find any quality problems with our products, please contact us and we will solve the problem for you immediately. Bassinet mattress size 32\" L x 18\" W .Please measure your bassinet to ensure a perfect fit."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ULEkp1biL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ULEkp1biL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ULEkp1biL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BRBQBBQX",
+    "title": "First Essentials Bassinet Cradle Mattress Pad (Rectangle, 18X36) for Newborn Comfort Breathable Easy Clean Hypoallergenic Waterproof Made in USA",
+    "url": "https://www.amazon.com/dp/B0BRBQBBQX?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "First Essentials",
+    "features": [
+      "\ud83d\udee1\ufe0fREST ASSURED WITH SAFETY FIRST: Our bassinet mattress prioritizes your newborn's safety above all, ensuring a safe, secure haven. Crafted from non-toxic, hypoallergenic, and allergy-free materials that meet strict safety criteria, it offers a gentle rest for delicate sleepers.",
+      "\ud83d\udecc\ud83c\udf00CLOUD-LIKE COMFORT IN EVERY BREATH: Experience cloud-like softness with our premium, supportive foam, paired with a breathable fabric for continuous air flow. This blend ensures a comfortable, cool, and serene sleep experience, making it the perfect, soft landing spot for your baby, day or night.",
+      "\ud83e\uddfdEFFORTLESS SPOT CLEANING: Maintain a fresh, clean sleeping area with ease. our durable, water-resistant pad is designed for simple, hand washable spot cleaning\u2014maintaining a hygienic space for your baby without the complexity of machine washing.",
+      "\ud83d\udccfA PERFECT FIT FOR EVERY BASSINET: Discover the ideal match with over 12 different sizes available, ensuring a snug, safe, and secure fit for every bassinet. Our portable and firm mattresses offer versatility and safety, making them a FIRST ESSENTIAL for on-the-go families.",
+      "\ud83c\uddfa\ud83c\uddf8 PROUDLY AMERICAN-MADE: Choose quality and craftsmanship with our USA-made bassinet mattresses. Produced with a commitment to durability and the well-being of your child, they embody the pinnacle of firm, premium quality and dedication to ensuring peaceful rest."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/314K5fcaZML._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/314K5fcaZML._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/314K5fcaZML._SL75_.jpg"
+  },
+  {
+    "asin": "B008HPP7XA",
+    "title": "My First Memory Foam Crib Mattress, Breathable Crib Mattress with Removable and Waterproof Cover, Hypoallergenic, Standard Size, 51.63\" L x 5\" H x 27.25\" W",
+    "url": "https://www.amazon.com/dp/B008HPP7XA?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "My First Mattress",
+    "features": [
+      "Dual-Sided Baby Mattress: Provide an undisturbed and comfortable sleeping environment to your baby and toddler with My First Memory Foam Crib Mattress. This dual-sided mattress provides a firm side for newborns and a soft memory foam side for toddlers.",
+      "Breathable Crib Mattress: Made with high-density and certified memory foam, this baby and toddler mattress is triple-layered and has a breathable, ventilated fabric that helps to regulate your baby's body temperature for a restful and sound sleep.",
+      "Perfect for Your Little Ones: Designed with the safety of your baby in mind, our hypoallergenic crib mattress has low VC and is free from harmful materials and chemicals including lead, phthalate, formaldehyde, toxic fire retardants, or any heavy metal.",
+      "Comfortable Mattress: For added comfort, the baby mattress features a soft velour crib mattress cover that fits each corner snugly and is easily removable. Also, the mattress cover is waterproof for accidents and machine washable for hassle-free cleaning.",
+      "Standard Size: Our toddler and baby bed mattress measures 51.63\"L x 5\"H x 27.25\"W, fitting all standard-size cribs and toddler beds. Also, this extra-soft and extremely plush toddler mattress can be a great baby registry or baby shower gift."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31CgWZye2IL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31CgWZye2IL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31CgWZye2IL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DCFNGS6T",
+    "title": "Kiniew Baby Crib for Newborn, Baby Bassinets Bedside Sleeper with Breathable Mesh & Mattress, Easy Move Crib for Newborns with Lockable Wheels, 4-Adjustable Height Beside Bassinet (Beige)",
+    "url": "https://www.amazon.com/dp/B0DCFNGS6T?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Kiniew",
+    "features": [
+      "[2-in-1 Convertible Mode]: The bassinet comes with 2 convertible modes, which can be used as a stand-alone baby bassinet or as a bedside sleeper attached to an adult bed. The multi-mode bassinet can meet your daily needs.",
+      "[Adjustable Height]: Our bedside bassinet has 4 adjustable heights. You can adjust the height to 29.5-32.5 inch at the push of a button to accommodate different heights of beds or sofas. When you need to secure the crib to a certain place, simply press the wheel mechanism. Turn on the wheel brake mode.",
+      "[Safe and Stable Design]: Lowering the side of the baby bassinet and inserting it into the tube that matches it, together with the double reinforcement of the side zipper, not only improves the stability of the overall structure, but also enhances the appearance of the simplicity of the aesthetics of the appearance with smooth lines. In bedside sleeper mode, the bassinet is stable, providing a safe and comfortable environment for the baby.",
+      "[Breathable Mesh]: The delicate mesh design not only blocks dust and foreign objects, but also allows for a clear line of sight - mom and dad can clearly observe the baby's condition by raising their eyes while lying down. The two-in-one design of \u201cBreathable + Guardian\u201d ensures air circulation while the baby is in the beside bassinet and adds peace of mind to parenting life.",
+      "[Easy to Portable]: No matter where you are, our travel crib allows your baby to adapt to unfamiliar surroundings. Lightweight and foldable, this 2-in-1 crib takes up no extra space, making it the perfect solution for parents who are always on the go."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/419kwLIcM-L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/419kwLIcM-L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/419kwLIcM-L._SL75_.jpg"
+  },
+  {
+    "asin": "B0C3187G46",
+    "title": "First Essentials Baby Bassinet Mattress Pad (Oval, 16X28) for Newborn Comfort Breathable Easy Clean Hypoallergenic Waterproof Made in USA",
+    "url": "https://www.amazon.com/dp/B0C3187G46?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "First Essentials",
+    "features": [
+      "\ud83d\udee1\ufe0fREST ASSURED WITH SAFETY FIRST: Our bassinet mattress prioritizes your newborn's safety above all, ensuring a safe, secure haven. Crafted from non-toxic, hypoallergenic, and allergy-free materials that meet strict safety criteria, it offers a gentle rest for delicate sleepers.",
+      "\ud83d\udecc\ud83c\udf00CLOUD-LIKE COMFORT IN EVERY BREATH: Experience cloud-like softness with our premium, supportive foam, paired with a breathable fabric for continuous air flow. This blend ensures a comfortable, cool, and serene sleep experience, making it the perfect, soft landing spot for your baby, day or night.",
+      "\ud83e\uddfdEFFORTLESS SPOT CLEANING: Maintain a fresh, clean sleeping area with ease. our durable, water-resistant pad is designed for simple, hand washable spot cleaning\u2014maintaining a hygienic space for your baby without the complexity of machine washing.",
+      "\ud83d\udccfA PERFECT FIT FOR EVERY BASSINET: Discover the ideal match with over 12 different sizes available, ensuring a snug, safe, and secure fit for every bassinet. Our portable and firm mattresses offer versatility and safety, making them a FIRST ESSENTIAL for on-the-go families.",
+      "\ud83c\uddfa\ud83c\uddf8 PROUDLY AMERICAN-MADE: Choose quality and craftsmanship with our USA-made bassinet mattresses. Produced with a commitment to durability and the well-being of your child, they embody the pinnacle of firm, premium quality and dedication to ensuring peaceful rest."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31srWsoshbL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31srWsoshbL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31srWsoshbL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D1Y1M9P5",
+    "title": "Kiniew Bassinet Bedside Sleeper, Adjustable Height Baby Bassinet with Wheels, Easy Assemble & Folding Crib with Comfy Mattress, Breathable Mesh Bedside Bassinet for Infant Newborn (Grey)",
+    "url": "https://www.amazon.com/dp/B0D1Y1M9P5?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Kiniew",
+    "features": [
+      "[Multi-functional Baby Bassinet]: This baby bassinet is CPC, ASTM and CPSIA certified. All bassinets are manufactured under strict quality control. This bassinet can be used as a stand-alone crib, freeing up mom's hands. When one side is down, it can be used as a bedside sleeper for nighttime care.",
+      "[Safe and Stable Design]: Lowering the side of the bedside crib and inserting it into the tube that matches it, together with the double reinforcement of the side zipper, not only improves the stability of the overall structure, but also enhances the appearance of the simplicity of the aesthetics of the appearance with smooth lines. In bedside sleeper mode, the bassinet is stable, providing a safe and comfortable environment for the baby.",
+      "[Adjustable Height]: Our bedside bassinet has 4 adjustable heights. You can adjust the height to 29.5-32.5 inch at the push of a button to accommodate different heights of beds or sofas. When you need to secure the bassinet to a certain place, simply press the wheel mechanism. Turn on the wheel brake mode.",
+      "[Breathable Mesh]: The delicate mesh design not only blocks dust and foreign objects, but also allows for a clear line of sight - mom and dad can clearly observe the baby's condition by raising their eyes while lying down. The two-in-one design of \u201cBreathable + Guardian\u201d ensures air circulation while the baby is in the bedside bassinet and adds peace of mind to parenting life.",
+      "[Quick Assembly]: No tools are needed, the baby crib is assembled in easy and convenient steps, it only takes about 10-15 minutes to assemble your baby's lightweight travel cradle, which saves you time and increases efficiency. It is the first choice for parents traveling with babies."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/4130hBn-WJL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/4130hBn-WJL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/4130hBn-WJL._SL75_.jpg"
+  },
+  {
+    "asin": "B08BF3N47B",
+    "title": "KoolerThings Baby Bassinet, Bedside Sleeper for Baby, Easy Folding Portable Crib with Storage Basket for Newborn, Bedside Bassinet, Comfy Mattress/Travel Bag Included (Bassinet) (Grey)",
+    "url": "https://www.amazon.com/dp/B08BF3N47B?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "KoolerThings",
+    "features": [
+      "Get a Good Night\u2019s Sleep with KoolaBaby baby bassinet. It keeps your baby cozy and close by, so you both can \u201csleep like a baby.\u201d The 4-in-1 newborn bassinet can be used as a standalone cradle, baby bedside sleeper, portable play area and a take anywhere crib. Ideal for age 0-8 months.",
+      "For the Little Bedside Sleeper: Designed to snug right beside your bed, this cosleeping bassinet is perfect for breastfeeding mommies. With the baby by your side, sleeping and breastfeeding a breeze while mothers can get some much-needed rest. Easy-to-glide 5 height options fit most beds and even sofas.",
+      "On the Go Baby Bed: With tool-free setup and freestanding design, our bedside bassinet can be placed anywhere your little one wants to sleep or play. It folds to a compact size and comes with a storage bag for easy portability during travels. Four wheels make it easy to move the bassinet from room to room.",
+      "Keep Baby Essentials Within Reach: Below, the bedside sleeper bassinet is a compact yet spacious compartment that allows you to keep burp cloths and diapers easy accessible to clean those unexpected surprises. Forget running to baby\u2019s room every time your baby poops.",
+      "Reliable & Baby Friendly Construction: The lightweight yet sturdy aluminum frame of our baby portable bassinet is sturdy and built to last. The corners are all rounded to prevent scratches and injuries. Although you will be using a mattress, the fabric we use is super soft and non-irritating."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51dCLSX6naL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51dCLSX6naL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51dCLSX6naL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FBGL6C8X",
+    "title": "3-in-1 Baby Bassinet, Rocking Bassinet, Bedside Bassinet for Baby, Stable and Secure Bassinet Bedside Sleeper for Newborn & Infant, 6 Height Adjustable with Wheels, Mattress & Breathable Mesh (Khaki)",
+    "url": "https://www.amazon.com/dp/B0FBGL6C8X?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LovliTod Baby",
+    "features": [
+      "\u30103-in-1 Versatile Baby Bassinet\u3011: Converts effortlessly into a standalone bassinet, gentle rocking cradle, or bedside sleeper. Ideal for keeping your baby close during day naps or overnight sleep.",
+      "\u3010Gentle Rocking & Sturdy Frame\u3011The bassinet switch between stationary mode and smooth rocking with one click. The solid base ensures safety while the rocking mode helps soothe your baby to sleep effortlessly.",
+      "\u3010Easy Access for Night Feeds\u3011Designed for seamless bedside use, this bedside bassinet lets you reach your baby without getting out of bed\u2014perfect for breastfeeding moms and those recovering from a C-section.",
+      "\u3010Balanced Firmness for Spinal Support Mattress\u3011Provides the ideal balance of firmness and comfort\u2014firm enough to promote proper spinal alignment, yet gently cushioned to provide gentle comfort for peaceful sleep.",
+      "\u30106 Adjustable Heights & Anti-Reflux Incline\u3011This rocking bassinet features 6 height settings to match most adult beds and includes an optional incline mode to help reduce baby\u2019s spit-up and congestion for more restful sleep.",
+      "\u3010Large Under-Bassinet Storage Basket & Smooth-Rolling Wheels with Brakes\u3011Let you move the bedside bassinet around your home with ease. Lockable brakes ensure safety and stability when stationary."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41zEdsozXuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41zEdsozXuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41zEdsozXuL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DMR8FNTN",
+    "title": "Larex Baby Bassinet, 3 in 1 Bassinets Bedside Sleeper Crib Sleeper for Newborn, Portable Crib Adjustable 7 Height Bedside Bassinet with Mattress and Movable Wheels\uff0cBreathable Mattress&Mesh(Dark Grey)",
+    "url": "https://www.amazon.com/dp/B0DMR8FNTN?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Larex",
+    "features": [
+      "The Bedside Sleeper: Baby bassinet features a zipper design on the side, bedside bassinet can serve as a standalone crib, also be a secure bedside sleeper attached to your bed.",
+      "Comfy Mattress and Mesh:The breathable mesh walls of the bedside crib offer excellent air circulation and a clear view of your baby, so you can watch over them with ease. The plush mattress provides a cozy and restful sleep environment.",
+      "7-Level Height Adjustment: The Larex bedside crib offers seven different height settings, allowing it to perfectly match various bed or sofa heights.Making night feedings more convenient.",
+      "Flexible and Convenient:Equipped with quiet, lockable swivel wheels, the Larex bedside bassinet allows smooth and secure movement across rooms while protecting your floors.",
+      "Safe and Stable Frame:Crafted from reinforced painted steel and built to meet rigorous safety standards, this bedside bassinet offers durable stability. Setup and takedown are quick and tool free. Baby Bassinet must not be tilted or inclined during use.Never leave your child unattended,please use under adult supervision."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/414hQocV3DL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/414hQocV3DL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/414hQocV3DL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.

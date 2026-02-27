@@ -1,0 +1,333 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-28T17:29:33Z
+author: "Mason Everett"
+title: "Best New Stove And Oven"
+excerpt: "Discover the new stove and oven to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - new stove and oven
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-new-stove-and-oven
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right new stove and oven
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best New Stove And Oven" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best New Stove And Oven"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best New Stove And Oven"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy new stove and oven?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose new stove and oven?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best new stove and oven for beginners?"
+- "How much should I spend on new stove and oven?"
+- "What features are most important in new stove and oven?"
+- "How do I maintain my new stove and oven?"
+- "Are expensive new stove and oven worth it?"
+- "What brands make the best new stove and oven?"
+- "How long do new stove and oven typically last?"
+- "Can I find good new stove and oven on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B00NTOBOCM",
+    "title": "Avanti Gas Range Oven, Compact Freestanding Design, 4 Sealed Burners with Electronic Ignition, 2.1 Cu.Ft. Capacity Features Storage Drawer Broiler and Accessories, 20-Inch, Black",
+    "url": "https://www.amazon.com/dp/B00NTOBOCM?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Avanti",
+    "features": [
+      "COMPACT & SPACE-SAVING DESIGN: A 20-inch freestanding gas range, ideal for small kitchens, RVs, studio apartments, and vacation homes.",
+      "VERSATILE COOKING POWER: Features 4 sealed burners (1 rapid, 2 semi-rapid, and 1 simmer) with automatic electronic ignition for reliable performance.",
+      "SPACIOUS 2.1 CU. FT. OVEN: Includes two oven racks, a broiler with a broiling pan, and full-range temperature control for versatile cooking.",
+      "USER-FRIENDLY FEATURES: Seamless framed glass oven door, oven light with ON/OFF switch, and a 60-minute timer for added convenience.",
+      "ADDITIONAL BENEFITS: Includes a storage drawer, LP conversion kit, ADA-compliant design, and a backsplash with integrated oven vents for proper air circulation."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31WnsMKXbmL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31WnsMKXbmL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31WnsMKXbmL._SL75_.jpg"
+  },
+  {
+    "asin": "B00P387SGS",
+    "title": "Avanti Electric Range Oven Compact Design, 2.1-Cu.Ft. Capacity with 4 Coil Burners, Framed Glass Oven Door, Storage Drawer and Broiler with Pan Perfect for Apartments, 20-Inch, Stainless Steel",
+    "url": "https://www.amazon.com/dp/B00P387SGS?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Avanti",
+    "features": [
+      "SPACIOUS 2.1 CU. FT. CAPACITY: Perfect for baking, roasting, and broiling in small kitchens, apartments, RVs, and tiny homes.",
+      "4 COIL BURNERS WITH SAFETY FEATURES: Includes three 6-inch and one 8-inch burners with chrome reflector bowls and temperature safety sensors for efficient and safe cooking.",
+      "USER-FRIENDLY OVEN DESIGN: Features a bake/broil oven with a broiling pan, seamless framed glass oven door, and a pull-out storage drawer with a handle for added convenience.",
+      "MODERN CONTROLS & FEATURES: Equipped with an electronic oven thermostat, oven light with ON/OFF switch, and surface and oven indicator lights for easy operation.",
+      "COMPACT & ADA COMPLIANT: Designed for small spaces with ADA compliance and backed by Avanti's 1-Year Manufacturer Limited Warranty for reliability and peace of mind."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31GBOkzsZ-L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31GBOkzsZ-L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31GBOkzsZ-L._SL75_.jpg"
+  },
+  {
+    "asin": "B00GHIJO10",
+    "title": "Avanti Gas Range Oven, Compact Freestanding Design, 4 Sealed Burners with Electronic Ignition, 2.1 Cu.Ft. Capacity Features Framed Glass Door Storage Drawer Broiler and Accessories, 20-Inch, White",
+    "url": "https://www.amazon.com/dp/B00GHIJO10?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Avanti",
+    "features": [
+      "SPACIOUS 2.1 CU. FT. CAPACITY: Compact yet efficient, perfect for baking, roasting, and broiling in small kitchens, apartments, RVs, and vacation homes.",
+      "4 SEALED BURNERS WITH ELECTRONIC IGNITION: Includes one rapid, two semi-rapid, and one simmer burner for versatile cooking with reliable ignition.",
+      "USER-FRIENDLY OVEN DESIGN: Features a seamless framed glass oven door, two oven racks, a bottom storage drawer, and a broiler with a broiling pan.",
+      "MODERN CONTROLS & SAFETY FEATURES: Full-range temperature control, an oven light with an ON/OFF switch, a 60-minute timer, and a backsplash with integrated oven vents for proper air circulation.",
+      "ADA COMPLIANT & ACCESSORIES INCLUDED: Comes with an LP conversion kit, an ADA-compliant design, and is covered by Avanti\u2019s 1-Year Manufacturer Limited Warranty for durability and peace of mind."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/315cG9L5anL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/315cG9L5anL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/315cG9L5anL._SL75_.jpg"
+  },
+  {
+    "asin": "B01MT0UL8N",
+    "title": "Linda\u2019s Essentials Silicone Stove Gap Covers (2 Pack), Heat Resistant Oven Gap Filler Seals Gaps Between Stovetop and Counter, Easy to Clean Stove Gap Guard (21 Inches, Black)",
+    "url": "https://www.amazon.com/dp/B01MT0UL8N?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Linda's Essentials",
+    "features": [
+      "COVER THAT GAP: America\u2019s best-selling stove gap covers help you say goodbye to that hard to clean gunk and debris that gets stuck in the gap between your stove and countertop, or any other appliances in your household",
+      "MEASURE BEFORE YOU BUY: Ensure the perfect fit by measuring both the length of your stove/counter and the width of the gap. This 21\" cover is ideal for stove gaps up to 2.3\" in width. We also offer 25\" and 30\" sizes for larger spaces. Check the listing images for compatibility details",
+      "HEAT RESISTANT: Designed with safety in mind, our silicone stove counter gap cover is made from high-quality, food-grade silicone that withstands heat from everyday cooking. Durable, flexible, and safe to use around your stovetop, it provides a reliable barrier without warping, melting, or cracking over time.",
+      "SIMPLE TO INSTALL: Our universal 21 inch stove gap guard sit perfectly in place on all stovetops. The non-slip flexible silicone conforms to your stove and counter surfaces and adapts to any uneven spaces. Easily customize to your stove by cutting to size using scissors",
+      "EASY TO CLEAN: Our matte black anti-dust and smudge resistant design makes us unrivalled in the market, allowing you to keep your gap cover clean and stain free. Our stove countertop gap covers are dishwasher safe and easy to wipe clean using a damp cloth"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41BFOb5oC2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41BFOb5oC2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41BFOb5oC2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0DJ95TKJ8",
+    "title": "Silicone Magnetic Over the Stove Shelf for Back of Stove - Magnetic Stove Top Shelf and Over Stove Shelf, Over Oven Shelf for Top of Stove, Over the Stove Spice Rack, Includes 6 Extra Plates (Black)",
+    "url": "https://www.amazon.com/dp/B0DJ95TKJ8?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Linda's Essentials",
+    "features": [
+      "ENHANCED KITCHEN ORGANIZATION: Keep your kitchen essentials within easy reach with our durable, magnetic over the stove shelf rack. It quickly attaches to your stove, providing a sturdy and secure storage space for condiments, spices, oils, and decor. Declutter your cooking area and enjoy a seamless storage solution that enhances both convenience and style in your kitchen",
+      "CHECK SIZE BEFORE PURCHASE: Our 30\" over the oven shelf is designed for most flat and slightly curved stoves. Please measure your stove before ordering to ensure a perfect fit. For guidance, see our detailed images showing exact dimensions and compatibility examples. Cleans easily - just wipe by hand or place in the dishwasher.",
+      "SIMPLE INSTALLATION IN SECONDS: No tools, drilling, or special adhesives required! Our over stove shelf for back of stove features 6 built-in magnets for a secure, hassle-free attachment to most stovetops. For non-magnetic stoves, we include 6 adhesive plates, ensuring compatibility with any setup. Install it in seconds and enjoy a sturdy, reliable storage solution without damaging your stove's surface",
+      "WHAT SETS US APART: Unlike flimsy, low-quality options, our over stove spice rack is crafted from premium, sturdy silicone that stays firmly in place. With elevated ridged sides to prevent items from falling and a non-slip texture design to keep everything secure, your kitchen essentials stay safe during cooking. Subtle ridges create three sections for better organization and flexible storage. Experience unmatched quality and functionality to keep your kitchen tidy and safe",
+      "AMERICAN BRAND QUALITY: As a trusted family-owned business who stands behind the quality of their products, Linda\u2019s Essentials is proud to serve over 1 million happy customers. Should you encounter any questions or troubles with your over stove shelf, please reach out to us and we\u2019ll make it right"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41Bb58tKk1L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41Bb58tKk1L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41Bb58tKk1L._SL75_.jpg"
+  },
+  {
+    "asin": "B0050KKS5C",
+    "title": "Frigidaire 316075103 Oven Bake Element for Electric Ranges and Stoves",
+    "url": "https://www.amazon.com/dp/B0050KKS5C?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Frigidaire",
+    "features": [
+      "Quality Craftsmanship: The Frigidaire 316075103 Oven Bake Element is designed and engineered by Frigidaire to exact specifications, which, unlike non-genuine parts, ensures optimal performance for your appliance",
+      "Tools Required: To install this item, you'll need the following: 1/4\" nut driver, flat-head screwdriver, gloves, safety glasses",
+      "Repair Skill Level: Experienced DIYer | For optimal results, it's recommended that someone with DIY experience install this part",
+      "Compatibility: Check the appliance user manual to verify that this part is compatible with your appliance before purchasing",
+      "Frigidaire Assurance: Confidently repair your appliance when you choose genuine Frigidaire parts"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/21E6KZTWXzL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/21E6KZTWXzL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/21E6KZTWXzL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DJSJ16XV",
+    "title": "Stainless Steel Stove Gap Covers (2PCS),Stove Gap Filler,Range Trim Kit,Stove Gap Guard for Kitchen Oven Between Stovetop and Counter,Easy Clean Heat Resistant,Adjustable Length 13.8'' to 27.5'',Black",
+    "url": "https://www.amazon.com/dp/B0DJSJ16XV?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "LIFFEE",
+    "features": [
+      "Please Note: Adjustable lengths range from 13.8'' to 27.5'', with width 0.79''. Stove gap covers are suitable for gaps between 2 mm and 17 mm. Not suitable for use on stoves and countertops with uneven surfaces",
+      "Upgraded Design: Stove counter gap covers are designed with an \"L\" shape that provides integrated springs for easy adjustment, making it easier to install and fix for stove gap guard, and preventing sliding",
+      "Effortless to Maintain: Oven side gap covers prevent debris and spills from falling into hard-to-clean crevices. They are easy to clean, remove, dry, and replace",
+      "Durable Quality: Made of stainless steel, the stove gap filler for electric stove won't burn, deform, rust, and will not melt like silicone strips for stove gap covers",
+      "Easy to Install: Just push it into oven side gap and provide sticky tape for preventing sliding. Please read the installation manual or video before use the gap covers"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41ddzWpmQrL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41ddzWpmQrL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41ddzWpmQrL._SL75_.jpg"
+  },
+  {
+    "asin": "B077NPFTGR",
+    "title": "Method Heavy Duty Degreaser, Lemongrass Scent, Oven Cleaner & Stove Top Cleaner, 28 Oz Spray Bottle (Pack of 1),(Packaging may vary)",
+    "url": "https://www.amazon.com/dp/B077NPFTGR?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Method",
+    "features": [
+      "Contains (1) 28oz spray bottle of heavy duty degreaser",
+      "Powers through grease, oil, burnt-on messes and stubborn splatters",
+      "Cleans plus cuts through grease on stove tops, range hoods, microwaves, burner grates and drip pans",
+      "Cruelty free. Tested by people, not on animals",
+      "Bottle (minus nozzle) made of 100% recycled plastic (PCR)",
+      "Lemongrass fragrance is a crisp, clean, aromatic scent that's right at home in the kitchen"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31qtLrbQrBL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31qtLrbQrBL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31qtLrbQrBL._SL75_.jpg"
+  },
+  {
+    "asin": "B0DY7Q9XHL",
+    "title": "New DG94-01012A Gas Oven Igniter Compatible with Sam-sung NX58H9500WS NX58K9850SS NX58H5600SS NX58M6630SS NX58K9500WG NX58H9950WS Gas Range -Replace AP5967723 4011538-Fast Ignition-by TOMOON",
+    "url": "https://www.amazon.com/dp/B0DY7Q9XHL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "TOMOON",
+    "features": [
+      "ACCURATE TEMPERATURE DETECTION -- DG94-01012A Sam-sung oven igniter wire connector plug and two ceramic nuts to fix inaccurate temperature control on Sam-sung gas ranges. Replacing the sam-sung oven igniter nx58h9500ws/aa restores reliable ignition",
+      "RESPONSE -- Tired of slow-starting stoves?Sam-sung dg94-01012a gas range oven igniter is used to solve the problem of inaccurate temperature control on Sam-sung gas ranges. The dg94-01012a oven igniter for sam-sung is designed to solve the problems associated with baking burners that don't heat up/can't ignite properly/won't heat up evenly, igniting the gas quickly and heating up to the rated temperature in a short period of time",
+      "UPGRADED SILICON CARBIDE -- DG94-01012A undergoes rigorous oxidization testing and is designed for long term use.Sam-sung oven igniter replacement is silicon carbide plate construction accurately detects temperature and surrounds the metal housing for consistent performance over long periods of use. Say goodbye to frequent replacement of gas range oven igniter",
+      "COMPATIBLE WITH SERIES -- This igniter is designed for Sam-sung NX58M, NX58H, NX58K, NX58J series gas cooktops, NX58H9500WS/AA-00, NX58H9500WS/AA-01, NX58H9500WS/AA-02, NX58K9500WG/AA-00, NX58K7850SS/ AA-00, NX58M6630SS/AA-00, NX58M6630SS/AA-00, NX58H9950WS/AA-01, NX58J7750SG/AA-00, NX58J7750SS/AA-00. Replacement for 4011538 AP5967723 PS11720750 EAP11720750 PD00033253, etc., please check compatibility with your specific model to ensure performance",
+      "PROTECTIVE PACKAGING -- DG94-01012A sam-sung burner igniter(nx58k9850ss/aa nx58k9500wg igniter)are fragile and we use protective packaging to prevent damage during transportation. Be sure to turn off the gas supply and power to the stove before installation. Carefully disconnect the old gas range igniter according to the wiring diagram and connect the new dg94-01012a samsung igniter oven igniter. periodically check that the connection points are secure. Loose connections can cause delayed ignition"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/418c7aNfFjL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/418c7aNfFjL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/418c7aNfFjL._SL75_.jpg"
+  },
+  {
+    "asin": "B07N4S9J97",
+    "title": "CozyKit Silicone Kitchen Stove Counter Gap Cover Long & Wide Gap Filler (2 Pack) Seals Spills Between Counters, Stovetops, Washing Machines, Oven, Washer, Dryer - Heat-Resistant and Easy Clean (Black)",
+    "url": "https://www.amazon.com/dp/B07N4S9J97?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "CozyKit",
+    "features": [
+      "NEW MODEL: Unlike other products in the market, the designed anti-static non-tacky top surface is matte black (not shiny). It is fingerprint and smudge resistant and does not collect dust which helps in keeping the cover clean and stain free. The back side is shiny non-slip (tacky) which keep the cover tight in place.",
+      "Made of 100% food grade heat resistant silicone, the gap cover withstands up to 446 degF (230 degC), does not melt or warp. Avoid direct contact with flame/pot.",
+      "Sits perfectly in place, the flexible silicone gap cover conforms to stove and counter surfaces (even if they are uneven) and may be easily cut to fit non-standard sizes",
+      "Covers the gap between stove and kitchen counter. With sleek design, the gap covers blend well into modern kitchens. They are dishwasher safe and can be easily cleaned with a damp cloth",
+      "LIFETIME WARRANTY: made with premium quality food-grade silicone material. They are great additions to the kitchen and make wonderful gifts! We promise to ensure your absolute satisfaction with every purchase. As a result, we offer a LIFETIME, NO-QUESTIONS-ASKED, MONEY-BACK GUARANTEE policy on all our products!"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31FuR6BgkoL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31FuR6BgkoL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31FuR6BgkoL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
