@@ -1,0 +1,349 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-28T16:39:09Z
+author: "Mason Everett"
+title: "Best New Carpet"
+excerpt: "Discover the new carpet to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - new carpet
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-new-carpet
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right new carpet
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best New Carpet" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best New Carpet"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best New Carpet"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy new carpet?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose new carpet?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best new carpet for beginners?"
+- "How much should I spend on new carpet?"
+- "What features are most important in new carpet?"
+- "How do I maintain my new carpet?"
+- "Are expensive new carpet worth it?"
+- "What brands make the best new carpet?"
+- "How long do new carpet typically last?"
+- "Can I find good new carpet on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0DJMP6T3N",
+    "title": "BISSELL Little Green Mini Portable Carpet and Upholstery Deep Cleaner, Car/Auto Detailer, with HydroRinse Self-Cleaning Tool and 4\" Tough Stain Tool, Tea Green, 4075",
+    "url": "https://www.amazon.com/dp/B0DJMP6T3N?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bissell",
+    "features": [
+      "EVERY PURCHASE SAVES PETS. Every purchase makes it possible for BISSELL to continue our support of BISSELL Pet Foundation and its mission of saving pets in need.",
+      "SAVE YOUR SANCTUARY: Tackle spills and pet stains while removing dander, dust, and pollen allergens.",
+      "CLEANS MORE THAN CARPET: Spray, scrub, and suction to remove embedded dirt and stains from upholstery, car interiors, pet beds, and more.",
+      "INCLUDES: 4\u201d Tough Stain Tool with removeable lens, HydroRinse self-cleaning hose tool, and 8oz. BISSELL Little Green Formula.",
+      "EASY STORAGE: Conveniently stores in small spaces - perfect for cabinets, closets, and more.",
+      "LITTLE GREEN FORMULA: Instantly and permanently removes stains and eliminates everyday household odors."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/415MxmXqmWL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/415MxmXqmWL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/415MxmXqmWL._SL75_.jpg"
+  },
+  {
+    "asin": "B004SE2V56",
+    "title": "SMELLEZE Natural New Carpet Smell Deodorizer, Carpet Odor Eliminator Powder - Deodorizes All New Carpets, Rugs & Upholstery, 2 lb. Powder",
+    "url": "https://www.amazon.com/dp/B004SE2V56?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "SMELLEZE",
+    "features": [
+      "Effective New Carpet Odor Control: Experience the power of Smelleze Natural New Carpet Deodorizer Powder. Specially formulated to neutralize and eliminate hazardous VOC emissions and offensive odors from new and old carpets, ensuring a fresher, healthier home environment. Ideal for tackling odors from pets, smoke, spills, and more, without relying on fragrances to mask scents.",
+      "Safe, Natural Ingredients: Crafted with eco-conscious households in mind, Smelleze contains non-toxic, natural, odorless ingredients. Free from harmful chemicals, VOCs, and ozone-depleting substances, it's the perfect choice for families, including those with allergies and chemical sensitivities. An environmentally friendly, recyclable product that ensures your home stays safe and smells fresh.",
+      "Deodorizes All New Carpets, Rugs & Upholstery: Effortlessly refresh your carpets, rugs, and upholstery with Smelleze All Natural Carpet Deodorizer. Simply sprinkle 2-3 tablespoons per square foot, vacuum after 20-30 minutes, and enjoy the difference. For persistent odors, a longer setting time and repeat applications might be necessary. Ideal for various household applications, it's a must-have for maintaining a fresh, odor-free home.",
+      "Improves Air Quality: Smelleze New Carpet Smell Eliminator doesn't just combat carpet odors; it enhances indoor air quality by trapping and encapsulating odor-causing molecules. It won't stain or harm your carpets and rugs, making it safe for all types of floorings and fabrics. Plus, with no added fragrances, it's an unobtrusive solution to keep your home smelling naturally fresh.",
+      "Trusted USA-Made Quaility & Eco-Friendly Excellence: SMELLEZE, made in the USA since 2010, offers high-performance, reusable odor eliminators. Environmentally responsible with all-natural ingredients, it's safe for people, pets, and the planet. Support American craftsmanship and enjoy a cleaner, fresher space with SMELLEZE."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/315H4CKay9L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/315H4CKay9L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/315H4CKay9L._SL75_.jpg"
+  },
+  {
+    "asin": "B009ZJ2M7G",
+    "title": "Hoover PowerScrub Deluxe Carpet Cleaner Machine for Carpet and Upholstery, Deep Cleaning Carpet Shampooer Machine with Multi-Purpose Tools, Pair Carpet Cleaner Solution",
+    "url": "https://www.amazon.com/dp/B009ZJ2M7G?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Hoover",
+    "features": [
+      "THE COMPLETE CLEAN COMBO: The Hoover PowerScrub Deluxe Carpet Cleaning Machine combines five counter-rotating SpinScrub brushes and HeatForce faster drying to lift and remove the toughest stains and renew your carpets.",
+      "VERSATILE TOOLS: Deep cleaning goes beyond just the floor. PowerScrub Deluxe Pet Carpet Cleaners come with a pet tool for stubborn pet messes, an upholstery tool that scrubs and lifts on fabrics, and a crevice tool for hard-to-reach places.",
+      "DUAL TANK TECHNOLOGY: With individual tanks for clean and dirty water, it\u2019s easy to fill, empty and rinse.",
+      "AUTO MIX: This Hoover carpet cleaner machine has an Auto Mix feature that precisely mixes and dispenses solution for optimal carpet washing. Package includes upholstery tool, pet tool, crevice tool, 8 ft. hose, sample solution.",
+      "PAIR WITH HOOVER CLEANING SOLUTION: For a bright, refreshed home, use the PowerScrub Deluxe with a Hoover carpet shampoo solution. Tackle pet messes with our Pet formula or clean everyday stains with our Everyday solutions."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41L1D3tO1XL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41L1D3tO1XL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41L1D3tO1XL._SL75_.jpg"
+  },
+  {
+    "asin": "B07BYCHMVY",
+    "title": "Home Techpro Vacuum Tech Rug Pad Gripper for Hardwood Floors No Damage, New Materials to Non Slip Rug Pads, Under Rug Carpet Tape : Keep Your Rug in Place & Make Corner Flat",
+    "url": "https://www.amazon.com/dp/B07BYCHMVY?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Home Techpro",
+    "features": [
+      "Unique Design: Do you still worry about the traditional glue rug tape harm your floor ? This gripper uses VACUUM TECH design which grips hard smooth floors firmly and easily, this design can protect your floor perfectly as no glue used on floor. But it does not work for rug on carpeted floor. It does not work for rubber backed rug ,jute rug or fluff backing rug.",
+      "Design Feature. This product can easily be glued under rug. The side facing the floor features tiny suction pores. These pores utilize the VACUUM TECH feature in which whenever pressure is applied from the top, air escapes and creates a low-pressure region within the cups. This produces an adhesive effect, which keeps your rug in place.",
+      "Advantages. The rug anti curling gripper is less than 1/10 inch thick and inconspicuous after installing. Suction technology firmly sticks to the floor without causing marks or damage, and the gripper easily peels off the floor. It is convenient to wash, as you won\u2019t have to separate it from your carpet for cleaning. The tape for rug adds extra comfort underfoot owing to the slightly bouncy nature of suction technology.",
+      "Components. This package includes 4 pieces. The size of the gripper is 3.9inch x 3.9inch. Each piece is square in order to increase the surface area in contact with the floor. That leaves your kitchen, bathroom, and hallway much more secure. You can even use them outdoors to prevent slipping and flatten corners.",
+      "Service: This gripper ensures that your rug remains securely in place, and helps to prevent accidental slips and falls"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51iQ8vjXbaL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51iQ8vjXbaL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51iQ8vjXbaL._SL75_.jpg"
+  },
+  {
+    "asin": "B0D518WTXH",
+    "title": "Shark CarpetXpert Upright Carpet, Area Rug & Upholstery Cleaner, Built-In Spot & Stain Remover & XL Tool, Perfect for Pets, Carpet Shampooer, 3 Cleaning Tools, Cleaning Solution, Slate Green, EX151",
+    "url": "https://www.amazon.com/dp/B0D518WTXH?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Shark",
+    "features": [
+      "Shark CarpetXpert is an upright carpet & upholstery cleaner with built-in spot and stain remover, combining high-pressure spray and ultra-powerful suction to remove dirt & grime \u2013 perfect for pets and whole-home cleaning.",
+      "UNBEATABLE DEEP CARPET CLEANING: CarpetXpert Technology combines a high-speed brushroll with PowerSpray high-pressure spray and Shark's ultra-powerful suction to deliver unbeatable dirt and grime removal.*",
+      "BUILT-IN SPOT & STAIN ELIMINATOR: Designed to treat and eliminate stubborn set-in stains.",
+      "PERFECT FOR PETS: Instantly & permanently removes stubborn, lingering odors \u2013 even pet urine and smoke^",
+      "DESIGNED FOR CARPETS AND AREA RUGS: Lift and extract embedded dirt and grime on your carpets and area rugs throughout your home.",
+      "SUITE OF ACCESSORIES: Includes three specially designed tools to tackle tough spots and stains on carpets, area rugs, upholstery, and more.",
+      "ULTRA-FAST DRY TIMES: Shark's CarpetXpert Technology and powerful suction deliver ultra-fast dry times without oversoaking your carpets.",
+      "DUAL TANK TECHNOLOGY: Dual Tank System keeps clean water + cleaning formula separate from dirty water so you're always cleaning with fresh solution.",
+      "WHAT'S INCLUDED: Shark CarpetXpert Upright Deep Carpet Cleaner, 3.5\" Reversible Bristle Tool, Integrated Crevice Tool, 7\" Wide-Path Tool, and 12oz. Deep Clean Essential Formula.",
+      "*Shark CarpetXpert models vs. consumer carpet cleaners based on ASTM F2828 using included cleaning solution as of May 15, 2024. ^When using Shark cleaning solution."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41JyQJyqYvL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41JyQJyqYvL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41JyQJyqYvL._SL75_.jpg"
+  },
+  {
+    "asin": "B07NZHVLY6",
+    "title": "Arm & Hammer 4SGM New 361970Extra Strengh 16.3Z Carpet Odor Eliminator (6-Pack) Laundry Detergent Cheap Wholesale Discount Bulk Cleaning Firesale",
+    "url": "https://www.amazon.com/dp/B07NZHVLY6?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Arm & Hammer",
+    "features": [
+      "Powder eliminates odors & helps removing dirt; Lasting fragrance stays behind",
+      "Package Dimensions: 6.0 inchLx 6.0inchW x 6.0inchH",
+      "For Tough Odors: From Mold, Mildew and Smoke",
+      "16. 3 OZ each;Pack of 6"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51OdMPy8BmL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51OdMPy8BmL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51OdMPy8BmL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FLDZGB5D",
+    "title": "Shark StainForce Cordless Portable Spot, Stain, & Odor Remover System for Carpets, Area Rugs, Upholstery, Stairs, with Storage Caddy, Accessories, and Full-Size Cleaning Solution, HX101 (New)",
+    "url": "https://www.amazon.com/dp/B0FLDZGB5D?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Shark",
+    "features": [
+      "THE BEST TOUGH STAIN ELIMINATION+: Powerful stain-grabbing suction and 30x more stain-fighting power+\u200b combine to deliver the best tough stain removal+ in the portable stain cleaner market \u2013 just spray, scrub, extract.",
+      "30X MORE STAIN-FIGHTING POWER*: Shark\u2019s most powerful stain-fighting formulas mix & activate on contact to break down tough stains.",
+      "POWERFUL, STAIN-GRABBING SUCTION:\u202f Break down tough spots by agitating with the bristles, then lift & lock away all kinds of stains\u2014from fresh spills to set-in stains with the powerful suction.",
+      "LIGHTWEIGHT: Shark\u2019s most compact stain cleaner at under 3 lbs, is perfect for small stains and messes that happen every day throughout your home",
+      "LOW MOISTURE SYSTEM: Saturate without oversoaking\u2014control the spray mode for the task at hand and eliminate stains with less liquid.",
+      "ODOR NEUTRALIZATION: Formulated to remove odors - even smoke and pet urine.",
+      "ANYTIME, ANYWHERE: Cordless convenience to tackle stains & spills wherever they happen \u2013 even outdoors.",
+      "ALWAYS READY: Everything you need, ready when you need it \u2013 no measuring, no mixing, no prep. Just grab the caddy & go.",
+      "+vs portable stain cleaner market using included cleaning solution tested on mustard, ketchup, coffee, chocolate syrup, grape juice, permanent marker, oil and dirt. *vs Shark Deep Clean Pro Formula.",
+      "WHAT'S INCLUDED: StainForce, Stain Eliminator Tool with reversible bristles, Crevice Tool, Grab & Go Caddy, Full-Size StainForce Dual-Activated Solution, Reusable Spray Bottle Head, Charging Cable"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41pPyO9ksaL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41pPyO9ksaL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41pPyO9ksaL._SL75_.jpg"
+  },
+  {
+    "asin": "B0016HF5GK",
+    "title": "BISSELL Little Green Multi-Purpose Portable Carpet and Upholstery Cleaner, Car and Auto Detailer, with Exclusive Specialty Tools, Green, 1400B",
+    "url": "https://www.amazon.com/dp/B0016HF5GK?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Bissell",
+    "features": [
+      "AMERICA'S #1 BRAND IN PORTABLE DEEP CLEANING: Trusted by over 7 million households.",
+      "TAKE THE STRESS OUT OF MESS: Scientifically proven to lift and remove 100+ common messes and stains.",
+      "ULTRA-POWERFUL TRIPLE ACTION FORMULA: Permanently removes stains and powerfully eliminates odors for \u201clike new\u201d results.",
+      "LARGE 48OZ. CLEAN WATER TANK: Clean more, uninterrupted, with large capacity clean water tank.",
+      "EASY STAIN REMOVAL: Just spray, scrub & suction.",
+      "DON\u2019T SPREAD THE MESS WITH PAPER TOWEL: Deep clean stains and odors beneath the surface.",
+      "EVERY PURCHASE SAVES PETS: BISSELL proudly supports BISSELL Pet Foundation and its mission to help save homeless pets."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/412Cq2JSLGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/412Cq2JSLGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/412Cq2JSLGL._SL75_.jpg"
+  },
+  {
+    "asin": "B0BX7GH721",
+    "title": "The Big Carpet Corrector- Carpet Rake to Rejuvenate Your Matted Carpet. Perfect for Hallways, Stairs, Steps, and Other High Traffic Areas.",
+    "url": "https://www.amazon.com/dp/B0BX7GH721?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Carpet Corrector",
+    "features": [
+      "Easy to Use \u2013 Simple to correct matted down carpet areas such as stairs, hallways, high traffic areas and furniture spots. Simply hold the brush at different angles depending on carpet type and amount of wear on the carpet. Apply gentle pressure and pull back the BIG Carpet Corrector to fluff up fabric fibers.",
+      "High Quality \u2013 The Carpet Corrector is specially designed with soft pyramid shaped bristles to not damage carpet or rugs. The material balances high durability and softness to have the right mix for effectively fluffing up carpet and rug fibers.",
+      "Ergonomic Design \u2013 The long handle screws together easily and is very sturdy. Standing 4 feet tall, the BIG Carpet Corrector allows you to work your carpet without bending over or straining your back. Just brush your carpet or rug in a gentle motion\u2013 the results are instant!",
+      "Pet Hair - Can also be used to quickly remove pet hair from your home\u2019s fabric surfaces such as carpeted stairs, rugs and ottomans. Use the BIG Carpet Corrector to loosen dirt, hair and debris from far down in the carpet and allow easy vacuuming later.",
+      "Perfect Size \u2013 The width of the BIG Carpet Corrector is over 12 inches and is perfect for quickly going over areas of your home without lugging out a heavy vacuum. Hallways, stairs and high-traffic doorways will immediately look better!",
+      "Versatile \u2013 Use the BIG Carpet Corrector to quickly straighten the fringe on your area rugs. The BIG Carpet Corrector can be used on furniture, in RV\u2019s, on bathroom rugs and much more!",
+      "Effective \u2013 Make your carpet look new again before guests come over or whenever you want your home to look better! Perfect for preparing for those holiday gatherings or real estate showings.",
+      "Faster - Tired of lugging out your vacuum to freshen up the carpet on your stairs? Use the BIG Carpet Corrector instead! How about that carpet leading into the bathroom or bedroom? It looks matted down and worn out. Make it new again with the BIG Carpet Corrector.",
+      "Simple - The BIG Carpet Corrector will be one of the easiest and fastest cleaning tools in your home. You\u2019ll be surprised at how often you use it.",
+      "Better - Other carpet rake products have metal tines which pull out strands and damage your expensive carpet and rugs. Some have long, thin silicone strands which are not powerful enough to fluff up carpet. And yet others are made of hard plastic material which can be damaging. The BIG Carpet Corrector is the best combination of design and material."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51sQiUE9bdL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51sQiUE9bdL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51sQiUE9bdL._SL75_.jpg"
+  },
+  {
+    "asin": "B09X226Z5Y",
+    "title": "Mohawk Advance 36\" x 12\" Berber (Loop pile), 0.11\" Pile Height, Carpet Tile, PET Fiber, New Shoes Color, (24 Tiles), (72 sqft/carton)",
+    "url": "https://www.amazon.com/dp/B09X226Z5Y?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mohawk",
+    "features": [
+      "MOHAWK Advance delivers design flexibility and color intensity with easy-to-maintain carpet tiles that are stain and soil resistant.",
+      "New Shoes is a Textured Loop, Patterned, Tan, 12\" x 36\" Carpet Tile; 72 sq ft per carton; Case weighs 34 lbs",
+      "Install in home office, basement, gym, playroom, bedroom or living room. Glue down installation and FlexLok floating floor installation options available. FlexLok tabs and adhesive must be purchased separately.",
+      "Tiles are impervious to moisture damage from spills and water extraction Cleaning.",
+      "Room scene photography represents flooring only, accessories not included. Actual item may vary in color from screen representation so we recommend ordering a sample to view in your home. Graphics, product names, and color names may vary on packaging. Actual product is the same as displayed and ordered."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/61sIHZKTcuL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/61sIHZKTcuL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/61sIHZKTcuL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.

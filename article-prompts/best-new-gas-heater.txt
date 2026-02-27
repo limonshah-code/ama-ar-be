@@ -1,0 +1,346 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-28T16:45:31Z
+author: "Mason Everett"
+title: "Best New Gas Heater"
+excerpt: "Discover the new gas heater to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - new gas heater
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-new-gas-heater
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right new gas heater
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best New Gas Heater" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 10 Best New Gas Heater"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best New Gas Heater"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy new gas heater?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose new gas heater?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best new gas heater for beginners?"
+- "How much should I spend on new gas heater?"
+- "What features are most important in new gas heater?"
+- "How do I maintain my new gas heater?"
+- "Are expensive new gas heater worth it?"
+- "What brands make the best new gas heater?"
+- "How long do new gas heater typically last?"
+- "Can I find good new gas heater on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B0CD1QGHWW",
+    "title": "ProCom Heating Natural Gas Ventless Infrared Plaque Heater With Base Feet - 30,000 BTU, T-Stat Control - Model# MN300TPA-B",
+    "url": "https://www.amazon.com/dp/B0CD1QGHWW?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "ProCom",
+    "features": [
+      "TECHNOLOGY: This compact Infrared mini heater produces 30000 Maximum BTU using Natural Gas and heats up to 1400 sq. ft. area; This is a great heater for office, bedroom, living room, and other residential use",
+      "DEPENDABLE: Thermostat control on the heater offers High/Medium/Low Thermostat Control; Ideal for greater heat flow that could add a warm atmosphere as a small space heater",
+      "STYLISH: Without compromising function for beauty, this versatile small heater has been redesigned for a slim & modern profile to effortlessly fit in your room; Mount on a wall with included hardware or place on a floor with Base Feet (Included)",
+      "SAFE: Push button ignition with built-in pilot oxygen depletion sensor (ODS) immediately shuts down the garage heater if carbon monoxide or lack of oxygen is detected; ANSI Certified to ensure safety",
+      "CONVENIENT: No electricity is required for this personal heater, making it perfect for power outages or any in-house emergencies; Includes Wall Mount and Base Feet"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51WZKDZ2VxL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51WZKDZ2VxL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51WZKDZ2VxL._SL75_.jpg"
+  },
+  {
+    "asin": "B01DPZ56OG",
+    "title": "30,000 BTU Vent Free Blue Flame Natural Gas Heater",
+    "url": "https://www.amazon.com/dp/B01DPZ56OG?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "Emits 30,000 BTU/hr",
+      "Heats up to 1,000 square feet",
+      "Battery operated electronic ignition (battery included)",
+      "Includes built-in adjustable thermostat",
+      "No electricity required",
+      "No outdoor venting required",
+      "Indoor safe",
+      "Low oxygen safety shut-off",
+      "For use with natural gas",
+      "Blower fan kit sold separately (F299201)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41aN0o6or9L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41aN0o6or9L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41aN0o6or9L._SL75_.jpg"
+  },
+  {
+    "asin": "B01DPZ5AZQ",
+    "title": "20,000 BTU Vent Free Radiant Natural Gas Heater",
+    "url": "https://www.amazon.com/dp/B01DPZ5AZQ?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "20,000 BTU/HR",
+      "Heats up to 700 sq ft",
+      "Electronic ignition",
+      "Built-in thermostat automatic temperature control",
+      "No electricity required",
+      "No outdoor venting required",
+      "Indoor safe",
+      "4500 ft high altitude restriction",
+      "Low oxygen safety shut-off",
+      "Blower fan kit sold separately (F299201)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/412ytB9WRWL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/412ytB9WRWL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/412ytB9WRWL._SL75_.jpg"
+  },
+  {
+    "asin": "B002G51BZU",
+    "title": "9,000 BTU Portable Buddy Radiant Propane Heater",
+    "url": "https://www.amazon.com/dp/B002G51BZU?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "Emits 4,000 or 9,000 BTU/hr radiant heat",
+      "Designed and approved for indoor and outdoor use",
+      "Heats up to approximately 225 square feet",
+      "Features emergency low oxygen safety system",
+      "2 temperature settings: low and high",
+      "Runs 5.4 hours on low and 2.4 hours on high with 1 lb propane cylinder",
+      "Constructed with self-extinguishing materials",
+      "The use of un-authorized accessories/attachments with this heater are expressly prohibited, may cause serious injury, and will void the warranty."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41n754IfZbL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41n754IfZbL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41n754IfZbL._SL75_.jpg"
+  },
+  {
+    "asin": "B00LWW7V7K",
+    "title": "Mr. Heater F260550 Big Maxx MHU50NG Natural Gas Unit Heater,Black",
+    "url": "https://www.amazon.com/dp/B00LWW7V7K?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "Ceiling-mounted forced air unit heater turns garages, barns, and workshops into heated workspaces",
+      "50,000 BTUs heat up to 1,667 sq ft, or approximately a 3-car garage",
+      "Compatible with standard 24-volt or new Wi-Fi enabled thermostats (sold separately)"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31eVhOUA11L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31eVhOUA11L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31eVhOUA11L._SL75_.jpg"
+  },
+  {
+    "asin": "B08DRVBRVR",
+    "title": "Mr. Heater 10,000 BTU Vent Free Dual Fuel Blue Flame Heater",
+    "url": "https://www.amazon.com/dp/B08DRVBRVR?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "Dual LP/NG Low Oxygen Detection Systems",
+      "Fail Safe Fuel Type Selection Knob",
+      "Battery Operated Electronic Spark Ignition",
+      "Feet and Mounting Hardware Included"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31ihZuBxCFL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31ihZuBxCFL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31ihZuBxCFL._SL75_.jpg"
+  },
+  {
+    "asin": "B08JJ7F75K",
+    "title": "Ashley 11,000 BTU Direct Vent Natural Gas Wall Heater for Indoor Space Heating, Sealed-Burn System, Mobile Home Approved, Model DVAG11N, Cream",
+    "url": "https://www.amazon.com/dp/B08JJ7F75K?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Ashley",
+    "features": [
+      "Safety pilot with built in pressure regulator completely stops the flow of gas in the event the pilot is extinguished",
+      "Heats up to 375 Sq Ft",
+      "430 Stainless steel ported burner provides silent on and off operation making this a quiet heating workhorse for your house",
+      "Designed for use with natural gas",
+      "Up to 11,000 BTU heat input",
+      "Sealed burn system is perfect for bedrooms and living spaces",
+      "Matchless Piezo lighting for quick starts",
+      "No complicated venting to purchase or install, complete kit is included (includes heat shield, vent pipe, air intake pipe, flashing, cap, and connecting rod)",
+      "Approved for use in mobile or modular homes"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31aW5XzGlGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31aW5XzGlGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31aW5XzGlGL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CM4L8VKC",
+    "title": "NEW Rinnai RX199iN Condensing Smart Sense Natural Gas or Propane Tankless Water Heater, Indoor or Outdoor Water Heater, Up to 11.1 GPM, 199,000 BTU",
+    "url": "https://www.amazon.com/dp/B0CM4L8VKC?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Rinnai",
+    "features": [
+      "One Model, Anywhere: This Rinnai tankless water heater is installable indoors or outdoors thanks to our new Versa Vent and powered by either propane or natural gas thanks to a Smart Sense gas control system; RX-OVC vent cap required for outdoor install",
+      "Never Run Out of Hot Water with this Compact Tankless Gas Water Heater: This condensing propane and natural gas tankless water heater from Rinnai is only the size of a small suitcase, but provides up to 11.1 GPM (7 fixtures at once)",
+      "Smart, Efficient Design: This water heater's modern design includes an easy-to-use interface, Quick Flush feature for simplified flushing, as well as a super-high energy efficiency factor of UEF .98; See Controlr module for WiFi control (not included)",
+      "Professional Installation Recommended: Visit the Find a Rinnai PRO page on our website to find a qualified technician to install your tankless water heater, and use the Rinnai Central App for help with setup, service & troubleshooting; We do not recommend installing a water heater without a technician",
+      "Find Your Rinnai: See our product guides, manuals, energy guide, warranty information, videos, and tables to find the right tankless water heater size for your home; Check our Ground Water Temperature Map to see if this heater is optimal for your region"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL75_.jpg"
+  },
+  {
+    "asin": "B0000AXF0M",
+    "title": "Mr. Heater F272800 40,000 BTU Natural Gas Garage Heater #MH40NG,Multi",
+    "url": "https://www.amazon.com/dp/B0000AXF0M?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Mr. Heater",
+    "features": [
+      "Efficient, cost effective infrared heat",
+      "For use in buildings with 12 to 15 ft ceilings",
+      "Clearances: Top - 36\", Sides & Back - 30\", Below - 68\"",
+      "Heats up to 1000 sq. ft.",
+      "No electricity required, Maintenance free; no moving parts"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31rR7HaO1JL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31rR7HaO1JL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31rR7HaO1JL._SL75_.jpg"
+  },
+  {
+    "asin": "B0CNQHT7CL",
+    "title": "NEW Rinnai RXP199iN Condensing Smart Sense Natural Gas or Propane Tankless Water Heater, Indoor or Outdoor Water Heater, Up to 11.1 GPM, 199,000 BTU, with Recirculation Pump",
+    "url": "https://www.amazon.com/dp/B0CNQHT7CL?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Rinnai",
+    "features": [
+      "One Model, Anywhere: This Rinnai tankless water heater is installable indoors or outdoors thanks to our new Versa Vent and powered by either propane or natural gas thanks to a Smart Sense gas control system; RX-OVC vent cap required for outdoor install",
+      "Never Run Out of Hot Water with this Compact Tankless Gas Water Heater: This condensing propane and natural gas tankless water heater from Rinnai is only the size of a small suitcase, but provides up to 11.1 GPM (7 fixtures at once)",
+      "Smart, Efficient Design: This water heater's modern design includes an easy-to-use interface, Quick Flush feature for simplified flushing, as well as a super-high energy efficiency factor of UEF .98; See Controlr module for WiFi control (not included)",
+      "Smart-Circ Intelligent Recirculation: This tankless hot water heater includes an internal pump and features Smart-Circ technology that learns your water usage patterns, then schedules pump and recirculation accordingly for best efficiency and convenience",
+      "Professional Installation Recommended: Visit the Find a Rinnai PRO page on our website to find a qualified technician to install your tankless water heater, and use the Rinnai Central App for help with setup, service & troubleshooting; We do not recommend installing a water heater without a technician"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31U8o4LBbLL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
