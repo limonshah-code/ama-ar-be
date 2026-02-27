@@ -1,0 +1,280 @@
+Create a comprehensive Amazon product review article in MDX format following this exact structure. Use the provided product data to write detailed, helpful content. The output should be valid MDX with JSX components mixed with must be Markdown format.
+
+---
+publishDate: 2026-02-28T20:19:47Z
+author: "Mason Everett"
+title: "Best Non Allergenic Carpet"
+excerpt: "Discover the non allergenic carpet to enhance your experience. Find top solutions based on thorough testing and reviews."
+image: https://res.cloudinary.com/dbcpfy04c/image/upload/v1743184673/images_k6zam3.png
+category: "Reviews"
+tags:
+  - non allergenic carpet
+  - Reviews products
+metadata:
+  canonical: https://www.homeessentialsguide.com/best-non-allergenic-carpet
+---
+
+import TopPicks from '~/components/ui/TopPicks.astro';
+import AmazonProducts from '~/components/ui/AmazonProducts.astro';
+
+## ARTICLE STRUCTURE REQUIREMENTS:
+
+### 1. OPENING SECTION (70-120 words)
+Write an engaging introduction in Markdown that:
+- Acknowledges the challenge of finding the right non allergenic carpet
+- Mentions 3-4 key criteria for evaluation (quality, durability, value, performance)
+- Introduces the concept of eco-friendly/safe options if applicable
+- Promises to help readers make an informed decision
+- Use "Best Non Allergenic Carpet" naturally in the first 100 words
+- Write each sentence inside its own <p> tag
+
+### 2. TOP PICKS SECTION
+Next, include the <TopPicks /> component.
+- id="top-picks"
+- tagline="Expert Recommendations ✨"
+- title="Our Top Picks"
+- subtitle="After testing dozens of products, we've selected the best options for every budget and need. Each recommendation has been thoroughly evaluated for performance, durability, and value."
+- items: An array including all products from the data, assigning appropriate categories like 'Best Overall', 'Best Budget', 'Best Premium', 'Best Multi-functional', creating custom categories as needed for all products.
+  - category: e.g., 'Best Overall', 'Best Budget', etc.
+  - title: Shortened and engaging version of the product title from data (keep it concise and short)
+  - description: 2-3 sentences explaining why it's picked, based on features. Do not use any double quotes in the description.
+  - link: Product URL from data
+  - image: Product image_large or image_medium from data
+  - color: Cycle through 'indigo', 'teal', 'green', 'purple'
+
+Use actual product data to fill these.
+
+### 3. PRODUCT REVIEWS SECTION
+Title: "## 7 Best Non Allergenic Carpet"
+
+write a short, engaging, and persuasive description (2–3 sentences) that hooks the reader.  
+- Mention why these products matter.  
+- Create a sense of excitement or curiosity to keep reading.  
+
+For EACH product in the data, include an <AmazonProducts /> component. Increment cardNumber starting from 1.
+For each component:
+- cardNumber: The product number (1,2,3...)
+- title: Shortened and engaging version of the full product title from data (keep it concise and short)
+- subtitle: A short tagline like Best in class for [key benefit] generated based on features
+- image: Product image_large from data
+- amazonLink: Product URL from data
+- description: 100-150 word paragraph covering main benefits, standout features, performance, who it's for. Do not use any double quotes in the description.
+- whySelected: 50-100 words on why we selected it, mentioning testing. Do not use any double quotes.
+- userExperience: 50-100 words on typical user experiences, praises, and uses. Do not use any double quotes.
+- features: Array of 4-7 strings based on product features from data, with benefits
+- pros: Array of 3-5 strings, positive aspects
+- cons: Array of 2-3 strings, minor drawbacks
+- specs: Array of objects like { label: "Feature Name", value: "Value" } - Generate 3-6 plausible specs from features or infer
+
+Use actual data where possible, generate content based on it.
+
+### 4. BUYING GUIDE SECTION
+Title: "## What to Look for Before Buying the Best Non Allergenic Carpet"
+
+Include these subsections with detailed explanations in Markdown:
+1. ### Find Your Need - Compatibility and use case considerations
+2. ### Budget - Setting realistic price expectations ($X-$Y ranges)
+3. ### Key Features - Most important technical specifications
+4. ### Quality & Durability - What to look for in construction
+5. ### Brand Reputation - Importance of established manufacturers
+6. ### Portability/Size - Considerations for space and storage
+
+### 5. EDUCATIONAL CONTENT
+
+#### Value Proposition Section
+Title: "## Is it A Wise Decision to Buy non allergenic carpet?"
+- Justify the investment (150-200 words) in Markdown
+- Compare to alternatives
+- Highlight long-term benefits
+- Address cost concerns
+
+#### Best Practices Section
+Title: "## What Is the Best Way to Choose non allergenic carpet?"
+- Step-by-step selection guide in Markdown
+- Professional tips
+- Common mistakes to avoid
+- When to upgrade vs. budget options
+- add more option if available 
+
+### 6. FAQ SECTION
+Title: "## FAQ"
+
+Create 8-10 FAQs in Markdown covering:
+- "What is the best non allergenic carpet for beginners?"
+- "How much should I spend on non allergenic carpet?"
+- "What features are most important in non allergenic carpet?"
+- "How do I maintain my non allergenic carpet?"
+- "Are expensive non allergenic carpet worth it?"
+- "What brands make the best non allergenic carpet?"
+- "How long do non allergenic carpet typically last?"
+- "Can I find good non allergenic carpet on a budget?"
+
+Each answer should be 50-75 words with actionable advice.
+
+### 7. FINAL VERDICT
+Title: "## Final Verdict"
+
+- Restate top recommendation with key selling points in Markdown
+- Mention budget option for cost-conscious buyers
+- Highlight premium option for quality seekers
+- End with clear, actionable next steps
+- Product recommendation with [Text](URL) markdown format (Must Follow this)
+- Write each sentence inside its own <p> tag
+
+## WRITING GUIDELINES:
+
+**Tone & Voice:**
+- Conversational and helpful
+- Authoritative but approachable: Use confident language like "we research" and "we recommend" to establish credibility without being overly formal.
+- Address reader directly with "you"
+
+**Content Principles:**
+- Lead with benefits, support with features
+- Use specific details from the product data
+- Include safety considerations
+- Balance enthusiasm with honest assessment
+- Critical Formatting Rule: No Double Quotes, The final output for both the title and the excerpt must not contain any double quotes (").
+
+**SEO Structure:**
+- Use H2/H3 headings properly
+- Write scannable content with bullets and short paragraphs
+- Target 4,000-5,000 words total
+
+## AMAZON PRODUCT DATA TO USE:
+[
+  {
+    "asin": "B004ISLJYG",
+    "title": "Arm & Hammer CDC 84113 42.6 oz Carpet And Room Allergen Reducer And Odor Eliminator Powder, Shaker Box",
+    "url": "https://www.amazon.com/dp/B004ISLJYG?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Arm & Hammer",
+    "features": [
+      "Unique powdered formula eliminates odors at the source",
+      "Baking soda goes deep into carpets to eliminate odors",
+      "Carpet and room allergen reducer and odor eliminator",
+      "Unique powdered formula eliminates odors at the source and reduces the level of allergens in carpeting"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51d2Apj9G2L._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51d2Apj9G2L._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51d2Apj9G2L._SL75_.jpg"
+  },
+  {
+    "asin": "B0D92SLXR5",
+    "title": "Allersearch X-Mit Anti-Allergen Carpet Cleaning Powder",
+    "url": "https://www.amazon.com/dp/B0D92SLXR5?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Allersearch",
+    "features": [
+      "Cleans without water, shampoo or steam.",
+      "No wet carpet.",
+      "No sticky, soapy residue left behind.",
+      "No filling or dumping of water.",
+      "Nothing to mix.",
+      "One bag cleans approximately 150 square feet.",
+      "Lasts up to 90 days. It may be necessary to apply product more often based upon household allegen concentration."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/410jOaLk-QL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/410jOaLk-QL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/410jOaLk-QL._SL75_.jpg"
+  },
+  {
+    "asin": "B007ZT47S0",
+    "title": "Capture Carpet Total Care Kit 250 - Home Couch and Upholstery, Car Rug, Dogs & Cats Pet Carpet Cleaner Solution - Strength Odor Eliminator, Stains Spot Remover, Non Liquid & No Harsh Chemical",
+    "url": "https://www.amazon.com/dp/B007ZT47S0?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Capture",
+    "features": [
+      "COMPACT CLEANING SOLUTION: Everything you need to clean spots or whole rooms. Includes 2.5 lb Carpet & Rug Dry Cleaner powder, 16oz Soil Release Pre-Mist and a bonus carpet brush (handle not included). With Capture Powder Cleaner, the spots do not reappear and act like heavy-duty sponges to absorb dirt and spills.",
+      "BEST CARPET CLEANING SOLUTION: Safe for all types of carpets including Wool and Code S fabric, silk, surfaces, and material. Take care and prolong the life of floor carpet fabrics and appearance by deodorizing and cleaning it using the power of Capture Carpet Cleaner.",
+      "STAIN REMOVER & DEODORIZER: Excellent bad smells neutralizer. It eliminates the toughest stains and odors without steam or shampoo. Can be used in the car or home, on animal, dog or cat pet stains. Plus, the 2.5lb pail can clean up to 250 square feet.",
+      "EASY APPLICATION: Spray the soiled area with Capture Pre-Mist or Pretreatment and sprinkle the powder evenly, brush gently, and vacuum thoroughly for a clean, fresh scent in minutes. No need to hire a pricey professional service you can do it yourself quickly.",
+      "CONVENIENT, SAFE, EFFECTIVE & TOTAL CARE: If you want your carpet to look great and last longer, clean regularly with Capture! You can get the freshness that you want with our premium cleaning products. Contains no bleach, solvents, or harsh chemicals. Proudly made in the USA."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41luYRaGyAL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41luYRaGyAL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41luYRaGyAL._SL75_.jpg"
+  },
+  {
+    "asin": "B01N9OZD9A",
+    "title": "Capture Carpet & Rug Dry Cleaner w/Resealable lid - Home, Car, Dogs & Cats Pet Carpet Cleaner Solution - Strength Odor Eliminator, Stains Spot Remover, Non Liquid & No Harsh Chemical (2.5 lb)",
+    "url": "https://www.amazon.com/dp/B01N9OZD9A?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Capture",
+    "features": [
+      "ABSORBENT DEEP DRY CLEANING: Wet cleaners cause wicking by leaving moisture in carpets, rugs, upholstery, furniture, sofa, and couch. With Capture Powder Cleaner, the spots do not reappear, it acts like heavy-duty sponges to absorb dirt and spills.",
+      "BEST CARPET CLEANING SOLUTION: Safe for all types of carpets including Wool and Code S fabric, silk, surfaces, and material. Take care and prolong the life of floor carpet fabrics and appearance by deodorizing and cleaning it using the power of Capture Carpet Cleaner.",
+      "STAIN REMOVER & DEODORIZER: Excellent bad smells neutralizer. It eliminates the toughest stains and odors without steam or shampoo. Can be used in the car or home, on animal, dog or cat pet stains. Plus, the 2.5lb pail can clean up to 250 square feet.",
+      "EASY APPLICATION: Spray the soiled area with Capture Pre-Mist (sold separately) and sprinkle the powder evenly, brush gently, and vacuum thoroughly for a clean, fresh scent in minutes. No need to hire a pricey professional service you can do it yourself quickly.",
+      "CONVENIENT, SAFE, EFFECTIVE & TOTAL CARE: If you want your carpet to look great and last longer, clean regularly with Capture! You can get the freshness that you want with our premium cleaning products. Contains no bleach, solvents, or harsh chemicals. Proudly made in the USA."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/416JrBQIZQL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/416JrBQIZQL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/416JrBQIZQL._SL75_.jpg"
+  },
+  {
+    "asin": "B000F2HMW2",
+    "title": "Allersearch All-Rug Anti-Allergen Concentrated Carpet Shampoo 1 Gallon (128 Oz)",
+    "url": "https://www.amazon.com/dp/B000F2HMW2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "AllerSearch",
+    "features": [
+      "Typical usage is 1 oz. per gallon of warm or cold water",
+      "Contains ACARIL, a proprietary Anti-Allergen Ingredient",
+      "Cleans water-soluble soils and oil-based matter such as grease, oils, etc. while removing allergens from carpets",
+      "Use Allersearch All Rug throughout your home on carpet, area rugs and soft furnishings"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/31eHooqCnGL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/31eHooqCnGL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/31eHooqCnGL._SL75_.jpg"
+  },
+  {
+    "asin": "B00TZ9Y8I2",
+    "title": "Allertech\u00ae Anti-Allergen Spray, 32 oz Bottle - Neutralizing Solution for Fabrics, Carpets, Bedding, Upholstery & Surfaces - Plant & Mineral Ingredients, Clear & Stain-Free, Safe Around Pets",
+    "url": "https://www.amazon.com/dp/B00TZ9Y8I2?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Allertech",
+    "features": [
+      "Effective Allergen Neutralizer - Helps reduce exposure to protein-based allergens for added comfort at home.",
+      "Independent Lab-Tested - Verified allergen reduction results without harsh residues or chemical odor",
+      "Clear, Stain-Free Formula - No tannic acid; safe for most water-washable fabrics, bedding, and upholstery.",
+      "Safe for Pet Spaces - Gentle enough for use around animals, including their resting areas and bedding.",
+      "Economical Size - 32-oz bottle provides broad coverage, up to 600 sq. ft., depending on application method."
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/41QMgTonFkL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/41QMgTonFkL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/41QMgTonFkL._SL75_.jpg"
+  },
+  {
+    "asin": "B0FD8LLYS1",
+    "title": "Love My Carpet 2-in-1 Carpet & Room Deodorizer (4-Pack) (Allergen reducer, 4)",
+    "url": "https://www.amazon.com/dp/B0FD8LLYS1?tag=home-essentials-guide-20&linkCode=osi&th=1&psc=1",
+    "brand": "Generic",
+    "features": [
+      "Allergen reducer Love My Carpet 2-in-1 Carpet & Room Deodorizer, scented, 4 pack. Freshen all your carpets while leaving the air clean and fresh, too! Bring the lush scent of lavender right into your home to fight carpet odors. Safe for all types of carpets, it eliminates problem odors and is safe to use around pets. It also can be used to freshen and deodorize upholstery, diaper and garbage pails, cat litter boxes, and car interiors. Love My Carpet 2-in-1 Carpet & Room Deodorizer scented, 4 Pack, 17 oz Safe for all types of carpets Eliminates problem odors and is safe to use around pets Brand: Love My Carpet Color: blue/white"
+    ],
+    "image_large": "https://m.media-amazon.com/images/I/51qqxl6zIUL._SL500_.jpg",
+    "image_medium": "https://m.media-amazon.com/images/I/51qqxl6zIUL._SL160_.jpg",
+    "image_small": "https://m.media-amazon.com/images/I/51qqxl6zIUL._SL75_.jpg"
+  }
+]
+
+**CRITICAL INSTRUCTIONS:**
+1. Use product titles, features, images, and URLs from the data above, but shorten titles to be short and engaging
+2. Every product component must include its Amazon affiliate link
+3. Write unique content for each product based on its specific features
+4. Maintain consistent quality and structure across all articles
+5. Ensure all product claims are based on the provided data
+6. Create compelling reasons to buy each product
+7. Include proper MDX formatting throughout, with JSX for components and Markdown for text.
+Generate and use Seo Title in the article must:
+- Keyword: Must include the primary keyword (e.g., "best steam cleaner for bathroom grout").
+- Format: Incorporate a number (e.g., "10 Best") and/or the current year to signal freshness and comprehensiveness.
+- Tone: The title should be clear, informative, and engaging.
+- Length: Aim for 50-60 characters.
+- Constraint: Do not use any double quotes and colon also.
+
+Generate and use Seo Excerpt in the article must:
+- Purpose: Function as a meta description designed to attract clicks from search engine results pages.
+- Keyword: Must include the primary keyword.
+- Structure:
+  - Hook: Start with a question that addresses the reader's pain point directly.
+  - Value Proposition: State your authority and what you did.
+  - Benefit: Promise a clear, desirable outcome.
+  - Tone: Must be conversational and helpful, directly addressing the reader with "you".
+  - Length: Keep it concise and impactful, between 140-150 characters.
+  - Constraint: Do not use any double quotes and colon also.
+Generate the complete MDX article now, following this structure exactly and using the provided product data comprehensively.
